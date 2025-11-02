@@ -45,8 +45,8 @@ export function ServiceCard({
               alt={`${name} background`}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            {/* Dark overlay with gradient for better text visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+            {/* Dark overlay with gradient for better text visibility (70-80% opacity) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/75 to-black/70"></div>
           </div>
         )}
         
