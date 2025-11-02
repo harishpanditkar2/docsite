@@ -289,7 +289,7 @@ export function Header() {
             
             {/* Join as Doctor - Outline Style */}
             <Link href="/join-doctor">
-              <Button variant="outline" size="md">
+              <Button variant="outline" size="sm">
                 Join as Doctor
               </Button>
             </Link>
