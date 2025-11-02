@@ -66,11 +66,11 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Founders Section */}
+          {/* Team Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-forest-900 mb-8 text-center">Our Leadership</h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Founder */}
+            <h2 className="text-3xl font-bold text-forest-900 mb-8 text-center">Our Team</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+              {/* Founder - Harish Panditkar */}
               <div className="bg-gradient-to-br from-forest-50 to-jade-50 rounded-2xl p-8 shadow-soft hover:shadow-md transition-shadow">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-24 h-24 bg-lime-400 rounded-full flex items-center justify-center mb-4 shadow-md">
@@ -78,77 +78,78 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-forest-900 mb-2">Harish Panditkar</h3>
                   <p className="text-lime-600 font-semibold mb-4">Founder & CEO</p>
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-gray-700 leading-relaxed mb-4 text-sm">
                     Harish brings extensive experience in building high-performance API-driven platforms and scalable web applications. 
                     He leads Glowheal's business strategy, technology architecture, go-to-market execution, and platform development.
                   </p>
-                  <div className="space-y-2 text-sm text-forest-700">
+                  <div className="space-y-2 text-xs text-forest-700">
                     <p className="flex items-center gap-2 justify-center">
-                      <svg className="w-4 h-4 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 text-lime-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      Business & Technology Strategy
+                      <span>Business & Technology Strategy</span>
                     </p>
                     <p className="flex items-center gap-2 justify-center">
-                      <svg className="w-4 h-4 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 text-lime-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      Platform Architecture & Development
+                      <span>Platform Architecture</span>
                     </p>
                     <p className="flex items-center gap-2 justify-center">
-                      <svg className="w-4 h-4 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 text-lime-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      Go-To-Market & Performance Marketing
-                    </p>
-                    <p className="flex items-center gap-2 justify-center">
-                      <svg className="w-4 h-4 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Automation & Growth Engineering
+                      <span>Growth & Marketing</span>
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Co-Founder */}
-              <div className="bg-gradient-to-br from-jade-50 to-forest-50 rounded-2xl p-8 shadow-soft hover:shadow-md transition-shadow">
+              {/* Placeholder Team Member 2 */}
+              <div className="bg-gradient-to-br from-mist-50 to-mist-100 rounded-2xl p-8 shadow-soft opacity-60 border-2 border-dashed border-mist-300">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 bg-jade-400 rounded-full flex items-center justify-center mb-4 shadow-md">
-                    <span className="text-3xl font-bold text-forest-900">CB</span>
+                  <div className="w-24 h-24 bg-mist-200 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-10 h-10 text-mist-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-forest-900 mb-2">Dr. Chetna Bhaisare</h3>
-                  <p className="text-jade-600 font-semibold mb-4">Co-Founder & CMO</p>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Dr. Chetna brings credible clinical expertise as Chief Medical Officer (CMO) at Glowheal. 
-                    She leads patient consultations, clinical operations, wellness programs, and strategic partnerships with healthcare providers across India.
+                  <h3 className="text-xl font-bold text-mist-500 mb-2">Coming Soon</h3>
+                  <p className="text-mist-400 font-semibold mb-4 text-sm">Team Member</p>
+                  <p className="text-mist-500 text-sm leading-relaxed">
+                    We're expanding our team. This position will be filled soon as we grow Glowheal.
                   </p>
-                  <div className="space-y-2 text-sm text-forest-700">
-                    <p className="flex items-center gap-2 justify-center">
-                      <svg className="w-4 h-4 text-jade-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Clinical Operations & Consultations
-                    </p>
-                    <p className="flex items-center gap-2 justify-center">
-                      <svg className="w-4 h-4 text-jade-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Wellness Programs & Patient Care
-                    </p>
-                    <p className="flex items-center gap-2 justify-center">
-                      <svg className="w-4 h-4 text-jade-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Healthcare Partnerships & Network
-                    </p>
-                    <p className="flex items-center gap-2 justify-center">
-                      <svg className="w-4 h-4 text-jade-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Marketing & Operational Continuity
-                    </p>
+                </div>
+              </div>
+
+              {/* Placeholder Team Member 3 */}
+              <div className="bg-gradient-to-br from-mist-50 to-mist-100 rounded-2xl p-8 shadow-soft opacity-60 border-2 border-dashed border-mist-300">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 bg-mist-200 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-10 h-10 text-mist-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
                   </div>
+                  <h3 className="text-xl font-bold text-mist-500 mb-2">Coming Soon</h3>
+                  <p className="text-mist-400 font-semibold mb-4 text-sm">Team Member</p>
+                  <p className="text-mist-500 text-sm leading-relaxed">
+                    We're expanding our team. This position will be filled soon as we grow Glowheal.
+                  </p>
+                </div>
+              </div>
+
+              {/* Placeholder Team Member 4 */}
+              <div className="bg-gradient-to-br from-mist-50 to-mist-100 rounded-2xl p-8 shadow-soft opacity-60 border-2 border-dashed border-mist-300">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 bg-mist-200 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-10 h-10 text-mist-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-mist-500 mb-2">Coming Soon</h3>
+                  <p className="text-mist-400 font-semibold mb-4 text-sm">Team Member</p>
+                  <p className="text-mist-500 text-sm leading-relaxed">
+                    We're expanding our team. This position will be filled soon as we grow Glowheal.
+                  </p>
                 </div>
               </div>
             </div>
@@ -169,7 +170,7 @@ export default function AboutPage() {
                 pay when you're ready to proceed.
               </p>
               <p>
-                We combine Harish's technical expertise in building scalable platforms with Dr. Chetna's clinical experience 
+                We leverage technical expertise in building scalable platforms combined with healthcare domain knowledge 
                 to create a healthcare platform that actually works for patients—no surprises, no confusion, just honest care.
               </p>
             </div>
