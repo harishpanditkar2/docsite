@@ -427,7 +427,7 @@ ${servicesText}
       ? `Hi, I want to book my free first consultation for ${formData.specialty} in ${formData.city}. My booking ID is ${bookingId}.${truncatedServiceNames ? ` I'm interested in: ${truncatedServiceNames}` : ''}`
       : `Hi, I just submitted booking ${bookingId}. My name is ${formData.name} and I need ${formData.specialty} consultation in ${formData.city}.${truncatedServiceNames ? ` Interested in: ${truncatedServiceNames}` : ''}`;
     
-    const whatsappURL = getFreeConsultWhatsAppURL(formData.specialty, formData.city);
+    const whatsappURL = `https://wa.me/919860151400?text=${encodeURIComponent(whatsappMessage)}`;
     const whatsappFallback = `https://api.whatsapp.com/send?phone=919860151400&text=${encodeURIComponent(whatsappMessage)}`;
 
     return (
@@ -465,25 +465,25 @@ ${servicesText}
                   Your Booking Details
                 </h2>
                 <div className="text-left space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-jade-200 gap-1">
-                    <span className="text-gray-700 font-medium">Consultation Type:</span>
-                    <span className="text-forest-900 font-semibold">{isFreeConsult ? 'Free First Consultation (₹0)' : 'Specialist Consultation'}</span>
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-3 border-b border-jade-200 gap-2">
+                    <span className="text-gray-700 font-medium text-sm sm:text-base">Consultation Type:</span>
+                    <span className="text-forest-900 font-semibold text-sm sm:text-base sm:text-right">{isFreeConsult ? 'Free First Consultation (₹0)' : 'Specialist Consultation'}</span>
                   </div>
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-jade-200 gap-1">
-                    <span className="text-gray-700 font-medium">Specialty:</span>
-                    <span className="text-forest-900 font-semibold">{formData.specialty}</span>
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-3 border-b border-jade-200 gap-2">
+                    <span className="text-gray-700 font-medium text-sm sm:text-base">Specialty:</span>
+                    <span className="text-forest-900 font-semibold text-sm sm:text-base sm:text-right">{formData.specialty}</span>
                   </div>
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-jade-200 gap-1">
-                    <span className="text-gray-700 font-medium">City:</span>
-                    <span className="text-forest-900 font-semibold">{formData.city}</span>
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-3 border-b border-jade-200 gap-2">
+                    <span className="text-gray-700 font-medium text-sm sm:text-base">City:</span>
+                    <span className="text-forest-900 font-semibold text-sm sm:text-base sm:text-right">{formData.city}</span>
                   </div>
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-jade-200 gap-1">
-                    <span className="text-gray-700 font-medium">Preferred Date:</span>
-                    <span className="text-forest-900 font-semibold">{new Date(formData.preferredDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-3 border-b border-jade-200 gap-2">
+                    <span className="text-gray-700 font-medium text-sm sm:text-base">Preferred Date:</span>
+                    <span className="text-forest-900 font-semibold text-sm sm:text-base sm:text-right">{new Date(formData.preferredDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                   </div>
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 gap-1">
-                    <span className="text-gray-700 font-medium">Preferred Time:</span>
-                    <span className="text-forest-900 font-semibold capitalize">{formData.preferredTime} ({
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-3 gap-2">
+                    <span className="text-gray-700 font-medium text-sm sm:text-base">Preferred Time:</span>
+                    <span className="text-forest-900 font-semibold text-sm sm:text-base sm:text-right capitalize">{formData.preferredTime} ({
                       formData.preferredTime === 'morning' ? '9 AM - 12 PM' :
                       formData.preferredTime === 'afternoon' ? '12 PM - 5 PM' :
                       '5 PM - 9 PM'
@@ -741,7 +741,7 @@ ${servicesText}
                                   </p>
                                   {isFreeConsult && (
                                     <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-lime-400 text-forest-900">
-                                      Default
+                                      Selected
                                     </span>
                                   )}
                                 </div>
