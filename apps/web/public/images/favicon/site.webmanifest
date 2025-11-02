@@ -1,11 +1,11 @@
 ﻿{
-  "name": "Glowheal - Online Healthcare Platform",
-  "short_name": "Glowheal",
+  "name": "Doqor - Digital Wellness Platform",
+  "short_name": "Doqor",
   "description": "Free first consultation with verified doctors. Online healthcare for all your needs.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2D5A3D",
+  "theme_color": "#134E4A",
   "orientation": "portrait-primary",
   "icons": [
     {

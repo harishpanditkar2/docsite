@@ -73,7 +73,7 @@ export function Header() {
           <Link href="/" className="flex items-center">
             <img 
               src="/images/logo-with-text.svg" 
-              alt="Glowheal - Healthcare Platform" 
+              alt="Doqor - Digital Wellness Platform" 
               className="h-12 w-auto"
             />
           </Link>
