@@ -11,10 +11,10 @@ import { getCityFromCookieServer } from '@/lib/server-city';
 // This eliminates Google Fonts CDN request and improves LCP by 200-500ms
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://glowheal.in'),
+  metadataBase: new URL('https://doqor.com'),
   title: {
-    default: 'Glowheal - Free First Consultation | Online Doctor Video Call',
-    template: '%s | Glowheal',
+    default: 'Doqor - Free First Consultation | Online Doctor Video Call',
+    template: '%s | Doqor',
   },
   description:
     'Start with a free consultation with our in-house doctor. Get routed to 500+ verified specialists if needed. Video consultation for dermatology, mental health, nutrition & more. Available 24/7.',
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     'nutrition consultation',
     'healthcare platform',
   ],
-  authors: [{ name: 'Glowheal' }],
-  creator: 'Glowheal',
-  publisher: 'Glowheal',
+  authors: [{ name: 'Doqor' }],
+  creator: 'Doqor',
+  publisher: 'Doqor',
   formatDetection: {
     email: false,
     address: false,
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://glowheal.in',
-    siteName: 'Glowheal',
-    title: 'Glowheal - Free First Consultation | Online Doctor Video Call',
+    url: 'https://doqor.com',
+    siteName: 'Doqor',
+    title: 'Doqor - Free First Consultation | Online Doctor Video Call',
     description:
       'Start with a free consultation. Connect with 500+ verified doctors if needed. Available 24/7.',
     images: [
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
         url: '/images/og-homepage.jpg',
         width: 1200,
         height: 630,
-        alt: 'Glowheal - Online Healthcare Platform',
+        alt: 'Doqor - Online Healthcare Platform',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Glowheal - Free First Consultation with a Doctor',
+    title: 'Doqor - Free First Consultation with a Doctor',
     description: 'Start with a free consultation. Connect with 500+ verified specialists if needed.',
     images: ['/images/og-homepage.jpg'],
   },

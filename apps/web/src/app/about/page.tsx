@@ -5,12 +5,12 @@ import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
 import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builders';
 
 export const metadata: Metadata = {
-  title: 'About Glowheal | Transparent Healthcare Platform',
+  title: 'About Doqor | Transparent Healthcare Platform',
   description:
-    'Glowheal connects patients with verified doctors across India. Fixed transparent pricing, free first consultation, and quality healthcare you can trust.',
-  keywords: 'about glowheal, healthcare platform, verified doctors, transparent pricing, telemedicine india',
+    'Doqor connects patients with verified doctors across India. Fixed transparent pricing, free first consultation, and quality healthcare you can trust.',
+  keywords: 'about doqor, healthcare platform, verified doctors, transparent pricing, telemedicine india',
   openGraph: {
-    title: 'About Glowheal | Quality Healthcare Platform',
+    title: 'About Doqor | Quality Healthcare Platform',
     description: 'Connecting patients with verified doctors. Fixed pricing, free first consultation.',
     type: 'website',
   },
@@ -20,8 +20,8 @@ export default function AboutPage() {
   const schemas = [
     buildOrganizationSchema(),
     buildBreadcrumbSchema([
-      { name: 'Home', url: 'https://glowheal.in' },
-      { name: 'About', url: 'https://glowheal.in/about' },
+      { name: 'Home', url: 'https://doqor.com' },
+      { name: 'About', url: 'https://doqor.com/about' },
     ]),
   ];
 
@@ -36,7 +36,7 @@ export default function AboutPage() {
             Healthcare Made Simple, Transparent, and Accessible
           </h1>
           <p className="text-lg text-forest-700 mb-8 max-w-3xl mx-auto">
-            Glowheal is a digital healthcare platform connecting patients with verified doctors across India.
+            Doqor is a digital healthcare platform connecting patients with verified doctors across India.
             We believe in transparent pricing, quality care, and making healthcare accessible to everyone.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -80,7 +80,7 @@ export default function AboutPage() {
                   <p className="text-lime-600 font-semibold mb-4">Founder & CEO</p>
                   <p className="text-gray-700 leading-relaxed mb-4 text-sm">
                     Harish brings extensive experience in building high-performance API-driven platforms and scalable web applications. 
-                    He leads Glowheal's business strategy, technology architecture, go-to-market execution, and platform development.
+                    He leads Doqor's business strategy, technology architecture, go-to-market execution, and platform development.
                   </p>
                   <div className="space-y-2 text-xs text-forest-700">
                     <p className="flex items-center gap-2 justify-center">
@@ -116,7 +116,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-mist-500 mb-2">Coming Soon</h3>
                   <p className="text-mist-400 font-semibold mb-4 text-sm">Team Member</p>
                   <p className="text-mist-500 text-sm leading-relaxed">
-                    We're expanding our team. This position will be filled soon as we grow Glowheal.
+                    We're expanding our team. This position will be filled soon as we grow Doqor.
                   </p>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-mist-500 mb-2">Coming Soon</h3>
                   <p className="text-mist-400 font-semibold mb-4 text-sm">Team Member</p>
                   <p className="text-mist-500 text-sm leading-relaxed">
-                    We're expanding our team. This position will be filled soon as we grow Glowheal.
+                    We're expanding our team. This position will be filled soon as we grow Doqor.
                   </p>
                 </div>
               </div>
@@ -148,7 +148,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-mist-500 mb-2">Coming Soon</h3>
                   <p className="text-mist-400 font-semibold mb-4 text-sm">Team Member</p>
                   <p className="text-mist-500 text-sm leading-relaxed">
-                    We're expanding our team. This position will be filled soon as we grow Glowheal.
+                    We're expanding our team. This position will be filled soon as we grow Doqor.
                   </p>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function AboutPage() {
 
           {/* Why We Started Section */}
           <div className="mb-16 bg-gradient-to-br from-amber-50 to-lime-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-forest-900 mb-6 text-center">Why We Started Glowheal</h2>
+            <h2 className="text-3xl font-bold text-forest-900 mb-6 text-center">Why We Started Doqor</h2>
             <div className="max-w-3xl mx-auto space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Healthcare in India is broken. Patients face unclear pricing, hidden fees, and confusing referrals to specialists 
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 transparent prices.
               </p>
               <p>
-                Glowheal was born from a simple idea: <strong className="text-forest-900">what if healthcare was as transparent 
+                Doqor was born from a simple idea: <strong className="text-forest-900">what if healthcare was as transparent 
                 as ordering a product online?</strong> You see the price upfront, you talk to a doctor for free first, and you only 
                 pay when you're ready to proceed.
               </p>
@@ -233,7 +233,7 @@ export default function AboutPage() {
 
           {/* How It Works */}
           <div className="bg-white rounded-2xl shadow-soft p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-forest-900 mb-8 text-center">How Glowheal Works</h2>
+            <h2 className="text-3xl font-bold text-forest-900 mb-8 text-center">How Doqor Works</h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">

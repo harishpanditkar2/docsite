@@ -112,7 +112,7 @@ const socialLinks = [
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const { ctaHref, bannerText, proofText } = useFreeCta();
-  const whatsappPhone = '+918329563445';
+  const whatsappPhone = '+919860151400';
 
   return (
     <footer className="bg-forest-900 text-white pt-16 pb-8">

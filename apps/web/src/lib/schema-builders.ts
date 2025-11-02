@@ -24,25 +24,25 @@ export function buildOrganizationSchema(): WithContext<Organization> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Glowheal',
-    url: 'https://glowheal.in',
-    logo: 'https://glowheal.in/logo.png',
+    name: 'Doqor',
+    url: 'https://doqor.com',
+    logo: 'https://doqor.com/logo.png',
     description: 'Digital wellness platform connecting patients with 500+ verified doctors across India. Video consultations for all healthcare specialties.',
-    telephone: '+91-XXXXXXXXXX', // TODO: Add actual phone
-    email: 'support@glowheal.in',
+    telephone: '+91-9860151400',
+    email: 'support@doqor.com',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IN',
     },
     sameAs: [
-      'https://www.facebook.com/glowheal',
-      'https://www.instagram.com/glowheal',
-      'https://www.linkedin.com/company/glowheal',
-      'https://twitter.com/glowheal',
+      'https://www.facebook.com/doqor',
+      'https://www.instagram.com/doqor',
+      'https://www.linkedin.com/company/doqor',
+      'https://twitter.com/doqor',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+91-XXXXXXXXXX', // TODO: Add actual phone
+      telephone: '+91-9860151400',
       contactType: 'Customer Service',
       areaServed: 'IN',
       availableLanguage: ['English', 'Hindi'],
@@ -59,11 +59,11 @@ export function buildMedicalOrganizationSchema(
   return {
     '@context': 'https://schema.org',
     '@type': 'MedicalOrganization',
-    name: 'Glowheal',
-    url: 'https://glowheal.in',
-    logo: 'https://glowheal.in/logo.png',
+    name: 'Doqor',
+    url: 'https://doqor.com',
+    logo: 'https://doqor.com/logo.png',
     description: 'Comprehensive telemedicine platform offering expert consultations across 12+ medical specialties.',
-    telephone: '+91-XXXXXXXXXX',
+    telephone: '+91-9860151400',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IN',

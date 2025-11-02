@@ -21,7 +21,7 @@ export function useFreeCta() {
     ctaHref: '/book',
     
     // WhatsApp prefill message
-    whatsappText: 'Hi, I want to book my free first consultation with a Glowheal doctor.',
+    whatsappText: 'Hi, I want to book my free first consultation with a Doqor doctor.',
     
     // WhatsApp with concern
     getWhatsappTextWithConcern: (concern: string, city?: string) => {
@@ -45,7 +45,7 @@ export function useFreeCta() {
     pricingExplainer: 'Begin with a free call; specialist fees apply only if you proceed.',
     
     // Banner text
-    bannerText: 'Your first Glowheal consultation is free — book now',
+    bannerText: 'Your first Doqor consultation is free — book now',
     
     // Exit intent copy
     exitIntentText: 'Have questions? Your first call is free',
@@ -70,7 +70,7 @@ export function getFreeConsultWhatsAppURL(
   city?: string
 ): string {
   // Direct text generation without using the Hook (Hook can't be called from regular functions)
-  const whatsappText = 'Hi, I want to book my free first consultation with a Glowheal doctor.';
+  const whatsappText = 'Hi, I want to book my free first consultation with a Doqor doctor.';
   const cityPart = city ? ` in ${city}` : '';
   const textWithConcern = `Hi, I want to book my free first consultation for ${concern}${cityPart}.`;
   

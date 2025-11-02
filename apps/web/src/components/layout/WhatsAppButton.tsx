@@ -13,8 +13,8 @@ interface WhatsAppButtonProps {
  * 48x48px minimum touch target for mobile accessibility
  */
 export function WhatsAppButton({
-  phone = '918329563445', // E.164 format: country code + number (no plus, brackets, dashes)
-  defaultMessage = 'Hello! I would like to know more about Glowheal services.',
+  phone = '919860151400', // E.164 format: country code + number (no plus, brackets, dashes)
+  defaultMessage = 'Hello! I would like to know more about Doqor services.',
 }: WhatsAppButtonProps) {
   const pathname = usePathname();
 
