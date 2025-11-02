@@ -248,6 +248,7 @@ export default function HomePage() {
                   icon={service.icon}
                   priceRange={service.priceRange}
                   consultationFee={service.consultationFee}
+                  heroImage={service.heroImage}
                   showMostBooked={showMostBooked}
                 />
               );

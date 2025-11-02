@@ -151,6 +151,7 @@ export default function ServicesPage() {
                 icon={service.icon}
                 priceRange={service.priceRange}
                 consultationFee={service.consultationFee}
+                heroImage={service.heroImage}
               />
             ))}
           </div>
