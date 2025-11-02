@@ -35,10 +35,7 @@ export function buildOrganizationSchema(): WithContext<Organization> {
       addressCountry: 'IN',
     },
     sameAs: [
-      'https://www.facebook.com/doqor',
-      'https://www.instagram.com/doqor',
-      'https://www.linkedin.com/company/doqor',
-      'https://twitter.com/doqor',
+      // Social media links - to be updated with actual pages
     ],
     contactPoint: {
       '@type': 'ContactPoint',
