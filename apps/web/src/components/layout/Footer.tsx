@@ -212,7 +212,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center justify-center md:justify-start w-full md:w-auto">
+            <div className="flex items-center justify-center w-full md:w-auto md:justify-start">
               <img 
                 src="/images/logo-white.svg" 
                 alt="Doqor" 

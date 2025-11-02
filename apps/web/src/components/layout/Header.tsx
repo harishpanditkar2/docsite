@@ -21,7 +21,7 @@ const mainNav = [
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(true); // Expanded by default on mobile
   const [isCityDropdownOpen, setIsCityDropdownOpen] = useState(false);
   const cityDropdownRef = useRef<HTMLDivElement>(null);
   const { ctaText, ctaHref, whatsappText } = useFreeCta();
