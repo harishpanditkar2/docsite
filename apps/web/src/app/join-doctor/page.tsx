@@ -6,10 +6,10 @@ import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-bui
 import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
 
 export const metadata: Metadata = {
-  title: 'Join as Doctor | Partner with Glowheal',
-  description: 'Grow your practice with Glowheal. Get qualified patients, transparent payouts, and steady referrals across 13 specialties. Zero setup fee. Start in days.',
+  title: 'Join as Doctor | Partner with Doqor',
+  description: 'Grow your practice with Doqor. Get qualified patients, transparent payouts, and steady referrals across 13 specialties. Zero setup fee. Start in days.',
   openGraph: {
-    title: 'Join as Doctor | Partner with Glowheal',
+    title: 'Join as Doctor | Partner with Doqor',
     description: 'Grow your practice with qualified patient leads and transparent fixed pricing.',
     type: 'website',
   },
@@ -25,8 +25,8 @@ export default function JoinDoctorPage() {
 
   const organizationSchema = buildOrganizationSchema();
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: 'Home', url: 'https://glowheal.in' },
-    { name: 'Join as Doctor', url: 'https://glowheal.in/join-doctor' },
+    { name: 'Home', url: 'https://Doqor.in' },
+    { name: 'Join as Doctor', url: 'https://Doqor.in/join-doctor' },
   ]);
 
   return (
@@ -38,7 +38,7 @@ export default function JoinDoctorPage() {
         <div className="container-width">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Grow Your Practice with Glowheal
+              Grow Your Practice with Doqor
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-jade-50">
               Get qualified patients. Keep higher profits. Zero setup fee.
@@ -62,7 +62,7 @@ export default function JoinDoctorPage() {
       <section className="py-16">
         <div className="container-width">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-forest-900 mb-12">
-            Why Partner with Glowheal?
+            Why Partner with Doqor?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Benefit 1 */}
@@ -91,7 +91,7 @@ export default function JoinDoctorPage() {
                 Fixed Patient Pricing, Transparent Payouts
               </h3>
               <p className="text-gray-700">
-                No rate haggling. Patients see Glowheal fixed prices. You get predictable revenue per service.
+                No rate haggling. Patients see Doqor fixed prices. You get predictable revenue per service.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ export default function JoinDoctorPage() {
                 <thead className="bg-forest-50">
                   <tr>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-forest-900">Service</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-forest-900">Glowheal Patient Price</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-forest-900">Doqor Patient Price</th>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-forest-900">Illustrative Doctor Payout*</th>
                   </tr>
                 </thead>
@@ -244,7 +244,7 @@ export default function JoinDoctorPage() {
                 <span className="group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-gray-700 mt-4">
-                All consultations and records follow DISHA (Digital Information Security in Healthcare Act) and IT Act guidelines. Patient consent required for data sharing. You own your clinical notes; Glowheal handles booking/payment data only.
+                All consultations and records follow DISHA (Digital Information Security in Healthcare Act) and IT Act guidelines. Patient consent required for data sharing. You own your clinical notes; Doqor handles booking/payment data only.
               </p>
             </details>
 
@@ -254,7 +254,7 @@ export default function JoinDoctorPage() {
                 <span className="group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-gray-700 mt-4">
-                Glowheal uses fixed patient-facing prices for transparency. Doctor payouts are based on a pre-agreed fee schedule that factors in specialty, complexity, and market rates. During onboarding, we'll discuss the schedule for your specialties.
+                Doqor uses fixed patient-facing prices for transparency. Doctor payouts are based on a pre-agreed fee schedule that factors in specialty, complexity, and market rates. During onboarding, we'll discuss the schedule for your specialties.
               </p>
             </details>
           </div>
@@ -266,7 +266,7 @@ export default function JoinDoctorPage() {
         <div className="container-width">
           <div className="max-w-4xl mx-auto mb-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-forest-900 mb-4">
-              Ready to Join Glowheal?
+              Ready to Join Doqor?
             </h2>
             <p className="text-lg text-gray-700">
               Fill out the application below. Our partnerships team will review and reach out within 2-3 business days.

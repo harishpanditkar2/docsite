@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Find Doctors Online | 500+ Verified Specialists - Glowheal',
+  title: 'Find Doctors Online | 500+ Verified Specialists - Doqor',
   description: 'Browse 500+ verified doctors across 12 specialties. Filter by city, language, rating. Start with free consultation. View fixed pricing for Pune services.',
   openGraph: {
-    title: 'Find Doctors Online | 500+ Verified Specialists - Glowheal',
+    title: 'Find Doctors Online | 500+ Verified Specialists - Doqor',
     description: 'Browse 500+ verified doctors across 12 specialties. Start with free consultation.',
-    url: 'https://glowheal.in/doctors',
+    url: 'https://Doqor.in/doctors',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,3 +22,4 @@ export default function DoctorsLayout({
 }) {
   return <>{children}</>;
 }
+

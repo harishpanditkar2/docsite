@@ -107,7 +107,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://glowheal.in" />
+        <link rel="canonical" href="https://doqor.com" />
         {/* Preload critical display font for LCP optimization */}
         <link
           rel="preload"

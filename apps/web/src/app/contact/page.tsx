@@ -65,7 +65,7 @@ export default function ContactPage() {
 
     setSubmitMethod('whatsapp');
     
-    const whatsappMessage = `🌿 *Glowheal Contact Form*
+    const whatsappMessage = `🌿 *Doqor Contact Form*
 
 👤 *Name:* ${data.name}
 📧 *Email:* ${data.email || 'Not provided'}
@@ -117,8 +117,8 @@ ${data.message}`;
                 </svg>
               </div>
               <h3 className="font-semibold text-forest-900 mb-2">Email</h3>
-              <a href="mailto:hello@glowheal.com" className="text-lime-600 hover:text-lime-700 font-medium">
-                hello@glowheal.com
+              <a href="mailto:hello@Doqor.com" className="text-lime-600 hover:text-lime-700 font-medium">
+                hello@Doqor.com
               </a>
             </div>
 

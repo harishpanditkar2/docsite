@@ -1,4 +1,4 @@
-# Glowheal Copilot Instructions
+# Doqor Copilot Instructions
 
 ## Project Architecture
 
@@ -103,7 +103,7 @@ const { ctaText, ctaHref, whatsappText } = useFreeCta();
 **WhatsApp Integration:**
 - `getFreeConsultWhatsAppURL(phone, concern?, city?)` - Generates wa.me link
 - Used in sticky buttons, success page, header
-- Phone: `+918329563445` (hardcoded in multiple components)
+- Phone: `+919860151400` (hardcoded in multiple components)
 
 ---
 
@@ -210,7 +210,7 @@ export function Component({ variant = 'default', className, ...props }: Componen
 
 ```typescript
 export const metadata: Metadata = {
-  title: 'Page Title | Glowheal',
+  title: 'Page Title | Doqor',
   description: 'SEO description with keywords',
   openGraph: { /* OG tags */ }
 };

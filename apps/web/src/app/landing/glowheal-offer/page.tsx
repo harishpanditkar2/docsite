@@ -87,7 +87,7 @@ export default function LandingPage() {
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-jade-600">
-            Glowheal
+            Doqor
           </Link>
           <a href="tel:+918329563445" className="text-sm text-gray-600 hover:text-gray-900">
             📞 8329563445

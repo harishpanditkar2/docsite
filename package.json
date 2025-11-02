@@ -1,8 +1,8 @@
 {
-  "name": "glowheal-monorepo",
+  "name": "doqor-monorepo",
   "version": "1.0.0",
   "private": true,
-  "description": "Glowheal - Digital Wellness Platform",
+  "description": "Doqor - Digital Wellness Platform",
   "workspaces": [
     "apps/*",
     "packages/*"

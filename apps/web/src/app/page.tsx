@@ -20,7 +20,7 @@ const homepageFAQs: FAQItem[] = [
   },
   {
     question: 'Are the doctors verified and licensed?',
-    answer: 'Yes, all doctors on Glowheal are verified with valid medical licenses and registrations. We conduct thorough background checks to ensure you receive care from qualified healthcare professionals.',
+    answer: 'Yes, all doctors on Doqor are verified with valid medical licenses and registrations. We conduct thorough background checks to ensure you receive care from qualified healthcare professionals.',
   },
   {
     question: 'What is the consultation fee?',
@@ -32,7 +32,7 @@ const homepageFAQs: FAQItem[] = [
   },
   {
     question: 'How do I receive my prescription after consultation?',
-    answer: 'After your video consultation, the doctor will send a digital prescription directly to your registered email and it will also be available in your Glowheal dashboard.',
+    answer: 'After your video consultation, the doctor will send a digital prescription directly to your registered email and it will also be available in your Doqor dashboard.',
   },
   {
     question: 'Is my medical data secure and confidential?',
@@ -269,7 +269,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-display text-forest-700 mb-4">
-              How Glowheal Works
+              How Doqor Works
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Start with a free consultation and get routed to the right specialist
@@ -280,7 +280,7 @@ export default function HomePage() {
             {[
               {
                 step: '1',
-                title: 'Free Call with Glowheal Doctor',
+                title: 'Free Call with Doqor Doctor',
                 description: 'Talk to our in-house doctor at no cost about your health concern',
                 icon: (
                   <svg className="w-16 h-16 text-jade-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -344,7 +344,7 @@ export default function HomePage() {
           <FAQAccordion
             faqs={homepageFAQs}
             title="Frequently Asked Questions"
-            description="Everything you need to know about online consultations on Glowheal"
+            description="Everything you need to know about online consultations on Doqor"
           />
         </div>
       </section>
@@ -356,7 +356,7 @@ export default function HomePage() {
             Ready to Start Your Health Journey?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-jade-100 leading-relaxed">
-            Join 2 million+ Indians who trust Glowheal. Your first consultation is completely free.
+            Join 2 million+ Indians who trust Doqor. Your first consultation is completely free.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href={ctaHref}>

@@ -136,7 +136,7 @@ export function DoctorCard({
             <p className="text-xs text-gray-700 mt-1 font-medium">Only if you proceed with this specialist</p>
           </div>
 
-          {/* NEW: Glowheal Fixed Pricing Tag */}
+          {/* NEW: Doqor Fixed Pricing Tag */}
           {glowealPrice && (
             <div 
               onClick={(e) => {
@@ -149,12 +149,12 @@ export function DoctorCard({
                 <svg className="w-4 h-4 text-amber-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
-                <span className="flex-1 min-w-0">Glowheal price in {city}: {formatPrice(glowealPrice.price)}</span>
+                <span className="flex-1 min-w-0">Doqor price in {city}: {formatPrice(glowealPrice.price)}</span>
                 <button
                   type="button"
                   className="relative flex-shrink-0"
-                  aria-label="Partner doctors follow Glowheal fixed prices for listed services"
-                  title="Partner doctors follow Glowheal fixed prices for listed services"
+                  aria-label="Partner doctors follow Doqor fixed prices for listed services"
+                  title="Partner doctors follow Doqor fixed prices for listed services"
                 >
                   <svg className="w-4 h-4 text-gray-500 group-hover/price:text-gray-700" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />

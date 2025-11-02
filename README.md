@@ -1,4 +1,4 @@
-# Glowheal - Digital Wellness Platform
+# Doqor - Digital Wellness Platform
 
 > **Professional healthcare aggregator connecting 500+ verified doctors with patients across India**
 
@@ -9,7 +9,7 @@
 
 ## 🚀 Project Overview
 
-Glowheal is a modern, high-performance healthcare platform built with Next.js 14 App Router, focusing on:
+Doqor is a modern, high-performance healthcare platform built with Next.js 14 App Router, focusing on:
 
 - ✅ **Performance**: Core Web Vitals compliance (LCP ≤2.5s, INP ≤200ms, CLS ≤0.1)
 - ✅ **SEO**: Healthcare-specific JSON-LD schema markup for rich results

@@ -43,7 +43,7 @@ const reviews: Review[] = [
     city: 'Delhi',
     rating: 5,
     quote:
-      'After 3 failed attempts with other clinics, Glowheal\'s doctor routed me to a PCOS specialist. The personalized plan helped me lose 8 kg and regulate my cycle.',
+      'After 3 failed attempts with other clinics, Doqor\'s doctor routed me to a PCOS specialist. The personalized plan helped me lose 8 kg and regulate my cycle.',
     verified: true,
     date: 'Oct 2025',
   },
@@ -76,7 +76,7 @@ const reviews: Review[] = [
     city: 'Chennai',
     rating: 5,
     quote:
-      'Suffered from IBS for 2 years. The gastroenterologist on Glowheal gave me a clear diagnosis and treatment plan. Symptoms reduced by 80%.',
+      'Suffered from IBS for 2 years. The gastroenterologist on Doqor gave me a clear diagnosis and treatment plan. Symptoms reduced by 80%.',
     verified: true,
     date: 'Oct 2025',
   },
