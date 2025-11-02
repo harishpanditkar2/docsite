@@ -4,7 +4,7 @@
   "currency": "INR",
   "teleconsult": {
     "first_consult": 0,
-    "note": "Glowheal in-house doctor"
+    "note": "Doqor in-house doctor"
   },
   "specialties": [
     {
@@ -1298,9 +1298,9 @@
     }
   ],
   "disclaimers": [
-    "Your first consultation is free with Glowheal's in-house doctor.",
+    "Your first consultation is free with Doqor's in-house doctor.",
     "Payment occurs only after consent based on selected services.",
     "Fixed prices apply at partner clinics in Pune.",
-    "Add-ons (labs, implants, room upgrades) are billed per Glowheal add-on catalog after explicit consent."
+    "Add-ons (labs, implants, room upgrades) are billed per Doqor add-on catalog after explicit consent."
   ]
 }

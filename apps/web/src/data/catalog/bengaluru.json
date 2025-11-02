@@ -4,7 +4,7 @@
   "currency": "INR",
   "teleconsult": {
     "first_consult": 0,
-    "note": "Your first call with a Glowheal doctor is completely free. If specialist care is recommended, fixed pricing applies."
+    "note": "Your first call with a Doqor doctor is completely free. If specialist care is recommended, fixed pricing applies."
   },
   "specialties": [
     {
@@ -64,8 +64,8 @@
   ],
   "disclaimers": [
     "All prices are fixed for Bengaluru and include GST.",
-    "Add-ons like lab tests, imaging, and medications are billed separately per Glowheal add-on catalog.",
-    "First consultation with Glowheal doctor is completely free (₹0).",
+    "Add-ons like lab tests, imaging, and medications are billed separately per Doqor add-on catalog.",
+    "First consultation with Doqor doctor is completely free (₹0).",
     "Payment required only after consultation and consent to treatment.",
     "[TODO: Medical review required - consult with healthcare compliance team before launching Bengaluru catalog]"
   ]
