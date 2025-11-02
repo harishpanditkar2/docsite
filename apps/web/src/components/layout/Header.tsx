@@ -201,7 +201,7 @@ export function Header() {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <button className={`text-forest-700 hover:text-lime-600 font-semibold text-sm transition-colors py-2 ${isServicesOpen ? 'text-lime-600' : ''}`}>
+                  <button className={`text-forest-700 hover:text-lime-600 font-semibold text-base transition-colors py-2 ${isServicesOpen ? 'text-lime-600' : ''}`}>
                     {item.label}
                     <svg
                       className={`inline-block ml-1 w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}
@@ -265,7 +265,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-forest-700 hover:text-lime-600 font-semibold text-sm transition-colors py-2"
+                  className="text-forest-700 hover:text-lime-600 font-semibold text-base transition-colors py-2"
                 >
                   {item.label}
                 </Link>
