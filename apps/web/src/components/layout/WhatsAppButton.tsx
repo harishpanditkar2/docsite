@@ -21,7 +21,7 @@ export function WhatsAppButton({
   // Generate page-specific WhatsApp messages
   const getContextualMessage = (): string => {
     if (pathname === '/') {
-      return 'Hello! I visited your homepage and would like to book a consultation.';
+      return 'Hello! I visited Doqor and would like to book a consultation.';
     }
     if (pathname.startsWith('/services/')) {
       const serviceName = pathname.split('/').pop()?.replace(/-/g, ' ');

@@ -67,15 +67,15 @@ export default function ContactPage() {
     
     const whatsappMessage = `ðŸŒ¿ *Doqor Contact Form*
 
-ðŸ‘¤ *Name:* ${data.name}
-ðŸ“§ *Email:* ${data.email || 'Not provided'}
-ðŸ“± *Phone:* ${data.phone}
-ðŸ“‹ *Subject:* ${data.subject}
+ðŸ'¤ *Name:* ${data.name}
+ðŸ"§ *Email:* ${data.email || 'Not provided'}
+ðŸ"± *Phone:* ${data.phone}
+ðŸ"‹ *Subject:* ${data.subject}
 
-ðŸ’¬ *Message:*
+ðŸ'¬ *Message:*
 ${data.message}`;
 
-    const whatsappUrl = `https://wa.me/918329563445?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/919860151400?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     
     setSubmitSuccess(true);
@@ -105,8 +105,8 @@ ${data.message}`;
                 </svg>
               </div>
               <h3 className="font-semibold text-forest-900 mb-2">Phone</h3>
-              <a href="tel:+918329563445" className="text-lime-600 hover:text-lime-700 font-medium">
-                +91 832 956 3445
+              <a href="tel:+919860151400" className="text-lime-600 hover:text-lime-700 font-medium">
+                +91 986 015 1400
               </a>
             </div>
 
@@ -129,7 +129,7 @@ ${data.message}`;
                 </svg>
               </div>
               <h3 className="font-semibold text-forest-900 mb-2">WhatsApp</h3>
-              <a href="https://wa.me/918329563445" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 font-medium">
+              <a href="https://wa.me/919860151400" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 font-medium">
                 Chat with us
               </a>
             </div>

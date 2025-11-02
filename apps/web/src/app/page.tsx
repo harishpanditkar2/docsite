@@ -50,7 +50,7 @@ export default function HomePage() {
     proofText 
   } = useFreeCta();
   
-  const whatsappPhone = '+918329563445';
+  const whatsappPhone = '+919860151400';
 
   // Generate JSON-LD schemas for homepage
   const organizationSchema = buildOrganizationSchema();

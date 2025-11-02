@@ -89,8 +89,8 @@ export default function LandingPage() {
           <Link href="/" className="text-2xl font-bold text-jade-600">
             Doqor
           </Link>
-          <a href="tel:+918329563445" className="text-sm text-gray-600 hover:text-gray-900">
-            ðŸ“ž 8329563445
+          <a href="tel:+919860151400" className="text-sm text-gray-600 hover:text-gray-900">
+            ðŸ"ž 9860151400
           </a>
         </div>
       </header>

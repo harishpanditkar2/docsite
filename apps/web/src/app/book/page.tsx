@@ -359,7 +359,7 @@ ${servicesText}
 
 âœ… I confirm booking and will wait for your call to schedule the consultation.`;
 
-        const whatsappUrl = `https://wa.me/918329563445?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappUrl = `https://wa.me/919860151400?text=${encodeURIComponent(whatsappMessage)}`;
         
         console.log('Opening WhatsApp with URL:', whatsappUrl);
         
@@ -402,7 +402,7 @@ ${servicesText}
       : `Hi, I just submitted booking ${bookingId}. My name is ${formData.name} and I need ${formData.specialty} consultation in ${formData.city}.${truncatedServiceNames ? ` Interested in: ${truncatedServiceNames}` : ''}`;
     
     const whatsappURL = getFreeConsultWhatsAppURL(formData.specialty, formData.city);
-    const whatsappFallback = `https://api.whatsapp.com/send?phone=918329563445&text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappFallback = `https://api.whatsapp.com/send?phone=919860151400&text=${encodeURIComponent(whatsappMessage)}`;
 
     return (
       <div className="min-h-screen bg-gradient-to-b from-forest-50 to-white py-12">
@@ -589,17 +589,17 @@ ${servicesText}
           {/* Hero Banner for Free Consultation */}
           <div className="bg-gradient-to-r from-forest-700 to-jade-600 text-white rounded-2xl p-6 mb-8 shadow-lg">
             <h1 className="text-3xl font-bold mb-2">Book Your Consultation</h1>
-            <p className="text-forest-50 text-lg mb-3">{proofText}</p>
+            <p className="text-forest-50 text-lg mb-3">Your first call is free. Specialist bookings only after your plan is confirmed.</p>
             <div className="flex items-center gap-2 text-sm text-forest-50">
               <span>Prefer to call?</span>
               <a 
-                href="tel:+918329563445" 
+                href="tel:+919860151400" 
                 className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-forest-100 transition-colors underline underline-offset-2"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                +91 832 956 3445
+                +91 986 015 1400
               </a>
             </div>
           </div>
@@ -1158,7 +1158,7 @@ ${servicesText}
             <p>
               Need help?{' '}
               <a
-                href="https://wa.me/918329563445?text=I%20need%20help%20with%20booking"
+                href="https://wa.me/919860151400?text=I%20need%20help%20with%20booking"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-jade-600 hover:text-jade-800 font-medium"

@@ -50,8 +50,8 @@ export default function JoinDoctorPage() {
               <Button variant="primary" size="lg" href="#apply">
                 Join Now (Free)
               </Button>
-              <Button variant="secondary" size="lg" href="tel:+918329563445">
-                ðŸ“ž Talk to Partnerships
+              <Button variant="secondary" size="lg" href="tel:+919860151400">
+                ðŸ"ž Talk to Partnerships
               </Button>
             </div>
           </div>
