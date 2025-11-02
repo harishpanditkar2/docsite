@@ -101,16 +101,8 @@ export default function ServicePage({ params }: ServicePageProps) {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              {/* Image first on mobile, right side on desktop */}
-              <div className="flex-shrink-0 order-1 md:order-2">
-                <img
-                  src={service.heroImage}
-                  alt={service.name}
-                  className="w-64 h-64 rounded-2xl object-cover shadow-2xl border-4 border-white/20"
-                />
-              </div>
-              {/* Text content - centered on mobile, left-aligned on desktop */}
-              <div className="flex-1 order-2 md:order-1 text-center md:text-left">
+              {/* Text content first on mobile, left side on desktop */}
+              <div className="flex-1 order-1 text-center md:text-left">
                 <span className="inline-block bg-lime-400 text-forest-900 text-sm font-semibold px-3 py-1 rounded-full mb-4">
                   {service.icon} Specialty
                 </span>
@@ -127,6 +119,14 @@ export default function ServicePage({ params }: ServicePageProps) {
                     </Link>
                   </Button>
                 </div>
+              </div>
+              {/* Image after text on mobile, right side on desktop */}
+              <div className="flex-shrink-0 order-2">
+                <img
+                  src={service.heroImage}
+                  alt={service.name}
+                  className="w-64 h-64 rounded-2xl object-cover shadow-2xl border-4 border-white/20"
+                />
               </div>
             </div>
           </div>

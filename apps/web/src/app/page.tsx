@@ -81,9 +81,10 @@ export default function HomePage() {
           <img
             src="/images/hero/hero-home.jpg"
             alt="Healthcare consultation"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-forest-900/60 to-jade-900/60" />
+          {/* Dark overlay with gradient for text readability (70-80% opacity) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/75 to-black/70" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
