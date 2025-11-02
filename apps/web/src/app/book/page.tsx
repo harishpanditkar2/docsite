@@ -465,23 +465,23 @@ ${servicesText}
                   Your Booking Details
                 </h2>
                 <div className="text-left space-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-jade-200">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-jade-200 gap-1">
                     <span className="text-gray-700 font-medium">Consultation Type:</span>
                     <span className="text-forest-900 font-semibold">{isFreeConsult ? 'Free First Consultation (₹0)' : 'Specialist Consultation'}</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-jade-200">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-jade-200 gap-1">
                     <span className="text-gray-700 font-medium">Specialty:</span>
                     <span className="text-forest-900 font-semibold">{formData.specialty}</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-jade-200">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-jade-200 gap-1">
                     <span className="text-gray-700 font-medium">City:</span>
                     <span className="text-forest-900 font-semibold">{formData.city}</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-jade-200">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-jade-200 gap-1">
                     <span className="text-gray-700 font-medium">Preferred Date:</span>
                     <span className="text-forest-900 font-semibold">{new Date(formData.preferredDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                   </div>
-                  <div className="flex justify-between items-center py-2">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 gap-1">
                     <span className="text-gray-700 font-medium">Preferred Time:</span>
                     <span className="text-forest-900 font-semibold capitalize">{formData.preferredTime} ({
                       formData.preferredTime === 'morning' ? '9 AM - 12 PM' :

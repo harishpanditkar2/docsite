@@ -81,7 +81,7 @@ export default function HomePage() {
           <img
             src="/images/hero/hero-home.jpg"
             alt="Healthcare consultation"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[40%_center] sm:object-center"
           />
           {/* Dark overlay with gradient for text readability (70-80% opacity) */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/75 to-black/70" />
