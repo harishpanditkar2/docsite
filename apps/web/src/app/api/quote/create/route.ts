@@ -130,7 +130,7 @@ function generateQuoteHTML(data: {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glowheal Quote - ${leadId}</title>
+  <title>Doqor Quote - ${leadId}</title>
   <style>
     @media print {
       @page {
@@ -230,7 +230,7 @@ function generateQuoteHTML(data: {
     }
 
     .services-section h2::before {
-      content: '📋';
+      content: 'ðŸ“‹';
       margin-right: 8px;
     }
 
@@ -289,7 +289,7 @@ function generateQuoteHTML(data: {
     }
 
     .includes li::before {
-      content: '✓ ';
+      content: 'âœ“ ';
       color: #10b981;
       font-weight: bold;
       margin-right: 4px;
@@ -300,7 +300,7 @@ function generateQuoteHTML(data: {
     }
 
     .excludes li::before {
-      content: '✗ ';
+      content: 'âœ— ';
       color: #ef4444;
       font-weight: bold;
       margin-right: 4px;
@@ -422,7 +422,7 @@ function generateQuoteHTML(data: {
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo">Glowheal</div>
+      <div class="logo">Doqor</div>
       <div class="quote-meta">
         <strong>Quote #${leadId}</strong>
         <div>Date: ${formattedDate}</div>
@@ -479,16 +479,16 @@ function generateQuoteHTML(data: {
       </div>
       <div class="totals-row due-now">
         <span>Amount Due Now:</span>
-        <span style="color: #10b981;">₹0 (Free Consultation)</span>
+        <span style="color: #10b981;">â‚¹0 (Free Consultation)</span>
       </div>
     </div>
 
     <div class="disclaimers">
-      <h3>⚠️ Important Notes:</h3>
+      <h3>âš ï¸ Important Notes:</h3>
       <ul>
         <li><strong>This is a provisional quote only.</strong> Final services and costs will be confirmed after your free consultation with our doctor.</li>
         <li><strong>Payment required only after consultation and consent.</strong> You are under no obligation to proceed with any service.</li>
-        <li><strong>Add-ons not included:</strong> Lab tests, imaging, medications, and implants are billed separately per Glowheal add-on catalog.</li>
+        <li><strong>Add-ons not included:</strong> Lab tests, imaging, medications, and implants are billed separately per Doqor add-on catalog.</li>
         <li><strong>Prices are fixed for ${city}.</strong> No hidden charges. All prices include GST.</li>
         <li><strong>Valid for 30 days</strong> from the date of this quote.</li>
         <li><strong>Partner doctor fees:</strong> If routed to a specialist, standard consultation fees may apply separately from treatment costs.</li>
@@ -496,15 +496,15 @@ function generateQuoteHTML(data: {
     </div>
 
     <div class="footer">
-      <strong>Glowheal Healthcare Services</strong>
-      <div>Phone: +91 8329563445 | Email: hello@glowheal.in</div>
-      <div>Visit: https://glowheal.in/pricing</div>
+      <strong>Doqor Healthcare Services</strong>
+      <div>Phone: +91 8329563445 | Email: hello@Doqor.in</div>
+      <div>Visit: https://Doqor.in/pricing</div>
       <div style="margin-top: 8px;">Generated on ${new Date(generatedAt).toLocaleString('en-IN')}</div>
     </div>
   </div>
 
   <button class="print-button no-print" onclick="window.print()">
-    🖨️ Print / Save as PDF
+    ðŸ–¨ï¸ Print / Save as PDF
   </button>
 
   <script>

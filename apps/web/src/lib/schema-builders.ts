@@ -94,14 +94,14 @@ export function buildPhysicianSchema(doctor: {
     '@context': 'https://schema.org' as const,
     '@type': 'Physician' as const,
     name: doctor.name,
-    image: `https://glowheal.in${doctor.image}`,
+    image: `https://doqor.com${doctor.image}`,
     description: doctor.bio,
-    url: `https://glowheal.in/doctors/${doctor.slug}`,
+    url: `https://doqor.com/doctors/${doctor.slug}`,
     medicalSpecialty: doctor.specialty,
     worksFor: {
       '@type': 'MedicalOrganization' as const,
-      name: 'Glowheal',
-      url: 'https://glowheal.in',
+      name: 'Doqor',
+      url: 'https://doqor.com',
     },
     // Add optional properties
     ...(doctor.education && doctor.education.length > 0 && {
@@ -151,11 +151,11 @@ export function buildLocalBusinessSchema(data: {
   const schema: any = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: `Glowheal - ${data.service} Services in ${data.city}`,
-    url: `https://glowheal.in/cities/${data.city.toLowerCase()}/${data.service.toLowerCase().replace(/\s+/g, '-')}`,
+    name: `Doqor - ${data.service} Services in ${data.city}`,
+    url: `https://doqor.com/cities/${data.city.toLowerCase()}/${data.service.toLowerCase().replace(/\s+/g, '-')}`,
     description: `Expert ${data.service} consultations in ${data.city}. Connect with verified specialists online.`,
-    telephone: '+91-XXXXXXXXXX',
-    priceRange: '₹499-₹4999',
+    telephone: '+91-9860151400',
+    priceRange: 'â‚¹499-â‚¹4999',
   };
 
   // Add address if provided
@@ -230,7 +230,7 @@ export function buildBreadcrumbSchema(
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.name,
-      item: `https://glowheal.in${crumb.url}`,
+      item: `https://doqor.com${crumb.url}`,
     })),
   };
 }
@@ -296,7 +296,7 @@ export function buildArticleSchema(article: {
     '@type': 'Article',
     headline: article.title,
     description: article.description,
-    image: `https://glowheal.in${article.image}`,
+    image: `https://doqor.com${article.image}`,
     datePublished: article.datePublished,
     dateModified: article.dateModified || article.datePublished,
     author: {
@@ -305,16 +305,16 @@ export function buildArticleSchema(article: {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Glowheal',
+      name: 'Doqor',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://glowheal.in/logo.png',
+        url: 'https://doqor.com/logo.png',
       },
     },
-    url: `https://glowheal.in${article.url}`,
+    url: `https://doqor.com${article.url}`,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://glowheal.in${article.url}`,
+      '@id': `https://doqor.com${article.url}`,
     },
   };
 }

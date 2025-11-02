@@ -45,7 +45,7 @@ export function useFreeCta() {
     pricingExplainer: 'Begin with a free call; specialist fees apply only if you proceed.',
     
     // Banner text
-    bannerText: 'Your first Doqor consultation is free — book now',
+    bannerText: 'Your first Doqor consultation is free â€” book now',
     
     // Exit intent copy
     exitIntentText: 'Have questions? Your first call is free',

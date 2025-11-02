@@ -24,7 +24,7 @@ const homepageFAQs: FAQItem[] = [
   },
   {
     question: 'What is the consultation fee?',
-    answer: "Your first consultation with our in-house doctor is completely free (₹0). If specialist care is recommended, you'll see transparent fixed pricing for services in Pune. Visit our Pricing page for full details. No hidden charges, no surprise fees.",
+    answer: "Your first consultation with our in-house doctor is completely free (â‚¹0). If specialist care is recommended, you'll see transparent fixed pricing for services in Pune. Visit our Pricing page for full details. No hidden charges, no surprise fees.",
   },
   {
     question: 'Can I get a refund if I cancel my appointment?',
@@ -98,7 +98,7 @@ export default function HomePage() {
               <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="font-bold whitespace-nowrap">₹0 first consultation — no hidden costs</span>
+              <span className="font-bold whitespace-nowrap">â‚¹0 first consultation â€” no hidden costs</span>
             </div>
             
             {/* Trust Chips - Research-backed confidence builders */}
@@ -109,14 +109,14 @@ export default function HomePage() {
                 </svg>
                 <span className="whitespace-nowrap">Verified doctors</span>
               </span>
-              <span className="text-white/60" aria-hidden="true">·</span>
+              <span className="text-white/60" aria-hidden="true">Â·</span>
               <span className="flex items-center gap-1.5 h-8">
                 <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
                 <span className="whitespace-nowrap">Transparent fixed prices</span>
               </span>
-              <span className="text-white/60" aria-hidden="true">·</span>
+              <span className="text-white/60" aria-hidden="true">Â·</span>
               <span className="flex items-center gap-1.5 h-8">
                 <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

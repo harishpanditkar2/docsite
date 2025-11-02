@@ -5,12 +5,12 @@ import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
 import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builders';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Services Across India | Pune, Mumbai, Bengaluru - Glowheal',
+  title: 'Healthcare Services Across India | Pune, Mumbai, Bengaluru - Doqor',
   description:
     'Access quality healthcare services in Pune, Mumbai, and Bengaluru. Free first consultation with verified doctors. Fixed transparent pricing across all cities.',
   keywords: 'healthcare cities india, pune doctors, mumbai healthcare, bengaluru medical services, multi-city healthcare',
   openGraph: {
-    title: 'Cities We Serve | Glowheal Healthcare',
+    title: 'Cities We Serve | Doqor Healthcare',
     description: 'Quality healthcare across Pune, Mumbai, and Bengaluru with free first consultation.',
     type: 'website',
   },
@@ -44,8 +44,8 @@ export default function CitiesPage() {
   const schemas = [
     buildOrganizationSchema(),
     buildBreadcrumbSchema([
-      { name: 'Home', url: 'https://glowheal.in' },
-      { name: 'Cities', url: 'https://glowheal.in/cities' },
+      { name: 'Home', url: 'https://Doqor.in' },
+      { name: 'Cities', url: 'https://Doqor.in/cities' },
     ]),
   ];
 
@@ -62,7 +62,7 @@ export default function CitiesPage() {
           </h1>
           <p className="text-lg text-forest-700 mb-8 max-w-3xl mx-auto">
             Access quality healthcare with verified doctors in major cities. Start with a free first consultation,
-            then see exact costs upfront—no hidden fees, no surprise charges.
+            then see exact costs upfrontâ€”no hidden fees, no surprise charges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book">

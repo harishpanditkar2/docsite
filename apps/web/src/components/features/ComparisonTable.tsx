@@ -1,63 +1,63 @@
 export function ComparisonTable() {
   const features: Array<{
     feature: string;
-    glowheal: boolean | 'partial';
+    Doqor: boolean | 'partial';
     aggregator: boolean | 'partial';
     clinic: boolean | 'partial';
     description: string;
   }> = [
     {
       feature: 'Free First Consultation',
-      glowheal: true,
+      Doqor: true,
       aggregator: false,
       clinic: false,
       description: 'Talk to our doctor at no cost before specialist routing',
     },
     {
       feature: 'Smart Specialist Routing',
-      glowheal: true,
+      Doqor: true,
       aggregator: false,
       clinic: false,
       description: 'Doctor assesses and routes you to the right specialist',
     },
     {
       feature: 'WhatsApp Confirmation',
-      glowheal: true,
+      Doqor: true,
       aggregator: 'partial',
       clinic: false,
       description: 'Instant booking confirmation and updates on WhatsApp',
     },
     {
       feature: 'Transparent Pricing',
-      glowheal: true,
+      Doqor: true,
       aggregator: 'partial',
       clinic: true,
       description: 'Know exact fees upfront with no hidden costs',
     },
     {
       feature: '100% Private & Secure',
-      glowheal: true,
+      Doqor: true,
       aggregator: true,
       clinic: true,
       description: 'HIPAA-compliant data protection and confidentiality',
     },
     {
       feature: '24/7 Availability',
-      glowheal: true,
+      Doqor: true,
       aggregator: true,
       clinic: false,
       description: 'Book consultations anytime, same-day slots available',
     },
     {
       feature: 'No Travel Required',
-      glowheal: true,
+      Doqor: true,
       aggregator: true,
       clinic: false,
       description: 'Video consultations from home comfort',
     },
     {
       feature: 'Follow-up Care',
-      glowheal: true,
+      Doqor: true,
       aggregator: 'partial',
       clinic: true,
       description: 'Ongoing support and treatment monitoring',
@@ -70,7 +70,7 @@ export function ComparisonTable() {
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-forest-700 mb-4">
-            Why Choose Glowheal?
+            Why Choose Doqor?
           </h2>
           <p className="text-lg text-gray-600">
             Compare our comprehensive care model with traditional alternatives
@@ -86,7 +86,7 @@ export function ComparisonTable() {
                   Feature
                 </th>
                 <th className="text-center p-4 font-bold text-white bg-gradient-to-br from-forest-700 to-jade-600 border-b-2 border-forest-800">
-                  Glowheal
+                  Doqor
                 </th>
                 <th className="text-center p-4 font-semibold text-gray-700 border-b-2 border-gray-200">
                   Generic Aggregator
@@ -110,9 +110,9 @@ export function ComparisonTable() {
                     </div>
                   </td>
 
-                  {/* Glowheal */}
+                  {/* Doqor */}
                   <td className="text-center p-4 border-b border-gray-200 bg-forest-50">
-                    {renderCheckmark(item.glowheal, 'forest')}
+                    {renderCheckmark(item.Doqor, 'forest')}
                   </td>
 
                   {/* Aggregator */}
@@ -139,8 +139,8 @@ export function ComparisonTable() {
 
               <div className="grid grid-cols-3 gap-2 text-sm">
                 <div className="text-center">
-                  <p className="font-semibold text-gray-700 mb-1">Glowheal</p>
-                  {renderCheckmark(item.glowheal, 'forest')}
+                  <p className="font-semibold text-gray-700 mb-1">Doqor</p>
+                  {renderCheckmark(item.Doqor, 'forest')}
                 </div>
                 <div className="text-center">
                   <p className="font-semibold text-gray-700 mb-1">Aggregator</p>

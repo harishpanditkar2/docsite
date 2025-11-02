@@ -65,14 +65,14 @@ export default function ContactPage() {
 
     setSubmitMethod('whatsapp');
     
-    const whatsappMessage = `🌿 *Doqor Contact Form*
+    const whatsappMessage = `ðŸŒ¿ *Doqor Contact Form*
 
-👤 *Name:* ${data.name}
-📧 *Email:* ${data.email || 'Not provided'}
-📱 *Phone:* ${data.phone}
-📋 *Subject:* ${data.subject}
+ðŸ‘¤ *Name:* ${data.name}
+ðŸ“§ *Email:* ${data.email || 'Not provided'}
+ðŸ“± *Phone:* ${data.phone}
+ðŸ“‹ *Subject:* ${data.subject}
 
-💬 *Message:*
+ðŸ’¬ *Message:*
 ${data.message}`;
 
     const whatsappUrl = `https://wa.me/918329563445?text=${encodeURIComponent(whatsappMessage)}`;
@@ -265,7 +265,7 @@ ${data.message}`;
             <h3 className="text-xl font-bold text-forest-900 mb-4">Need immediate assistance?</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-forest-700 mb-2">📞 Call us directly</h4>
+                <h4 className="font-semibold text-forest-700 mb-2">ðŸ“ž Call us directly</h4>
                 <p className="text-gray-600 mb-3">
                   For urgent medical queries or booking assistance, call us at:
                 </p>
@@ -278,7 +278,7 @@ ${data.message}`;
               </div>
 
               <div>
-                <h4 className="font-semibold text-forest-700 mb-2">🩺 Book free consultation</h4>
+                <h4 className="font-semibold text-forest-700 mb-2">ðŸ©º Book free consultation</h4>
                 <p className="text-gray-600 mb-3">
                   Skip the queue - book your first consultation at no cost:
                 </p>

@@ -14,7 +14,7 @@ const CityContext = createContext<CityContextType | undefined>(undefined);
 
 export const SUPPORTED_CITIES: City[] = ['pune', 'mumbai', 'bengaluru'];
 export const DEFAULT_CITY: City = 'pune';
-export const CITY_COOKIE_NAME = 'glowheal_city';
+export const CITY_COOKIE_NAME = 'doqor_city';
 
 interface CityProviderProps {
   children: React.ReactNode;

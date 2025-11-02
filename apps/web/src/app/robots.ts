@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 /**
- * Robots.txt configuration for Glowheal
+ * Robots.txt configuration for Doqor
  * 
  * Allows:
  * - All public pages (/, /services, /doctors, /cities)
@@ -13,7 +13,7 @@ import { MetadataRoute } from 'next';
  * - Documentation (/docs)
  * - Data directory (/data)
  * 
- * Sitemap location: https://glowheal.in/sitemap.xml
+ * Sitemap location: https://Doqor.in/sitemap.xml
  */
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -37,6 +37,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/landing/', '/admin/'],
       },
     ],
-    sitemap: 'https://glowheal.in/sitemap.xml',
+    sitemap: 'https://Doqor.in/sitemap.xml',
   };
 }

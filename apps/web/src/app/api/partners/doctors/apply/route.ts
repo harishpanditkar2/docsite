@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
     fs.writeFileSync(filePath, JSON.stringify(leadData, null, 2), 'utf8');
 
     // Log to console for monitoring
-    console.log(`✅ Doctor application received: ${applicationId}`);
+    console.log(`âœ… Doctor application received: ${applicationId}`);
     console.log(`   Name: ${validatedData.fullName}`);
     console.log(`   Specialties: ${validatedData.specialties.join(', ')}`);
     console.log(`   City: ${validatedData.city}`);
@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
     }, { status: 201 });
 
   } catch (error) {
-    console.error('❌ Doctor application error:', error);
+    console.error('âŒ Doctor application error:', error);
 
     if (error instanceof z.ZodError) {
       return NextResponse.json({

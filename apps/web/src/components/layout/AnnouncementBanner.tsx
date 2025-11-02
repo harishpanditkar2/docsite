@@ -12,7 +12,7 @@ import { useFreeCta } from '@/hooks/useFreeCta';
  * - No CLS (Cumulative Layout Shift) - reserved space
  * - WCAG AAA contrast (Forest on Amber)
  * - Keyboard accessible
- * - ≥48px touch targets
+ * - â‰¥48px touch targets
  * 
  * @example
  * <AnnouncementBanner />
@@ -25,7 +25,7 @@ export function AnnouncementBanner() {
   useEffect(() => {
     setIsClient(true);
     // Check if user has dismissed the banner
-    const isDismissed = localStorage.getItem('glowheal_banner_dismissed');
+    const isDismissed = localStorage.getItem('doqor_banner_dismissed');
     if (!isDismissed) {
       setIsVisible(true);
     }
@@ -33,7 +33,7 @@ export function AnnouncementBanner() {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('glowheal_banner_dismissed', 'true');
+    localStorage.setItem('doqor_banner_dismissed', 'true');
   };
 
   // Don't render during SSR to avoid hydration mismatch

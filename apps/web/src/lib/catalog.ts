@@ -1,5 +1,5 @@
 /**
- * Fixed-price catalog types for Glowheal (Multi-city model)
+ * Fixed-price catalog types for Doqor (Multi-city model)
  * All prices are fixed per city; no ranges or tiers
  */
 
@@ -202,5 +202,5 @@ export function getItemsBySpecialty(
  */
 export function formatPrice(price: number): string {
   if (price === 0) return 'Free';
-  return `₹${price.toLocaleString('en-IN')}`;
+  return `â‚¹${price.toLocaleString('en-IN')}`;
 }

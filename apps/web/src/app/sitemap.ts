@@ -4,12 +4,12 @@ import doctors from '@/data/doctors.sample.json';
 import cities from '@/data/cities.json';
 
 /**
- * Dynamic sitemap generation for Glowheal
+ * Dynamic sitemap generation for Doqor
  * Includes: Homepage, Services, Doctors, Cities
  * Updates automatically when data files change
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://glowheal.in';
+  const baseUrl = 'https://Doqor.in';
   const currentDate = new Date();
 
   return [

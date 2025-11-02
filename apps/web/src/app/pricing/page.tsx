@@ -45,8 +45,8 @@ export default function PricingPage() {
   // Structured data schemas
   const organizationSchema = buildOrganizationSchema();
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: 'Home', url: 'https://glowheal.in' },
-    { name: 'Pricing', url: 'https://glowheal.in/pricing' },
+    { name: 'Home', url: 'https://Doqor.in' },
+    { name: 'Pricing', url: 'https://Doqor.in/pricing' },
   ]);
 
   return (
@@ -70,7 +70,7 @@ export default function PricingPage() {
                 Home
               </Link>
             </li>
-            <li aria-hidden="true">›</li>
+            <li aria-hidden="true">â€º</li>
             <li>
               <span className="text-gray-900 font-medium" aria-current="page">
                 Pricing
@@ -121,7 +121,7 @@ export default function PricingPage() {
         <div className="container-width">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-forest-900 text-center mb-3">
-              Why Choose Glowheal?
+              Why Choose Doqor?
             </h2>
             <p className="text-gray-600 text-center mb-8">
               Compare our transparent, patient-first approach with typical healthcare platforms
@@ -142,10 +142,10 @@ export default function PricingPage() {
             </div>
             <div>
               <p className="text-lg font-semibold text-forest-900">
-                Your first consultation is always ₹0
+                Your first consultation is always â‚¹0
               </p>
               <p className="text-gray-700">
-                Meet with a Glowheal doctor to discuss your treatment plan—completely free.
+                Meet with a Doqor doctor to discuss your treatment planâ€”completely free.
               </p>
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function PricingPage() {
                       href={`/pricing/${specialty.slug}`}
                       className="text-jade-600 hover:text-jade-800 font-medium underline"
                     >
-                      View all {specialty.title.toLowerCase()} services →
+                      View all {specialty.title.toLowerCase()} services â†’
                     </Link>
                   </div>
 

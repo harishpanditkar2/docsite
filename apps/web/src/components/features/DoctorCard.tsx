@@ -47,28 +47,8 @@ export function DoctorCard({
 }: DoctorCardProps) {
   return (
     <Link href={`/doctors/${slug}`} className="block h-full group">
-      <Card variant="default" className="h-full flex flex-col relative hover:shadow-xl transition-shadow">
-        {/* Free First Consult Badge */}
-        <div className="absolute top-3 right-3 z-10">
-          <span className="bg-forest-700 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md flex items-center">
-            <svg
-              className="w-3 h-3 mr-1 text-lime-300"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            Starts with free consult
-          </span>
-        </div>
-
-        <CardHeader className="pb-0">
+      <Card variant="default" className="h-full flex flex-col hover:shadow-xl transition-shadow">
+        <CardHeader className="pb-3 pt-4">
           <div className="flex items-start space-x-4">
             {/* Doctor Image */}
             <div className="flex-shrink-0">
@@ -86,13 +66,33 @@ export function DoctorCard({
             </div>
 
             {/* Doctor Info */}
-            <div className="flex-1 min-w-0">
-              <CardTitle as="h3" className="text-lg mb-1 text-forest-900 group-hover:text-jade-600 transition-colors">
+            <div className="flex-1 min-w-0 pr-2">
+              <CardTitle as="h3" className="text-lg mb-1 text-forest-900 group-hover:text-jade-600 transition-colors leading-tight">
                 {title} {name}
               </CardTitle>
               <p className="text-sm text-jade-600 font-semibold mb-1">{specialty}</p>
               <p className="text-xs text-gray-700 font-medium">{experience} years experience</p>
             </div>
+          </div>
+
+          {/* Free First Consult Badge - Moved below header */}
+          <div className="mt-3">
+            <span className="inline-flex bg-forest-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md items-center">
+              <svg
+                className="w-3 h-3 mr-1 text-lime-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Starts with free consult
+            </span>
           </div>
         </CardHeader>
 
@@ -132,7 +132,7 @@ export function DoctorCard({
               <p className="text-xs text-forest-700 font-semibold">Start free, then</p>
               <p className="text-xs text-gray-600 font-medium">Specialist fee</p>
             </div>
-            <p className="text-2xl font-bold text-forest-900">₹{consultationFee}</p>
+            <p className="text-2xl font-bold text-forest-900">â‚¹{consultationFee}</p>
             <p className="text-xs text-gray-700 mt-1 font-medium">Only if you proceed with this specialist</p>
           </div>
 

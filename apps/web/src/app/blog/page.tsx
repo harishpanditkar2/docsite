@@ -5,12 +5,12 @@ import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
 import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builders';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Insights & Wellness Tips | Glowheal Blog',
+  title: 'Healthcare Insights & Wellness Tips | Doqor Blog',
   description:
     'Expert healthcare advice, wellness tips, and medical insights from verified doctors. Learn about dermatology, mental health, orthopedics, and more.',
   keywords: 'healthcare blog, wellness tips, medical advice, dermatology tips, mental health resources, orthopedic care',
   openGraph: {
-    title: 'Glowheal Blog | Healthcare Insights',
+    title: 'Doqor Blog | Healthcare Insights',
     description: 'Expert healthcare advice and wellness tips from verified doctors.',
     type: 'website',
   },
@@ -20,8 +20,8 @@ export default function BlogPage() {
   const schemas = [
     buildOrganizationSchema(),
     buildBreadcrumbSchema([
-      { name: 'Home', url: 'https://glowheal.in' },
-      { name: 'Blog', url: 'https://glowheal.in/blog' },
+      { name: 'Home', url: 'https://Doqor.in' },
+      { name: 'Blog', url: 'https://Doqor.in/blog' },
     ]),
   ];
 
@@ -108,7 +108,7 @@ export default function BlogPage() {
             >
               <h3 className="text-lg font-semibold text-forest-900 mb-2">Fixed Pricing</h3>
               <p className="text-sm text-forest-700">
-                View transparent pricing for all services—no hidden fees.
+                View transparent pricing for all servicesâ€”no hidden fees.
               </p>
             </Link>
             <Link

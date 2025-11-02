@@ -5,42 +5,42 @@ interface PricingComparisonTableProps {
 }
 
 /**
- * PricingComparisonTable - Shows Glowheal advantages vs competitors
+ * PricingComparisonTable - Shows Doqor advantages vs competitors
  * Designed for pricing pages to build trust before item selection
  */
 export function PricingComparisonTable({ className }: PricingComparisonTableProps) {
   const comparisons = [
     {
       feature: 'First consultation',
-      glowheal: '✓ Free (₹0)',
+      Doqor: 'âœ“ Free (â‚¹0)',
       aggregator: 'Varies',
-      clinic: '₹500-1,000',
+      clinic: 'â‚¹500-1,000',
       glowealBest: true,
     },
     {
       feature: 'Pricing model',
-      glowheal: '✓ Fixed by city',
+      Doqor: 'âœ“ Fixed by city',
       aggregator: 'Variable, opaque',
       clinic: 'Not disclosed upfront',
       glowealBest: true,
     },
     {
       feature: 'Quote before payment',
-      glowheal: '✓ Yes, always',
+      Doqor: 'âœ“ Yes, always',
       aggregator: 'Sometimes',
       clinic: 'Rarely',
       glowealBest: true,
     },
     {
       feature: 'Doctor transparency',
-      glowheal: '✓ Fixed payouts',
+      Doqor: 'âœ“ Fixed payouts',
       aggregator: 'Opaque commission',
       clinic: 'N/A',
       glowealBest: true,
     },
     {
       feature: 'WhatsApp confirmation',
-      glowheal: '✓ Optional',
+      Doqor: 'âœ“ Optional',
       aggregator: 'Email/SMS only',
       clinic: 'Phone/in-person',
       glowealBest: false,
@@ -54,7 +54,7 @@ export function PricingComparisonTable({ className }: PricingComparisonTableProp
           <tr className="bg-gradient-to-r from-forest-700 to-jade-600 text-white">
             <th className="px-4 py-3.5 text-left text-sm md:text-base font-bold">Feature</th>
             <th className="px-4 py-3.5 text-center text-sm md:text-base font-bold">
-              Glowheal
+              Doqor
             </th>
             <th className="px-4 py-3.5 text-center text-sm md:text-base font-bold">
               Generic Aggregator
@@ -81,7 +81,7 @@ export function PricingComparisonTable({ className }: PricingComparisonTableProp
                     : 'font-semibold text-gray-700 bg-white'
                 )}
               >
-                {row.glowheal}
+                {row.Doqor}
               </td>
               <td className="px-4 py-3 text-center text-sm md:text-base text-gray-600 bg-white">
                 {row.aggregator}

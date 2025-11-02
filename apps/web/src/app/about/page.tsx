@@ -161,7 +161,7 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Healthcare in India is broken. Patients face unclear pricing, hidden fees, and confusing referrals to specialists 
-                they don't need. We experienced this firsthand—watching friends and family struggle to find trustworthy care at 
+                they don't need. We experienced this firsthandâ€”watching friends and family struggle to find trustworthy care at 
                 transparent prices.
               </p>
               <p>
@@ -171,7 +171,7 @@ export default function AboutPage() {
               </p>
               <p>
                 We leverage technical expertise in building scalable platforms combined with healthcare domain knowledge 
-                to create a healthcare platform that actually works for patients—no surprises, no confusion, just honest care.
+                to create a healthcare platform that actually works for patientsâ€”no surprises, no confusion, just honest care.
               </p>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold text-forest-900 mb-2">Fixed Transparent Pricing</h3>
               <p className="text-gray-700">
-                See exact costs upfront—no hidden fees, no surprise charges. What you see is what you pay.
+                See exact costs upfrontâ€”no hidden fees, no surprise charges. What you see is what you pay.
               </p>
             </div>
 
@@ -294,7 +294,7 @@ export default function AboutPage() {
         <div className="container-width max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-forest-900 mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-forest-700 mb-8">
-            Book your free first consultation today and experience healthcare the way it should be—transparent,
+            Book your free first consultation today and experience healthcare the way it should beâ€”transparent,
             accessible, and focused on you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

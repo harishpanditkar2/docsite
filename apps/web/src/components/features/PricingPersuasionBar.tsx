@@ -18,7 +18,7 @@ export function PricingPersuasionBar({ className }: PricingPersuasionBarProps) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      text: 'Free first consult (₹0)',
+      text: 'Free first consult (â‚¹0)',
     },
     {
       icon: (
@@ -27,7 +27,7 @@ export function PricingPersuasionBar({ className }: PricingPersuasionBarProps) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
-      text: 'Fixed prices by city—no surprise fees',
+      text: 'Fixed prices by cityâ€”no surprise fees',
     },
     {
       icon: (

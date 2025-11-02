@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       'utf-8'
     );
 
-    console.log(`✅ Booking saved: ${fileName}`);
+    console.log(`âœ… Booking saved: ${fileName}`);
 
     return NextResponse.json(
       { 

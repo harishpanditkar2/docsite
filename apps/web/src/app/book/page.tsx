@@ -314,7 +314,7 @@ function BookAppointmentPageContent() {
       setBookingSuccess(true);
       
       // Store in localStorage for recovery
-      localStorage.removeItem('glowheal-booking-draft');
+      localStorage.removeItem('Doqor-booking-draft');
       
       // Analytics
       if (typeof window !== 'undefined' && (window as any).dataLayer) {
@@ -338,26 +338,26 @@ function BookAppointmentPageContent() {
             }).filter(Boolean).join('\n')
           : 'No specific services selected';
         
-        const whatsappMessage = `🌿 *Glowheal Booking Confirmation*
+        const whatsappMessage = `ðŸŒ¿ *Doqor Booking Confirmation*
 
-📋 *Booking ID:* ${id}
-👤 *Name:* ${data.name}
-📱 *Phone:* ${phoneWithPrefix}
-📧 *Email:* ${data.email || 'Not provided'}
+ðŸ“‹ *Booking ID:* ${id}
+ðŸ‘¤ *Name:* ${data.name}
+ðŸ“± *Phone:* ${phoneWithPrefix}
+ðŸ“§ *Email:* ${data.email || 'Not provided'}
 
-💚 *Consultation Type:* ${data.consultationType === 'free' ? 'Free First Consultation (₹0)' : 'Direct Specialist (₹499+)'}
-🩺 *Specialty:* ${data.specialty}
-📍 *City:* ${data.city}
-📅 *Preferred Date:* ${data.preferredDate}
-⏰ *Preferred Time:* ${data.preferredTime}
+ðŸ’š *Consultation Type:* ${data.consultationType === 'free' ? 'Free First Consultation (â‚¹0)' : 'Direct Specialist (â‚¹499+)'}
+ðŸ©º *Specialty:* ${data.specialty}
+ðŸ“ *City:* ${data.city}
+ðŸ“… *Preferred Date:* ${data.preferredDate}
+â° *Preferred Time:* ${data.preferredTime}
 
-📝 *Concern:*
+ðŸ“ *Concern:*
 ${data.concern || 'Not specified'}
 
-🛒 *Selected Services (Provisional):*
+ðŸ›’ *Selected Services (Provisional):*
 ${servicesText}
 
-✅ I confirm booking and will wait for your call to schedule the consultation.`;
+âœ… I confirm booking and will wait for your call to schedule the consultation.`;
 
         const whatsappUrl = `https://wa.me/918329563445?text=${encodeURIComponent(whatsappMessage)}`;
         
@@ -378,7 +378,7 @@ ${servicesText}
   // Save draft to localStorage on input change
   const saveDraft = () => {
     const values = getValues();
-    localStorage.setItem('glowheal-booking-draft', JSON.stringify(values));
+    localStorage.setItem('Doqor-booking-draft', JSON.stringify(values));
   };
 
   // Success view
@@ -434,7 +434,7 @@ ${servicesText}
               <div className="bg-jade-50 rounded-lg p-6 mb-6">
                 <h2 className="font-semibold text-forest-700 mb-3">Your Details:</h2>
                 <div className="text-left space-y-2 text-sm">
-                  <p><strong>Consultation Type:</strong> {isFreeConsult ? 'Free First Consultation (₹0)' : 'Specialist Consultation'}</p>
+                  <p><strong>Consultation Type:</strong> {isFreeConsult ? 'Free First Consultation (â‚¹0)' : 'Specialist Consultation'}</p>
                   <p><strong>Specialty:</strong> {formData.specialty}</p>
                   <p><strong>City:</strong> {formData.city}</p>
                   <p><strong>Preferred Date:</strong> {formData.preferredDate}</p>
@@ -479,7 +479,7 @@ ${servicesText}
                         </svg>
                         <div className="flex-1">
                           <p className="text-sm font-semibold text-orange-800 mb-1">
-                            ⚠️ Multiple Specialties Selected
+                            âš ï¸ Multiple Specialties Selected
                           </p>
                           <p className="text-xs text-gray-700">
                             You've selected items from {specialties.size} different specialties ({Array.from(specialties).join(', ')}). 
@@ -506,7 +506,7 @@ ${servicesText}
                     <ul className="list-disc list-inside space-y-1 text-xs">
                       <li>Payment only required <strong>after</strong> your free consultation and consent to treatment.</li>
                       <li>Our doctor will discuss these services during your call and confirm they're right for you.</li>
-                      <li>Add-ons (labs, imaging, implants) are billed per Glowheal add-on catalog.</li>
+                      <li>Add-ons (labs, imaging, implants) are billed per Doqor add-on catalog.</li>
                       <li>All prices are fixed for Pune. No hidden charges.</li>
                     </ul>
                   </div>
@@ -524,7 +524,7 @@ ${servicesText}
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                         </svg>
-                        📥 Download Your Quote (Printable PDF)
+                        ðŸ“¥ Download Your Quote (Printable PDF)
                       </a>
                       <p className="text-xs text-gray-600 mt-2">
                         View and print your detailed service quote. Valid for 30 days.
@@ -553,7 +553,7 @@ ${servicesText}
                       aria-label={`Continue conversation on WhatsApp about your ${formData.specialty} consultation`}
                     >
                       <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white">
-                        📱 Continue on WhatsApp
+                        ðŸ“± Continue on WhatsApp
                       </Button>
                     </a>
 
@@ -649,7 +649,7 @@ ${servicesText}
               {currentStep === 1 && (
                 <div className="space-y-6">
                   <div className="border-b-2 border-forest-100 pb-4 mb-6">
-                    <h2 className="text-3xl font-bold text-forest-900 mb-2">📱 Contact Information</h2>
+                    <h2 className="text-3xl font-bold text-forest-900 mb-2">ðŸ“± Contact Information</h2>
                     <p className="text-base text-gray-600">We'll use these details to confirm your appointment</p>
                   </div>
 
@@ -693,7 +693,7 @@ ${servicesText}
                                   </p>
                                   {isFreeConsult && (
                                     <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-lime-400 text-forest-900">
-                                      ✓ Selected
+                                      âœ“ Selected
                                     </span>
                                   )}
                                 </div>
@@ -791,7 +791,7 @@ ${servicesText}
               {currentStep === 2 && (
                 <div className="space-y-6">
                   <div className="border-b-2 border-forest-100 pb-4 mb-6">
-                    <h2 className="text-3xl font-bold text-forest-900 mb-2">💚 Your Concern</h2>
+                    <h2 className="text-3xl font-bold text-forest-900 mb-2">ðŸ’š Your Concern</h2>
                     <p className="text-base text-gray-600">Help us understand your health concern</p>
                   </div>
 
@@ -814,7 +814,7 @@ ${servicesText}
                         />
                         <div className="flex items-start justify-between mb-2">
                           <div className="font-bold text-forest-700 text-lg">Free First Consultation</div>
-                          <div className="text-2xl font-bold text-forest-700">₹0</div>
+                          <div className="text-2xl font-bold text-forest-700">â‚¹0</div>
                         </div>
                         <p className="text-sm text-forest-600 mb-3">
                           Talk to our in-house doctor at no cost. Get routed to a specialist if needed.
@@ -840,7 +840,7 @@ ${servicesText}
                         />
                         <div className="flex items-start justify-between mb-2">
                           <div className="font-bold text-forest-700 text-lg">Direct Specialist</div>
-                          <div className="text-2xl font-bold text-gray-700">₹499+</div>
+                          <div className="text-2xl font-bold text-gray-700">â‚¹499+</div>
                         </div>
                         <p className="text-sm text-gray-600 mb-3">
                           Book directly with a verified specialist for your specific concern.
@@ -890,7 +890,7 @@ ${servicesText}
               {currentStep === 3 && (
                 <div className="space-y-6">
                   <div className="border-b-2 border-forest-100 pb-4 mb-6">
-                    <h2 className="text-3xl font-bold text-forest-900 mb-2">📍 Your Preferences</h2>
+                    <h2 className="text-3xl font-bold text-forest-900 mb-2">ðŸ“ Your Preferences</h2>
                     <p className="text-base text-gray-600">When and where would you like your consultation?</p>
                   </div>
 
@@ -1018,7 +1018,7 @@ ${servicesText}
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-1">
                             <span className="font-semibold text-forest-900">Basic Health Panel</span>
-                            <span className="text-lg font-bold text-jade-600">₹999</span>
+                            <span className="text-lg font-bold text-jade-600">â‚¹999</span>
                           </div>
                           <p className="text-xs text-gray-600">CBC, Blood Sugar, Lipid Profile, Liver & Kidney Function</p>
                         </div>
@@ -1042,9 +1042,9 @@ ${servicesText}
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-1">
                             <span className="font-semibold text-forest-900">Comprehensive Health Check Plus</span>
-                            <span className="text-lg font-bold text-jade-600">₹5,999</span>
+                            <span className="text-lg font-bold text-jade-600">â‚¹5,999</span>
                           </div>
-                          <p className="text-xs text-gray-600">Full panel + consultation + diet plan (saves ₹1,899)</p>
+                          <p className="text-xs text-gray-600">Full panel + consultation + diet plan (saves â‚¹1,899)</p>
                         </div>
                       </label>
 
@@ -1066,7 +1066,7 @@ ${servicesText}
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-1">
                             <span className="font-semibold text-forest-900">Gut Health Panel</span>
-                            <span className="text-lg font-bold text-jade-600">₹1,999</span>
+                            <span className="text-lg font-bold text-jade-600">â‚¹1,999</span>
                           </div>
                           <p className="text-xs text-gray-600">Microbiome analysis, food sensitivities, inflammation markers</p>
                         </div>
@@ -1092,7 +1092,7 @@ ${servicesText}
                     onClick={handleBack}
                     className="flex-1"
                   >
-                    ← Back
+                    â† Back
                   </Button>
                 )}
                 
@@ -1102,7 +1102,7 @@ ${servicesText}
                     onClick={handleNext}
                     className="flex-1"
                   >
-                    Next →
+                    Next â†’
                   </Button>
                 ) : (
                   <>
@@ -1142,7 +1142,7 @@ ${servicesText}
                   <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>No payment now—₹0 first consult</span>
+                  <span>No payment nowâ€”â‚¹0 first consult</span>
                 </p>
               )}
 
