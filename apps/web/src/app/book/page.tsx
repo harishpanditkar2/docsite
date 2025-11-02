@@ -363,10 +363,18 @@ ${servicesText}
 
         const whatsappUrl = `https://wa.me/919860151400?text=${encodeURIComponent(whatsappMessage)}`;
         
-        // Open WhatsApp in new tab after short delay (allow user to see success message first)
-        setTimeout(() => {
-          window.open(whatsappUrl, '_blank');
-        }, 1500);
+        // Check if mobile device
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+          // On mobile: open WhatsApp immediately, don't show success until user returns
+          window.location.href = whatsappUrl;
+        } else {
+          // On desktop: open WhatsApp in new tab after short delay
+          setTimeout(() => {
+            window.open(whatsappUrl, '_blank');
+          }, 1500);
+        }
       }
       
     } catch (error) {
