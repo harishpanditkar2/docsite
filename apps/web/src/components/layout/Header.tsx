@@ -221,12 +221,12 @@ export function Header() {
                   {/* Horizontal Mega Menu with hover delay */}
                   {isServicesOpen && (
                     <div 
-                      className="absolute left-0 top-full mt-2 w-[1100px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl p-8 border-2 border-lime-400"
+                      className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[1100px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl p-8 border-2 border-lime-400"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
                       {/* Triangle indicator */}
-                      <div className="absolute -top-2 left-12 w-4 h-4 bg-white border-l-2 border-t-2 border-lime-400 rotate-45"></div>
+                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l-2 border-t-2 border-lime-400 rotate-45"></div>
                       
                       <div className="grid grid-cols-4 gap-6">
                         {services.map((service) => (
