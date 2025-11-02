@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -50,9 +50,22 @@ type BookingFormData = z.infer<typeof bookingSchema>;
 
 const STEPS = [
   { id: 1, title: 'Contact Info', description: 'Your details' },
-  { id: 2, title: 'Your Concern', description: 'What brings you here' },
+  { id: 2, title: 'Your Concern', description: 'Tell us more' },
   { id: 3, title: 'Preferences', description: 'City & timing' },
 ] as const;
+
+// Helper function to get today's date in YYYY-MM-DD format
+function getTodayDate(): string {
+  return new Date().toISOString().split('T')[0];
+}
+
+// Helper function to get current time slot (morning/afternoon/evening)
+function getCurrentTimeSlot(): 'morning' | 'afternoon' | 'evening' {
+  const hour = new Date().getHours();
+  if (hour < 12) return 'morning';
+  if (hour < 17) return 'afternoon';
+  return 'evening';
+}
 
 function BookAppointmentPageContent() {
   const searchParams = useSearchParams();
@@ -93,6 +106,8 @@ function BookAppointmentPageContent() {
       consultationType: 'free' as const, // Default to free consultation
       whatsappConfirm: true, // Default WhatsApp confirm on
       city: getCityDisplayName(contextCity), // Pre-fill city from context
+      preferredDate: getTodayDate(), // Default to today's date
+      preferredTime: getCurrentTimeSlot(), // Default to current time slot
     },
   });
 
@@ -418,14 +433,38 @@ ${servicesText}
                 Our team will contact you within 30 minutes to confirm your appointment.
               </p>
 
-              <div className="bg-jade-50 rounded-lg p-6 mb-6">
-                <h2 className="font-semibold text-forest-700 mb-3">Your Details:</h2>
-                <div className="text-left space-y-2 text-sm">
-                  <p><strong>Consultation Type:</strong> {isFreeConsult ? 'Free First Consultation (₹0)' : 'Specialist Consultation'}</p>
-                  <p><strong>Specialty:</strong> {formData.specialty}</p>
-                  <p><strong>City:</strong> {formData.city}</p>
-                  <p><strong>Preferred Date:</strong> {formData.preferredDate}</p>
-                  <p><strong>Preferred Time:</strong> {formData.preferredTime}</p>
+              <div className="bg-jade-50 rounded-lg p-6 mb-6 border-2 border-jade-200">
+                <h2 className="font-bold text-forest-700 mb-4 text-lg flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Your Booking Details
+                </h2>
+                <div className="text-left space-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-jade-200">
+                    <span className="text-gray-700 font-medium">Consultation Type:</span>
+                    <span className="text-forest-900 font-semibold">{isFreeConsult ? 'Free First Consultation (₹0)' : 'Specialist Consultation'}</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-jade-200">
+                    <span className="text-gray-700 font-medium">Specialty:</span>
+                    <span className="text-forest-900 font-semibold">{formData.specialty}</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-jade-200">
+                    <span className="text-gray-700 font-medium">City:</span>
+                    <span className="text-forest-900 font-semibold">{formData.city}</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-jade-200">
+                    <span className="text-gray-700 font-medium">Preferred Date:</span>
+                    <span className="text-forest-900 font-semibold">{new Date(formData.preferredDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 font-medium">Preferred Time:</span>
+                    <span className="text-forest-900 font-semibold capitalize">{formData.preferredTime} ({
+                      formData.preferredTime === 'morning' ? '9 AM - 12 PM' :
+                      formData.preferredTime === 'afternoon' ? '12 PM - 5 PM' :
+                      '5 PM - 9 PM'
+                    })</span>
+                  </div>
                 </div>
               </div>
 
@@ -593,14 +632,14 @@ ${servicesText}
 
           {/* Progress Indicator */}
           <div className="mb-8">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-center gap-4">
               {STEPS.map((step, index) => (
-                <div key={step.id} className="flex items-center flex-1">
-                  <div className="flex flex-col items-center flex-1">
+                <React.Fragment key={step.id}>
+                  <div className="flex flex-col items-center">
                     <button
                       onClick={() => goToStep(step.id)}
                       disabled={step.id > currentStep && currentStep < STEPS.length}
-                      className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all mb-2 ${
+                      className={`w-14 h-14 rounded-full flex items-center justify-center font-bold text-xl transition-all mb-3 ${
                         currentStep >= step.id
                           ? 'bg-lime-400 text-forest-900 shadow-md cursor-pointer hover:bg-lime-500'
                           : 'bg-gray-200 text-gray-600 cursor-not-allowed'
@@ -608,21 +647,21 @@ ${servicesText}
                     >
                       {step.id}
                     </button>
-                    <div className="text-center">
-                      <p className={`text-sm font-semibold ${currentStep >= step.id ? 'text-forest-900' : 'text-gray-600'}`}>
+                    <div className="text-center w-24">
+                      <p className={`text-sm font-semibold mb-1 ${currentStep >= step.id ? 'text-forest-900' : 'text-gray-600'}`}>
                         {step.title}
                       </p>
-                      <p className="text-xs text-gray-500">{step.description}</p>
+                      <p className="text-xs text-gray-500 leading-tight">{step.description}</p>
                     </div>
                   </div>
                   {index < STEPS.length - 1 && (
                     <div
-                      className={`flex-1 h-1 mx-2 transition-colors ${
+                      className={`h-1 w-16 mt-[-40px] transition-colors ${
                         currentStep > step.id ? 'bg-lime-400' : 'bg-gray-200'
                       }`}
                     />
                   )}
-                </div>
+                </React.Fragment>
               ))}
             </div>
           </div>
