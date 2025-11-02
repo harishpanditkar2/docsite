@@ -45,8 +45,8 @@ export function ServiceCard({
               alt={`${name} background`}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            {/* Softer gradient overlay with subtle green tint for better image visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/60 to-jade-50/70"></div>
+            {/* Dark overlay with gradient for better text visibility */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
           </div>
         )}
         
@@ -63,25 +63,25 @@ export function ServiceCard({
             </div>
           )}
           <CardHeader>
-            <div className="mb-3 text-5xl drop-shadow-sm">
+            <div className="mb-3 text-5xl drop-shadow-lg">
               {icon}
             </div>
-            <CardTitle as="h3" className="text-forest-700">
+            <CardTitle as="h3" className="text-white">
               {name}
             </CardTitle>
           </CardHeader>
           <CardContent className="flex-1 flex flex-col">
-            <p className="text-gray-700 text-sm mb-4 line-clamp-2 min-h-[40px] font-medium">{tagline}</p>
+            <p className="text-white/90 text-sm mb-4 line-clamp-2 min-h-[40px] font-medium">{tagline}</p>
             <div className="space-y-3 mt-auto">
               <div className="text-sm">
-                <p className="text-gray-600 text-xs mb-1">First Consultation</p>
-                <p className="font-semibold text-forest-700">Free (₹0)</p>
+                <p className="text-white/70 text-xs mb-1">First Consultation</p>
+                <p className="font-semibold text-lime-400">Free (₹0)</p>
               </div>
               <div className="space-y-2">
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="w-full bg-white/90 hover:bg-lime-50 border-2 border-forest-300 text-forest-900 font-semibold hover:border-lime-500 backdrop-blur-sm"
+                  className="w-full bg-white hover:bg-lime-400 border-2 border-white text-forest-900 font-semibold hover:border-lime-400 hover:text-forest-900"
                   onClick={(e) => {
                     // Prevent Link navigation, let parent Link handle it
                     e.stopPropagation();
@@ -89,7 +89,7 @@ export function ServiceCard({
                 >
                   View Packages
                 </Button>
-                <p className="text-xs text-gray-600 text-center font-medium">
+                <p className="text-xs text-white/80 text-center font-medium">
                   Start free—talk to a doctor
                 </p>
               </div>
