@@ -220,13 +220,20 @@ export function Header() {
 
                   {/* Horizontal Mega Menu with hover delay */}
                   {isServicesOpen && (
-                    <div 
-                      className="fixed left-1/2 -translate-x-1/2 top-[80px] w-[1100px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl p-8 border-2 border-lime-400 z-50"
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
-                    >
-                      {/* Triangle indicator */}
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l-2 border-t-2 border-lime-400 rotate-45"></div>
+                    <>
+                      {/* Invisible bridge to prevent menu hiding when moving mouse down */}
+                      <div 
+                        className="fixed left-0 right-0 h-4 top-[60px] z-40"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      />
+                      <div 
+                        className="fixed left-1/2 -translate-x-1/2 top-[80px] w-[1100px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl p-8 border-2 border-lime-400 z-50"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >
+                        {/* Triangle indicator - positioned under Services button */}
+                        <div className="absolute -top-2 left-[calc(50%-300px)] w-4 h-4 bg-white border-l-2 border-t-2 border-lime-400 rotate-45"></div>
                       
                       <div className="grid grid-cols-4 gap-6">
                         {services.map((service) => (
@@ -259,6 +266,7 @@ export function Header() {
                         </Link>
                       </div>
                     </div>
+                    </>
                   )}
                 </div>
               ) : (
