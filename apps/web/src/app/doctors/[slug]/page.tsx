@@ -6,6 +6,23 @@ import { buildPhysicianSchema, buildBreadcrumbSchema, buildOrganizationSchema } 
 import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
 import doctorsData from '@/data/doctors.sample.json';
 
+// Helper function to format date/time
+function formatDateTime(isoString: string): string {
+  try {
+    const date = new Date(isoString);
+    const options: Intl.DateTimeFormatOptions = {
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    };
+    return date.toLocaleString('en-US', options);
+  } catch {
+    return isoString;
+  }
+}
+
 interface DoctorPageProps {
   params: {
     slug: string;
@@ -90,7 +107,7 @@ export default function DoctorProfilePage({ params }: DoctorPageProps) {
             <li aria-hidden="true">›</li>
             <li>
               <span className="text-gray-900 font-medium" aria-current="page">
-                Dr. {doctor.name}
+                {doctor.name}
               </span>
             </li>
           </ol>
@@ -212,7 +229,7 @@ export default function DoctorProfilePage({ params }: DoctorPageProps) {
             {/* Availability */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-forest-900 mb-4">Next Available</h2>
-              <p className="text-xl text-green-600 font-semibold mb-4">{doctor.nextAvailable}</p>
+              <p className="text-xl text-green-600 font-semibold mb-4">{formatDateTime(doctor.nextAvailable)}</p>
               <p className="text-gray-600 mb-6">
                 Book now to secure your free first consultation with Dr. {doctor.name}.
               </p>

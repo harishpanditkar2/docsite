@@ -30,6 +30,24 @@ interface DoctorCardProps {
  * DoctorCard component displays doctor profile with photo, credentials, rating, and booking CTA
  * Used on homepage, doctors listing page, service pages, and city pages
  */
+
+// Helper function to format date and time in human-readable format
+function formatDateTime(isoString: string): string {
+  try {
+    const date = new Date(isoString);
+    const options: Intl.DateTimeFormatOptions = {
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    };
+    return date.toLocaleString('en-US', options);
+  } catch {
+    return isoString; // Fallback to original string if parsing fails
+  }
+}
+
 export function DoctorCard({
   name,
   slug,
@@ -123,7 +141,7 @@ export function DoctorCard({
           {/* Next Available */}
           <div className="mb-3">
             <p className="text-xs text-gray-600 font-semibold mb-1">Next Available:</p>
-            <p className="text-sm font-semibold text-green-600">{nextAvailable}</p>
+            <p className="text-sm font-semibold text-green-600">{formatDateTime(nextAvailable)}</p>
           </div>
 
           {/* Consultation Fee */}
@@ -132,7 +150,7 @@ export function DoctorCard({
               <p className="text-xs text-forest-700 font-semibold">Start free, then</p>
               <p className="text-xs text-gray-600 font-medium">Specialist fee</p>
             </div>
-            <p className="text-2xl font-bold text-forest-900">₹‚¹{consultationFee}</p>
+            <p className="text-2xl font-bold text-forest-900">₹{consultationFee}</p>
             <p className="text-xs text-gray-700 mt-1 font-medium">Only if you proceed with this specialist</p>
           </div>
 
