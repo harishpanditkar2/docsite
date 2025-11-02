@@ -119,6 +119,22 @@ function BookAppointmentPageContent() {
   // Watch consultation type to show dynamic pricing
   const consultationType = watch('consultationType');
 
+  // Auto-remove FREE_CONSULT when switching to specialist consultation
+  useEffect(() => {
+    if (consultationType === 'specialist') {
+      // Remove FREE_CONSULT from selected items
+      setSelectedItems(prev => prev.filter(code => code !== 'FREE_CONSULT'));
+    } else if (consultationType === 'free') {
+      // Add FREE_CONSULT back if not present
+      setSelectedItems(prev => {
+        if (!prev.includes('FREE_CONSULT')) {
+          return ['FREE_CONSULT', ...prev];
+        }
+        return prev;
+      });
+    }
+  }, [consultationType]);
+
   // Validate current step before proceeding
   const validateStep = async (): Promise<boolean> => {
     let fieldsToValidate: (keyof BookingFormData)[] = [];
@@ -708,26 +724,45 @@ ${servicesText}
                       <div className="space-y-3 mb-4">
                         {selectedItems.map((code) => {
                           const item = getCatalogItem('pune', code);
+                          const isFreeConsult = code === 'FREE_CONSULT';
                           return item ? (
-                            <div key={code} className="flex items-start justify-between bg-white rounded-lg p-4 shadow-sm">
+                            <div 
+                              key={code} 
+                              className={`flex items-start justify-between rounded-lg p-4 shadow-sm ${
+                                isFreeConsult 
+                                  ? 'bg-forest-50 border-2 border-forest-700' 
+                                  : 'bg-white'
+                              }`}
+                            >
                               <div className="flex-1">
-                                <p className="font-semibold text-forest-700">{item.name}</p>
-                                <p className="text-sm text-gray-600 mt-1">
+                                <div className="flex items-center gap-2">
+                                  <p className={`font-semibold ${isFreeConsult ? 'text-forest-700' : 'text-forest-700'}`}>
+                                    {item.name}
+                                  </p>
+                                  {isFreeConsult && (
+                                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-lime-400 text-forest-900">
+                                      Default
+                                    </span>
+                                  )}
+                                </div>
+                                <p className={`text-sm mt-1 ${isFreeConsult ? 'text-forest-600' : 'text-gray-600'}`}>
                                   {formatPrice(item.price)} / {item.unit}
                                 </p>
                               </div>
-                              <button
-                                type="button"
-                                onClick={() => removeService(code)}
-                                className="ml-4 inline-flex items-center gap-1 rounded-full bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 px-3 py-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-forest-700"
-                                style={{ minHeight: '44px', minWidth: '44px' }}
-                                aria-label={`Remove ${item.name} from selection`}
-                              >
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                                Remove
-                              </button>
+                              {!isFreeConsult && (
+                                <button
+                                  type="button"
+                                  onClick={() => removeService(code)}
+                                  className="ml-4 inline-flex items-center gap-1 rounded-full bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 px-3 py-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-forest-700"
+                                  style={{ minHeight: '44px', minWidth: '44px' }}
+                                  aria-label={`Remove ${item.name} from selection`}
+                                >
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                  </svg>
+                                  Remove
+                                </button>
+                              )}
                             </div>
                           ) : null;
                         })}
