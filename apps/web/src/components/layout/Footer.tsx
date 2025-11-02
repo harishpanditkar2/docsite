@@ -219,7 +219,7 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-400 text-sm">
-              Â© {currentYear} Doqor. All rights reserved.
+              &copy; {currentYear} Doqor. All rights reserved.
             </p>
           </div>
         </div>

@@ -72,22 +72,22 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/images/favicon/favicon.svg', type: 'image/svg+xml' },
-      { url: '/images/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/images/favicon/favicon.ico', sizes: 'any' },
+      { url: '/images/favicon/favicon.svg?v=2', type: 'image/svg+xml' },
+      { url: '/images/favicon/favicon-96x96.png?v=2', sizes: '96x96', type: 'image/png' },
+      { url: '/images/favicon/favicon.ico?v=2', sizes: 'any' },
     ],
     apple: [
-      { url: '/images/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/images/favicon/apple-touch-icon.png?v=2', sizes: '180x180', type: 'image/png' },
     ],
     other: [
       {
         rel: 'icon',
-        url: '/images/favicon/web-app-manifest-192x192.png',
+        url: '/images/favicon/web-app-manifest-192x192.png?v=2',
         sizes: '192x192',
       },
       {
         rel: 'icon',
-        url: '/images/favicon/web-app-manifest-512x512.png',
+        url: '/images/favicon/web-app-manifest-512x512.png?v=2',
         sizes: '512x512',
       },
     ],
