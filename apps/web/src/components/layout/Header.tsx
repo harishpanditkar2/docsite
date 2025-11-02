@@ -192,7 +192,7 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {mainNav.map((item) =>
               item.label === 'Services' ? (
                 <div
@@ -201,7 +201,7 @@ export function Header() {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <button className={`text-forest-700 hover:text-lime-600 font-semibold text-base transition-colors py-2 ${isServicesOpen ? 'text-lime-600' : ''}`}>
+                  <button className={`text-forest-700 hover:text-lime-600 font-semibold text-sm transition-colors py-2 ${isServicesOpen ? 'text-lime-600' : ''}`}>
                     {item.label}
                     <svg
                       className={`inline-block ml-1 w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}
@@ -265,7 +265,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-forest-700 hover:text-lime-600 font-semibold text-base transition-colors py-2"
+                  className="text-forest-700 hover:text-lime-600 font-semibold text-sm transition-colors py-2"
                 >
                   {item.label}
                 </Link>
@@ -274,10 +274,10 @@ export function Header() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center gap-4">
             {/* Primary CTA - Book Free Consultation */}
             <Link href={ctaHref}>
-              <Button variant="primary" size="md">
+              <Button variant="primary" size="sm">
                 {ctaText}
               </Button>
             </Link>

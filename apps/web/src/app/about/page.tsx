@@ -232,54 +232,54 @@ export default function AboutPage() {
           </div>
 
           {/* How It Works */}
-          <div className="bg-white rounded-2xl shadow-soft p-8 md:p-12">
+          <div className="bg-white rounded-2xl shadow-soft p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-forest-900 mb-12 text-center">How Doqor Works</h2>
-            <div className="space-y-8 max-w-2xl mx-auto">
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-lg">1</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0 mb-4 shadow-md">
+                  <span className="text-white font-bold text-2xl">1</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-forest-900 mb-2">
+                  <h3 className="text-lg font-semibold text-forest-900 mb-2">
                     Book Your Free First Consultation
                   </h3>
-                  <p className="text-gray-700">
+                  <p className="text-sm text-gray-700">
                     Fill out a simple form and schedule your free consultation with our in-house doctor.
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-lg">2</span>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0 mb-4 shadow-md">
+                  <span className="text-white font-bold text-2xl">2</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-forest-900 mb-2">Get Expert Assessment</h3>
-                  <p className="text-gray-700">
+                  <h3 className="text-lg font-semibold text-forest-900 mb-2">Get Expert Assessment</h3>
+                  <p className="text-sm text-gray-700">
                     Our doctor assesses your concern and recommends the right specialist if needed.
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-lg">3</span>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0 mb-4 shadow-md">
+                  <span className="text-white font-bold text-2xl">3</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-forest-900 mb-2">View Transparent Pricing</h3>
-                  <p className="text-gray-700">
+                  <h3 className="text-lg font-semibold text-forest-900 mb-2">View Transparent Pricing</h3>
+                  <p className="text-sm text-gray-700">
                     See exact costs for treatments before committing. No hidden fees, no surprises.
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-lg">4</span>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0 mb-4 shadow-md">
+                  <span className="text-white font-bold text-2xl">4</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-forest-900 mb-2">Start Your Treatment</h3>
-                  <p className="text-gray-700">
+                  <h3 className="text-lg font-semibold text-forest-900 mb-2">Start Your Treatment</h3>
+                  <p className="text-sm text-gray-700">
                     Once you consent, proceed with treatment. Payment only after you're ready to start.
                   </p>
                 </div>

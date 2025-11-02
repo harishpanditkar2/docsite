@@ -34,6 +34,7 @@ const footerSections = [
   {
     title: 'For Doctors',
     links: [
+      { label: 'Join as Doctor', href: '/join-doctor' },
       { label: 'Find Doctors', href: '/doctors' },
       { label: 'View Services', href: '/services' },
       // Removed: Doctor signup/login/dashboard - auth not yet implemented
