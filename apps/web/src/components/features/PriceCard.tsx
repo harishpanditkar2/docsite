@@ -73,7 +73,7 @@ export function PriceCard({
           )}
           {showMostBooked && (
             <span className="inline-flex items-center gap-1 px-3 py-1 bg-jade-100 text-jade-700 text-xs font-semibold rounded-full">
-              <span aria-hidden="true">₹­</span>
+              <span aria-hidden="true">🔥</span>
               <span>Most Booked</span>
             </span>
           )}
@@ -100,7 +100,7 @@ export function PriceCard({
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            Save ₹‚¹{item.savings.toLocaleString()} vs standalone
+            Save ₹{item.savings.toLocaleString()} vs standalone
             <span className="text-xs text-gray-500">
               ({Math.round((item.savings / item.standaloneTotal) * 100)}% off)
             </span>

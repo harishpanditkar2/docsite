@@ -202,5 +202,5 @@ export function getItemsBySpecialty(
  */
 export function formatPrice(price: number): string {
   if (price === 0) return 'Free';
-  return `₹‚¹${price.toLocaleString('en-IN')}`;
+  return `₹${price.toLocaleString('en-IN')}`;
 }

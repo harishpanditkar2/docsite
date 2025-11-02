@@ -12,7 +12,7 @@ import { useFreeCta } from '@/hooks/useFreeCta';
  * - No CLS (Cumulative Layout Shift) - reserved space
  * - WCAG AAA contrast (Forest on Amber)
  * - Keyboard accessible
- * - ₹‰¥48px touch targets
+ * - ≥48px touch targets
  * 
  * @example
  * <AnnouncementBanner />

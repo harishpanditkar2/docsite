@@ -57,7 +57,7 @@ export function StickyMobileBar() {
             className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold"
             style={{ minHeight: '48px' }}
           >
-            Start Free Consultation (₹‚¹0)
+            Start Free Consultation (₹0)
           </Button>
         </Link>
 

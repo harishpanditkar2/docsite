@@ -13,7 +13,7 @@ export function cn(...inputs: ClassValue[]) {
  * Format price in Indian Rupees
  */
 export function formatPrice(amount: number): string {
-  return `₹‚¹${amount.toLocaleString('en-IN')}`;
+  return `₹${amount.toLocaleString('en-IN')}`;
 }
 
 /**

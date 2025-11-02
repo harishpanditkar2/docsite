@@ -152,7 +152,7 @@ export function buildLocalBusinessSchema(data: {
     url: `https://doqor.com/cities/${data.city.toLowerCase()}/${data.service.toLowerCase().replace(/\s+/g, '-')}`,
     description: `Expert ${data.service} consultations in ${data.city}. Connect with verified specialists online.`,
     telephone: '+91-9860151400',
-    priceRange: '₹‚¹499-₹‚¹4999',
+    priceRange: '₹499-₹4999',
   };
 
   // Add address if provided
