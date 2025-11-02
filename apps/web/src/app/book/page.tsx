@@ -816,14 +816,17 @@ ${servicesText}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {/* Free Consultation Option */}
                       <label
-                        className="relative flex flex-col p-6 border-2 border-forest-300 rounded-xl cursor-pointer hover:border-forest-500 transition-colors bg-forest-50"
+                        className={`relative flex flex-col p-6 border-2 rounded-xl cursor-pointer transition-colors ${
+                          consultationType === 'free' 
+                            ? 'border-forest-700 bg-forest-50' 
+                            : 'border-forest-300 hover:border-forest-500 bg-forest-50'
+                        }`}
                       >
                         <input
                           type="radio"
                           value="free"
                           {...register('consultationType')}
-                          defaultChecked
-                          className="sr-only peer"
+                          className="sr-only"
                         />
                         <div className="flex items-start justify-between mb-2">
                           <div className="font-bold text-forest-700 text-lg">Free First Consultation</div>
@@ -838,18 +841,24 @@ ${servicesText}
                           </svg>
                           Recommended for first-time patients
                         </div>
-                        <div className="absolute inset-0 border-3 border-forest-700 rounded-xl opacity-0 peer-checked:opacity-100 transition-opacity" />
+                        {consultationType === 'free' && (
+                          <div className="absolute inset-0 border-3 border-forest-700 rounded-xl pointer-events-none" />
+                        )}
                       </label>
 
                       {/* Specialist Consultation Option */}
                       <label
-                        className="relative flex flex-col p-6 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-jade-500 transition-colors"
+                        className={`relative flex flex-col p-6 border-2 rounded-xl cursor-pointer transition-colors ${
+                          consultationType === 'specialist' 
+                            ? 'border-jade-600 bg-jade-50' 
+                            : 'border-gray-200 hover:border-jade-500'
+                        }`}
                       >
                         <input
                           type="radio"
                           value="specialist"
                           {...register('consultationType')}
-                          className="sr-only peer"
+                          className="sr-only"
                         />
                         <div className="flex items-start justify-between mb-2">
                           <div className="font-bold text-forest-700 text-lg">Direct Specialist</div>
@@ -864,7 +873,9 @@ ${servicesText}
                           </svg>
                           For returning patients
                         </div>
-                        <div className="absolute inset-0 border-3 border-jade-600 rounded-xl opacity-0 peer-checked:opacity-100 transition-opacity" />
+                        {consultationType === 'specialist' && (
+                          <div className="absolute inset-0 border-3 border-jade-600 rounded-xl pointer-events-none" />
+                        )}
                       </label>
                     </div>
                     {errors.consultationType && (
