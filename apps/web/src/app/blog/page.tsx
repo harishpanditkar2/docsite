@@ -108,7 +108,7 @@ export default function BlogPage() {
             >
               <h3 className="text-lg font-semibold text-forest-900 mb-2">Fixed Pricing</h3>
               <p className="text-sm text-forest-700">
-                View transparent pricing for all services₹€”no hidden fees.
+                View transparent pricing for all services—no hidden fees.
               </p>
             </Link>
             <Link

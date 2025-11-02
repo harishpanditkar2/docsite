@@ -110,9 +110,9 @@ export default function LandingPage() {
             </h1>
 
             <p className="text-xl md:text-2xl mb-4 text-jade-100">
-              Expert dermatologist consultation + personalized treatment plan for just ₹‚¹499
+              Expert dermatologist consultation + personalized treatment plan for just ₹499
               <br />
-              <span className="line-through text-jade-300">₹‚¹999</span> <span className="text-yellow-400 font-bold">50% OFF</span>
+              <span className="line-through text-jade-300">₹999</span> <span className="text-yellow-400 font-bold">50% OFF</span>
             </p>
             
             <p className="text-sm text-jade-200 mb-8 max-w-2xl mx-auto">
@@ -142,12 +142,12 @@ export default function LandingPage() {
 
             <Link href="/book">
               <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-forest-700 font-bold text-xl px-12 py-6">
-                Claim Your ₹‚¹500 Discount Now ₹†’
+                Claim Your ₹500 Discount Now →
               </Button>
             </Link>
 
             <p className="text-sm text-jade-200 mt-4">
-              ₹œ“ No credit card required  ₹œ“ Instant booking  ₹œ“ 100% secure
+              ✓ No credit card required  ✓ Instant booking  ✓ 100% secure
             </p>
           </div>
         </div>
@@ -163,7 +163,7 @@ export default function LandingPage() {
                 <div className="text-gray-600">Happy Patients</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-jade-600 mb-2">4.8₹˜…</div>
+                <div className="text-4xl font-bold text-jade-600 mb-2">4.8★</div>
                 <div className="text-gray-600">Average Rating</div>
               </div>
               <div>
@@ -197,11 +197,11 @@ export default function LandingPage() {
               ].map((testimonial, i) => (
                 <div key={i} className="bg-white p-6 rounded-lg shadow-md">
                   <div className="flex text-yellow-400 mb-3">
-                    {'₹˜…'.repeat(testimonial.rating)}
+                    {'★'.repeat(testimonial.rating)}
                   </div>
                   <p className="text-gray-700 mb-4">"{testimonial.text}"</p>
                   <p className="font-semibold text-forest-700">{testimonial.name}</p>
-                  <p className="text-xs text-green-600">₹œ“ Verified Patient</p>
+                  <p className="text-xs text-green-600">✓ Verified Patient</p>
                 </div>
               ))}
             </div>
@@ -214,7 +214,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-forest-700 mb-12">
-              What You Get for Just ₹‚¹499
+              What You Get for Just ₹499
             </h2>
 
             <div className="space-y-6">
@@ -251,7 +251,7 @@ export default function LandingPage() {
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="text-center">
                   <div className="text-gray-600 mb-2">Regular Clinic Visit</div>
-                  <div className="text-4xl font-bold text-red-600 line-through">₹‚¹1,500</div>
+                  <div className="text-4xl font-bold text-red-600 line-through">₹1,500</div>
                   <div className="text-sm text-gray-600 mt-4 space-y-2">
                     <div>+ Travel time</div>
                     <div>+ Waiting time</div>
@@ -262,22 +262,22 @@ export default function LandingPage() {
                   <div className="bg-green-100 text-green-700 px-4 py-1 rounded-full inline-block mb-2 text-sm font-semibold">
                     TODAY'S OFFER
                   </div>
-                  <div className="text-5xl font-bold text-green-600">₹‚¹499</div>
+                  <div className="text-5xl font-bold text-green-600">₹499</div>
                   <div className="text-sm text-gray-600 mt-4 space-y-2">
-                    <div>₹œ“ From home</div>
-                    <div>₹œ“ No waiting</div>
-                    <div>₹œ“ Instant booking</div>
+                    <div>✓ From home</div>
+                    <div>✓ No waiting</div>
+                    <div>✓ Instant booking</div>
                   </div>
                 </div>
               </div>
 
               <div className="text-2xl font-bold text-jade-600 mb-4">
-                You Save: ₹‚¹1,001 (67% OFF)
+                You Save: ₹1,001 (67% OFF)
               </div>
 
               <Link href="/book">
                 <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-6">
-                  Yes, I Want To Save ₹‚¹1,001 ₹†’
+                  Yes, I Want To Save ₹1,001 →
                 </Button>
               </Link>
             </div>
@@ -309,7 +309,7 @@ export default function LandingPage() {
                 },
                 {
                   q: 'Is this offer really for today only?',
-                  a: 'Yes! This is a limited-time flash sale. Price returns to ₹‚¹999 after today. Book now to lock in ₹‚¹499.',
+                  a: 'Yes! This is a limited-time flash sale. Price returns to ₹999 after today. Book now to lock in ₹499.',
                 },
               ].map((faq, i) => (
                 <div key={i} className="bg-gray-50 p-6 rounded-lg">
@@ -333,7 +333,7 @@ export default function LandingPage() {
           </p>
           <Link href="/book">
             <Button size="lg" className="bg-forest-900 hover:bg-navy-800 text-white font-bold text-xl px-12 py-6">
-              Book Now - Pay Only ₹‚¹499
+              Book Now - Pay Only ₹499
             </Button>
           </Link>
         </div>
@@ -343,7 +343,7 @@ export default function LandingPage() {
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-green-600 p-4 shadow-lg z-50">
         <Link href="/book">
           <Button size="lg" className="w-full bg-white text-green-700 hover:bg-gray-100 font-bold">
-            Book ₹‚¹499 Consultation Now
+            Book ₹499 Consultation Now
           </Button>
         </Link>
       </div>
@@ -369,7 +369,7 @@ export default function LandingPage() {
                 Wait! Get Extra ₹100 OFF
               </h3>
               <p className="text-gray-700 mb-6">
-                Enter your email and get a special discount code for just ₹‚¹399 consultation!
+                Enter your email and get a special discount code for just ₹399 consultation!
               </p>
 
               <form onSubmit={handleEmailSubmit} className="space-y-4">

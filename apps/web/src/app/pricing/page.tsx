@@ -70,7 +70,7 @@ export default function PricingPage() {
                 Home
               </Link>
             </li>
-            <li aria-hidden="true">₹€º</li>
+            <li aria-hidden="true">/</li>
             <li>
               <span className="text-gray-900 font-medium" aria-current="page">
                 Pricing
@@ -179,7 +179,7 @@ export default function PricingPage() {
                       href={`/pricing/${specialty.slug}`}
                       className="text-jade-600 hover:text-jade-800 font-medium underline"
                     >
-                      View all {specialty.title.toLowerCase()} services ₹†’
+                      View all {specialty.title.toLowerCase()} services →
                     </Link>
                   </div>
 
