@@ -233,14 +233,14 @@ export default function AboutPage() {
 
           {/* How It Works */}
           <div className="bg-white rounded-2xl shadow-soft p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-forest-900 mb-8 text-center">How Doqor Works</h2>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">1</span>
+            <h2 className="text-3xl font-bold text-forest-900 mb-12 text-center">How Doqor Works</h2>
+            <div className="space-y-8 max-w-2xl mx-auto">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">1</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-forest-900 mb-1">
+                  <h3 className="text-xl font-semibold text-forest-900 mb-2">
                     Book Your Free First Consultation
                   </h3>
                   <p className="text-gray-700">
@@ -249,36 +249,36 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">2</span>
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">2</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-forest-900 mb-1">Get Expert Assessment</h3>
+                  <h3 className="text-xl font-semibold text-forest-900 mb-2">Get Expert Assessment</h3>
                   <p className="text-gray-700">
                     Our doctor assesses your concern and recommends the right specialist if needed.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">3</span>
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">3</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-forest-900 mb-1">View Transparent Pricing</h3>
+                  <h3 className="text-xl font-semibold text-forest-900 mb-2">View Transparent Pricing</h3>
                   <p className="text-gray-700">
                     See exact costs for treatments before committing. No hidden fees, no surprises.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">4</span>
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">4</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-forest-900 mb-1">Start Your Treatment</h3>
+                  <h3 className="text-xl font-semibold text-forest-900 mb-2">Start Your Treatment</h3>
                   <p className="text-gray-700">
                     Once you consent, proceed with treatment. Payment only after you're ready to start.
                   </p>
