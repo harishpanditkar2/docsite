@@ -65,7 +65,7 @@ export default function ContactPage() {
 
     setSubmitMethod('whatsapp');
     
-    const whatsappMessage = `🌿 *Glowheal Contact Form*
+    const whatsappMessage = `🌿 *Doqor Contact Form*
 
 👤 *Name:* ${data.name}
 📧 *Email:* ${data.email || 'Not provided'}
@@ -75,7 +75,7 @@ export default function ContactPage() {
 💬 *Message:*
 ${data.message}`;
 
-    const whatsappUrl = `https://wa.me/918329563445?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/919860151400?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     
     setSubmitSuccess(true);
@@ -105,8 +105,8 @@ ${data.message}`;
                 </svg>
               </div>
               <h3 className="font-semibold text-forest-900 mb-2">Phone</h3>
-              <a href="tel:+918329563445" className="text-lime-600 hover:text-lime-700 font-medium">
-                +91 832 956 3445
+              <a href="tel:+919860151400" className="text-lime-600 hover:text-lime-700 font-medium">
+                +91 9860151400
               </a>
             </div>
 
@@ -117,8 +117,8 @@ ${data.message}`;
                 </svg>
               </div>
               <h3 className="font-semibold text-forest-900 mb-2">Email</h3>
-              <a href="mailto:hello@glowheal.com" className="text-lime-600 hover:text-lime-700 font-medium">
-                hello@glowheal.com
+              <a href="mailto:hello@doqor.com" className="text-lime-600 hover:text-lime-700 font-medium">
+                hello@doqor.com
               </a>
             </div>
 

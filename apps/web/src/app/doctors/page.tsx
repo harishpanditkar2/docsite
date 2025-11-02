@@ -116,7 +116,7 @@ export default function DoctorsPage() {
       // Free consult filter (all doctors start with free consultation, this is for UX affordance)
       // In production, you might have a property like doctor.offersFreConsultation
       if (freeConsultFilter) {
-        // All doctors offer free first consultation via Glowheal's routing model
+        // All doctors offer free first consultation via Doqor's routing model
         // This filter is always true but shows the affordance to users
       }
 
@@ -151,8 +151,8 @@ export default function DoctorsPage() {
   const schemas = [
     buildOrganizationSchema(),
     buildBreadcrumbSchema([
-      { name: 'Home', url: 'https://glowheal.in' },
-      { name: 'Find Doctors', url: 'https://glowheal.in/doctors' },
+      { name: 'Home', url: 'https://doqor.com' },
+      { name: 'Find Doctors', url: 'https://doqor.com/doctors' },
     ]),
   ];
 
@@ -228,7 +228,7 @@ export default function DoctorsPage() {
                   </button>
                   {freeConsultFilter && (
                     <p className="text-xs text-forest-600 mt-2 px-1">
-                      All doctors offer a free consultation with a Glowheal physician first. You'll be routed to specialists if needed.
+                      All doctors offer a free consultation with a Doqor physician first. You'll be routed to specialists if needed.
                     </p>
                   )}
                 </div>

@@ -9,20 +9,20 @@ import { getCatalog, CatalogSpecialty } from '@/lib/catalog';
 import services from '@/data/services.json';
 
 export const metadata: Metadata = {
-  title: 'Free First Consultation | Healthcare Services - Glowheal',
+  title: 'Free First Consultation | Healthcare Services - Doqor',
   description: 'Start with a free consultation with our in-house doctor. Browse 12+ healthcare specialties including Dermatology, Hair Care, Mental Health, Women\'s Health. Get routed to specialists if needed.',
   openGraph: {
-    title: 'Free First Consultation | Healthcare Services - Glowheal',
+    title: 'Free First Consultation | Healthcare Services - Doqor',
     description: 'Start with a free consultation. Browse 12+ healthcare specialties. Get routed to specialists if needed.',
-    url: 'https://glowheal.in/services',
+    url: 'https://doqor.com/services',
     type: 'website',
   },
 };
 
 export default function ServicesPage() {
   const breadcrumbs = buildBreadcrumbSchema([
-    { name: 'Home', url: 'https://glowheal.in' },
-    { name: 'Services', url: 'https://glowheal.in/services' },
+    { name: 'Home', url: 'https://doqor.com' },
+    { name: 'Services', url: 'https://doqor.com/services' },
   ]);
 
   const organizationSchema = buildOrganizationSchema();
@@ -128,7 +128,7 @@ export default function ServicesPage() {
               {/* Disclaimer */}
               <div className="mt-8 p-4 bg-white rounded-lg border border-amber-300">
                 <p className="text-sm text-gray-700 text-center">
-                  <strong>Note:</strong> Glowheal fixed prices apply at partner clinics in Pune. 
+                  <strong>Note:</strong> Doqor fixed prices apply at partner clinics in Pune. 
                   Add-ons (labs, implants, extended stays) require consent after your free consultation.
                 </p>
               </div>
@@ -157,12 +157,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Why Choose Glowheal */}
+      {/* Why Choose Doqor */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-display text-forest-700 mb-4">
-              Why Choose Glowheal for Your Health?
+              Why Choose Doqor for Your Health?
             </h2>
             <p className="text-gray-600">
               India's most trusted platform for quality healthcare

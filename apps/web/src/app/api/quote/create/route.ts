@@ -130,7 +130,7 @@ function generateQuoteHTML(data: {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glowheal Quote - ${leadId}</title>
+  <title>Doqor Quote - ${leadId}</title>
   <style>
     @media print {
       @page {
@@ -422,7 +422,7 @@ function generateQuoteHTML(data: {
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo">Glowheal</div>
+      <div class="logo">Doqor</div>
       <div class="quote-meta">
         <strong>Quote #${leadId}</strong>
         <div>Date: ${formattedDate}</div>
@@ -488,7 +488,7 @@ function generateQuoteHTML(data: {
       <ul>
         <li><strong>This is a provisional quote only.</strong> Final services and costs will be confirmed after your free consultation with our doctor.</li>
         <li><strong>Payment required only after consultation and consent.</strong> You are under no obligation to proceed with any service.</li>
-        <li><strong>Add-ons not included:</strong> Lab tests, imaging, medications, and implants are billed separately per Glowheal add-on catalog.</li>
+        <li><strong>Add-ons not included:</strong> Lab tests, imaging, medications, and implants are billed separately per Doqor add-on catalog.</li>
         <li><strong>Prices are fixed for ${city}.</strong> No hidden charges. All prices include GST.</li>
         <li><strong>Valid for 30 days</strong> from the date of this quote.</li>
         <li><strong>Partner doctor fees:</strong> If routed to a specialist, standard consultation fees may apply separately from treatment costs.</li>
@@ -496,9 +496,9 @@ function generateQuoteHTML(data: {
     </div>
 
     <div class="footer">
-      <strong>Glowheal Healthcare Services</strong>
-      <div>Phone: +91 8329563445 | Email: hello@glowheal.in</div>
-      <div>Visit: https://glowheal.in/pricing</div>
+      <strong>Doqor Healthcare Services</strong>
+      <div>Phone: +91 9860151400 | Email: hello@doqor.com</div>
+      <div>Visit: https://doqor.com/pricing</div>
       <div style="margin-top: 8px;">Generated on ${new Date(generatedAt).toLocaleString('en-IN')}</div>
     </div>
   </div>
