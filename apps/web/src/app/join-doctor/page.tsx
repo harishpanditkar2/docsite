@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { DoctorApplyForm } from '@/components/features/DoctorApplyForm';
@@ -6,10 +6,10 @@ import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-bui
 import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
 
 export const metadata: Metadata = {
-  title: 'Join as Doctor | Partner with Doqor',
-  description: 'Grow your practice with Doqor. Get qualified patients, transparent payouts, and steady referrals across 13 specialties. Zero setup fee. Start in days.',
+  title: 'Join as Doctor | Partner with Glowheal',
+  description: 'Grow your practice with Glowheal. Get qualified patients, transparent payouts, and steady referrals across 13 specialties. Zero setup fee. Start in days.',
   openGraph: {
-    title: 'Join as Doctor | Partner with Doqor',
+    title: 'Join as Doctor | Partner with Glowheal',
     description: 'Grow your practice with qualified patient leads and transparent fixed pricing.',
     type: 'website',
   },
@@ -25,8 +25,8 @@ export default function JoinDoctorPage() {
 
   const organizationSchema = buildOrganizationSchema();
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: 'Home', url: 'https://Doqor.in' },
-    { name: 'Join as Doctor', url: 'https://Doqor.in/join-doctor' },
+    { name: 'Home', url: 'https://glowheal.in' },
+    { name: 'Join as Doctor', url: 'https://glowheal.in/join-doctor' },
   ]);
 
   return (
@@ -38,7 +38,7 @@ export default function JoinDoctorPage() {
         <div className="container-width">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Grow Your Practice with Doqor
+              Grow Your Practice with Glowheal
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-jade-50">
               Get qualified patients. Keep higher profits. Zero setup fee.
@@ -50,8 +50,8 @@ export default function JoinDoctorPage() {
               <Button variant="primary" size="lg" href="#apply">
                 Join Now (Free)
               </Button>
-              <Button variant="secondary" size="lg" href="tel:+919860151400">
-                ðŸ"ž Talk to Partnerships
+              <Button variant="secondary" size="lg" href="tel:+918329563445">
+                📞 Talk to Partnerships
               </Button>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function JoinDoctorPage() {
       <section className="py-16">
         <div className="container-width">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-forest-900 mb-12">
-            Why Partner with Doqor?
+            Why Partner with Glowheal?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Benefit 1 */}
@@ -91,7 +91,7 @@ export default function JoinDoctorPage() {
                 Fixed Patient Pricing, Transparent Payouts
               </h3>
               <p className="text-gray-700">
-                No rate haggling. Patients see Doqor fixed prices. You get predictable revenue per service.
+                No rate haggling. Patients see Glowheal fixed prices. You get predictable revenue per service.
               </p>
             </div>
 
@@ -144,40 +144,40 @@ export default function JoinDoctorPage() {
                 <thead className="bg-forest-50">
                   <tr>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-forest-900">Service</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-forest-900">Doqor Patient Price</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-forest-900">Glowheal Patient Price</th>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-forest-900">Illustrative Doctor Payout*</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">Therapy Session (50-60 min)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹1,499</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹1,199</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹1,499</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹1,199</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">PRP Hair (1 session)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹4,999</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹3,999</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹4,999</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹3,999</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">Ortho Follow-up</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹899</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹719</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹899</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹719</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">Acne Care Plan (30 days)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹899</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹719</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹899</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹719</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">Diet Plan (30 days)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹899</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹719</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹899</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹719</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">IV Therapy (Vitamin Boost)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹2,999</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹2,399</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹2,999</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹2,399</td>
                   </tr>
                 </tbody>
               </table>
@@ -201,7 +201,7 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>How long does onboarding take?</span>
-                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
+                <span className="group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 Typically 3-5 business days. After application review, we schedule a brief call, verify credentials, complete KYC, sync your slots, and you're live.
@@ -211,7 +211,7 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>When do I receive payouts?</span>
-                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
+                <span className="group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 Weekly payouts processed every Friday for consultations completed the previous week. Bank transfer via NEFT/IMPS. Requires valid PAN/GST and bank details during KYC.
@@ -221,17 +221,17 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>What if a patient cancels?</span>
-                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
+                <span className="group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-gray-700 mt-4">
-                Patients can cancel up to 1 day before their scheduled appointment. Same-day cancellations are not permitted. Doctors will not receive payment for cancelled bookings. No-shows or late cancellations are tracked; persistent offenders are flagged. You won't be penalized for patient-side cancellations within the allowed timeframe.
+                Patients can cancel up to 6 hours before appointment. No-shows or late cancellations are tracked; persistent offenders are flagged. You won't be penalized for patient-side cancellations.
               </p>
             </details>
 
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>What documents do I need?</span>
-                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
+                <span className="group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 Medical registration (MCI/NMC/State Council), PAN card, GST certificate (if applicable), bank details (cancelled cheque/passbook), clinic address proof. Degree certificates helpful but optional.
@@ -241,20 +241,20 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>How is patient privacy maintained?</span>
-                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
+                <span className="group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-gray-700 mt-4">
-                All consultations and records follow DISHA (Digital Information Security in Healthcare Act) and IT Act guidelines. Patient consent required for data sharing. You own your clinical notes; Doqor handles booking/payment data only.
+                All consultations and records follow DISHA (Digital Information Security in Healthcare Act) and IT Act guidelines. Patient consent required for data sharing. You own your clinical notes; Glowheal handles booking/payment data only.
               </p>
             </details>
 
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>Can I set my own prices?</span>
-                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
+                <span className="group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-gray-700 mt-4">
-                Doqor uses fixed patient-facing prices for transparency. Doctor payouts are based on a pre-agreed fee schedule that factors in specialty, complexity, and market rates. During onboarding, we'll discuss the schedule for your specialties.
+                Glowheal uses fixed patient-facing prices for transparency. Doctor payouts are based on a pre-agreed fee schedule that factors in specialty, complexity, and market rates. During onboarding, we'll discuss the schedule for your specialties.
               </p>
             </details>
           </div>
@@ -266,7 +266,7 @@ export default function JoinDoctorPage() {
         <div className="container-width">
           <div className="max-w-4xl mx-auto mb-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-forest-900 mb-4">
-              Ready to Join Doqor?
+              Ready to Join Glowheal?
             </h2>
             <p className="text-lg text-gray-700">
               Fill out the application below. Our partnerships team will review and reach out within 2-3 business days.

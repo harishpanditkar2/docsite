@@ -90,7 +90,7 @@ export default function LandingPage() {
             Doqor
           </Link>
           <a href="tel:+919860151400" className="text-sm text-gray-600 hover:text-gray-900">
-            ðŸ"ž 9860151400
+            📞 9860151400
           </a>
         </div>
       </header>
@@ -101,7 +101,7 @@ export default function LandingPage() {
           <div className="max-w-4xl mx-auto text-center">
             {/* Urgency Badge */}
             <div className="inline-block bg-yellow-400 text-forest-700 px-6 py-2 rounded-full font-bold text-sm mb-6">
-              ðŸ”¥ FLASH SALE: Only 3 Slots Left Today
+              🔥 FLASH SALE: Only 3 Slots Left Today
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -219,12 +219,12 @@ export default function LandingPage() {
 
             <div className="space-y-6">
               {[
-                { icon: 'ðŸ‘¨₹€₹š•ï¸', title: '30-Minute Video Consultation', desc: 'Face-to-face with top dermatologists' },
-                { icon: 'ðŸ“‹', title: 'Personalized Treatment Plan', desc: 'Customized for your skin type and concern' },
-                { icon: 'ðŸ’Š', title: 'Digital Prescription', desc: 'Delivered instantly to your email' },
-                { icon: 'ðŸ“ž', title: '2 Free Follow-Ups', desc: 'Track progress with your doctor' },
-                { icon: 'ðŸ’°', title: 'Money Back Guarantee*', desc: 'Not satisfied? Get full refund within 30 days' },
-                { icon: 'ðŸ”’', title: '100% Confidential', desc: 'Your privacy is our priority' },
+                { icon: '👨‍⚕️', title: '30-Minute Video Consultation', desc: 'Face-to-face with top dermatologists' },
+                { icon: '📋', title: 'Personalized Treatment Plan', desc: 'Customized for your skin type and concern' },
+                { icon: '💊', title: 'Digital Prescription', desc: 'Delivered instantly to your email' },
+                { icon: '📞', title: '2 Free Follow-Ups', desc: 'Track progress with your doctor' },
+                { icon: '💰', title: 'Money Back Guarantee*', desc: 'Not satisfied? Get full refund within 30 days' },
+                { icon: '🔒', title: '100% Confidential', desc: 'Your privacy is our priority' },
               ].map((benefit, i) => (
                 <div key={i} className="flex items-start gap-4 p-6 bg-jade-50 rounded-lg">
                   <div className="text-4xl">{benefit.icon}</div>
@@ -364,9 +364,9 @@ export default function LandingPage() {
             </button>
 
             <div className="text-center">
-              <div className="text-6xl mb-4">ðŸŽ</div>
+              <div className="text-6xl mb-4">🎁</div>
               <h3 className="text-2xl font-bold text-forest-700 mb-4">
-                Wait! Get Extra ₹‚¹100 OFF
+                Wait! Get Extra ₹100 OFF
               </h3>
               <p className="text-gray-700 mb-6">
                 Enter your email and get a special discount code for just ₹‚¹399 consultation!

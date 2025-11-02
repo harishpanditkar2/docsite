@@ -1,6 +1,6 @@
-﻿'use client';
+'use client';
 
-import React, { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -20,7 +20,8 @@ import { useCity, getCityDisplayName } from '@/lib/city-context';
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(100),
   phone: z.string()
-    .regex(/^[6-9]\d{9}$/, 'Enter valid 10-digit mobile number'),
+    .regex(/^[6-9]\d{9}$/, 'Enter valid 10-digit mobile number')
+    .transform(val => `91${val}`), // Convert to E.164
   email: z.string().email('Enter valid email address').optional().or(z.literal('')),
 });
 
@@ -92,14 +93,6 @@ function BookAppointmentPageContent() {
       consultationType: 'free' as const, // Default to free consultation
       whatsappConfirm: true, // Default WhatsApp confirm on
       city: getCityDisplayName(contextCity), // Pre-fill city from context
-      preferredDate: new Date().toISOString().split('T')[0], // Default to today
-      preferredTime: (() => {
-        // Default to current time period
-        const hour = new Date().getHours();
-        if (hour < 12) return 'morning' as const;
-        if (hour < 17) return 'afternoon' as const;
-        return 'evening' as const;
-      })(),
     },
   });
 
@@ -208,7 +201,6 @@ function BookAppointmentPageContent() {
   };
 
   const onSubmit = async (data: BookingFormData) => {
-    console.log('Form submitted with data:', data);
     setIsSubmitting(true);
 
     try {
@@ -216,9 +208,6 @@ function BookAppointmentPageContent() {
       const timestamp = new Date().toISOString();
       const id = `booking-${Date.now()}`;
       setBookingId(id);
-
-      // Add 91 prefix to phone if not already present
-      const phoneWithPrefix = data.phone.startsWith('91') ? data.phone : `91${data.phone}`;
 
       // Prepare lead data with selected catalog items
       const leadData = {
@@ -229,12 +218,12 @@ function BookAppointmentPageContent() {
         consultationType: data.consultationType, // 'free' or 'specialist'
         contact: {
           name: data.name,
-          phone: phoneWithPrefix, // E.164 format
+          phone: data.phone, // Already in E.164 format
           email: data.email || null,
         },
         concern: {
           specialty: data.specialty,
-          description: data.concern || '',
+          description: data.concern,
         },
         preferences: {
           city: data.city,
@@ -252,8 +241,6 @@ function BookAppointmentPageContent() {
           } : null;
         }).filter(Boolean),
       };
-
-      console.log('Submitting lead data:', leadData);
 
       // Save to API route (which writes to /data/leads/*.json)
       const response = await fetch('/api/bookings', {
@@ -281,12 +268,12 @@ function BookAppointmentPageContent() {
               city: data.city,
               contact: {
                 name: data.name,
-                phone: phoneWithPrefix,
+                phone: data.phone,
                 email: data.email || undefined,
               },
               concern: {
                 specialty: data.specialty,
-                description: data.concern || '',
+                description: data.concern,
               },
             }),
           });
@@ -314,7 +301,7 @@ function BookAppointmentPageContent() {
       setBookingSuccess(true);
       
       // Store in localStorage for recovery
-      localStorage.removeItem('Doqor-booking-draft');
+      localStorage.removeItem('doqor-booking-draft');
       
       // Analytics
       if (typeof window !== 'undefined' && (window as any).dataLayer) {
@@ -338,33 +325,33 @@ function BookAppointmentPageContent() {
             }).filter(Boolean).join('\n')
           : 'No specific services selected';
         
-        const whatsappMessage = `ðŸŒ¿ *Doqor Booking Confirmation*
+        const whatsappMessage = `🌿 *Doqor Booking Confirmation*
 
-ðŸ“‹ *Booking ID:* ${id}
-ðŸ‘¤ *Name:* ${data.name}
-ðŸ“± *Phone:* ${phoneWithPrefix}
-ðŸ“§ *Email:* ${data.email || 'Not provided'}
+📋 *Booking ID:* ${id}
+👤 *Name:* ${data.name}
+📱 *Phone:* ${data.phone}
+📧 *Email:* ${data.email || 'Not provided'}
 
-ðŸ’š *Consultation Type:* ${data.consultationType === 'free' ? 'Free First Consultation (₹‚¹0)' : 'Direct Specialist (₹‚¹499+)'}
-ðŸ©º *Specialty:* ${data.specialty}
-ðŸ“ *City:* ${data.city}
-ðŸ“… *Preferred Date:* ${data.preferredDate}
-₹° *Preferred Time:* ${data.preferredTime}
+💚 *Consultation Type:* ${data.consultationType === 'free' ? 'Free First Consultation (₹0)' : 'Direct Specialist (₹499+)'}
+🩺 *Specialty:* ${data.specialty}
+📍 *City:* ${data.city}
+📅 *Preferred Date:* ${data.preferredDate}
+⏰ *Preferred Time:* ${data.preferredTime}
 
-ðŸ“ *Concern:*
-${data.concern || 'Not specified'}
+📝 *Concern:*
+${data.concern}
 
-ðŸ›’ *Selected Services (Provisional):*
+🛒 *Selected Services (Provisional):*
 ${servicesText}
 
-₹œ… I confirm booking and will wait for your call to schedule the consultation.`;
+✅ I confirm booking and will wait for your call to schedule the consultation.`;
 
-        const whatsappUrl = `https://wa.me/919860151400?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappUrl = `https://wa.me/918329563445?text=${encodeURIComponent(whatsappMessage)}`;
         
-        console.log('Opening WhatsApp with URL:', whatsappUrl);
-        
-        // Open WhatsApp immediately
-        window.open(whatsappUrl, '_blank');
+        // Open WhatsApp in new tab after short delay (allow user to see success message first)
+        setTimeout(() => {
+          window.open(whatsappUrl, '_blank');
+        }, 1500);
       }
       
     } catch (error) {
@@ -378,7 +365,7 @@ ${servicesText}
   // Save draft to localStorage on input change
   const saveDraft = () => {
     const values = getValues();
-    localStorage.setItem('Doqor-booking-draft', JSON.stringify(values));
+    localStorage.setItem('doqor-booking-draft', JSON.stringify(values));
   };
 
   // Success view
@@ -402,7 +389,7 @@ ${servicesText}
       : `Hi, I just submitted booking ${bookingId}. My name is ${formData.name} and I need ${formData.specialty} consultation in ${formData.city}.${truncatedServiceNames ? ` Interested in: ${truncatedServiceNames}` : ''}`;
     
     const whatsappURL = getFreeConsultWhatsAppURL(formData.specialty, formData.city);
-    const whatsappFallback = `https://api.whatsapp.com/send?phone=919860151400&text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappFallback = `https://api.whatsapp.com/send?phone=918329563445&text=${encodeURIComponent(whatsappMessage)}`;
 
     return (
       <div className="min-h-screen bg-gradient-to-b from-forest-50 to-white py-12">
@@ -434,7 +421,7 @@ ${servicesText}
               <div className="bg-jade-50 rounded-lg p-6 mb-6">
                 <h2 className="font-semibold text-forest-700 mb-3">Your Details:</h2>
                 <div className="text-left space-y-2 text-sm">
-                  <p><strong>Consultation Type:</strong> {isFreeConsult ? 'Free First Consultation (₹‚¹0)' : 'Specialist Consultation'}</p>
+                  <p><strong>Consultation Type:</strong> {isFreeConsult ? 'Free First Consultation (₹0)' : 'Specialist Consultation'}</p>
                   <p><strong>Specialty:</strong> {formData.specialty}</p>
                   <p><strong>City:</strong> {formData.city}</p>
                   <p><strong>Preferred Date:</strong> {formData.preferredDate}</p>
@@ -479,7 +466,7 @@ ${servicesText}
                         </svg>
                         <div className="flex-1">
                           <p className="text-sm font-semibold text-orange-800 mb-1">
-                            ₹š ï¸ Multiple Specialties Selected
+                            ⚠️ Multiple Specialties Selected
                           </p>
                           <p className="text-xs text-gray-700">
                             You've selected items from {specialties.size} different specialties ({Array.from(specialties).join(', ')}). 
@@ -524,7 +511,7 @@ ${servicesText}
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                         </svg>
-                        ðŸ“¥ Download Your Quote (Printable PDF)
+                        📥 Download Your Quote (Printable PDF)
                       </a>
                       <p className="text-xs text-gray-600 mt-2">
                         View and print your detailed service quote. Valid for 30 days.
@@ -553,7 +540,7 @@ ${servicesText}
                       aria-label={`Continue conversation on WhatsApp about your ${formData.specialty} consultation`}
                     >
                       <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white">
-                        ðŸ“± Continue on WhatsApp
+                        📱 Continue on WhatsApp
                       </Button>
                     </a>
 
@@ -589,31 +576,31 @@ ${servicesText}
           {/* Hero Banner for Free Consultation */}
           <div className="bg-gradient-to-r from-forest-700 to-jade-600 text-white rounded-2xl p-6 mb-8 shadow-lg">
             <h1 className="text-3xl font-bold mb-2">Book Your Consultation</h1>
-            <p className="text-forest-50 text-lg mb-3">Your first call is free. Specialist bookings only after your plan is confirmed.</p>
+            <p className="text-forest-50 text-lg mb-3">{proofText}</p>
             <div className="flex items-center gap-2 text-sm text-forest-50">
               <span>Prefer to call?</span>
               <a 
-                href="tel:+919860151400" 
+                href="tel:+918329563445" 
                 className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-forest-100 transition-colors underline underline-offset-2"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                +91 986 015 1400
+                +91 832 956 3445
               </a>
             </div>
           </div>
 
           {/* Progress Indicator */}
           <div className="mb-8">
-            <div className="flex items-start justify-center gap-2 sm:gap-4">
+            <div className="flex items-center justify-between">
               {STEPS.map((step, index) => (
-                <React.Fragment key={step.id}>
-                  <div className="flex flex-col items-center flex-shrink-0">
+                <div key={step.id} className="flex items-center flex-1">
+                  <div className="flex flex-col items-center flex-1">
                     <button
                       onClick={() => goToStep(step.id)}
                       disabled={step.id > currentStep && currentStep < STEPS.length}
-                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-bold text-base sm:text-lg transition-all mb-2 ${
+                      className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all mb-2 ${
                         currentStep >= step.id
                           ? 'bg-lime-400 text-forest-900 shadow-md cursor-pointer hover:bg-lime-500'
                           : 'bg-gray-200 text-gray-600 cursor-not-allowed'
@@ -622,22 +609,20 @@ ${servicesText}
                       {step.id}
                     </button>
                     <div className="text-center">
-                      <p className={`text-xs sm:text-sm font-semibold whitespace-nowrap ${currentStep >= step.id ? 'text-forest-900' : 'text-gray-600'}`}>
+                      <p className={`text-sm font-semibold ${currentStep >= step.id ? 'text-forest-900' : 'text-gray-600'}`}>
                         {step.title}
                       </p>
-                      <p className="text-[10px] sm:text-xs text-gray-500 whitespace-nowrap hidden sm:block">{step.description}</p>
+                      <p className="text-xs text-gray-500">{step.description}</p>
                     </div>
                   </div>
                   {index < STEPS.length - 1 && (
-                    <div className="flex items-center pt-5 flex-shrink-0">
-                      <div
-                        className={`w-8 sm:w-16 h-1 transition-colors ${
-                          currentStep > step.id ? 'bg-lime-400' : 'bg-gray-200'
-                        }`}
-                      />
-                    </div>
+                    <div
+                      className={`flex-1 h-1 mx-2 transition-colors ${
+                        currentStep > step.id ? 'bg-lime-400' : 'bg-gray-200'
+                      }`}
+                    />
                   )}
-                </React.Fragment>
+                </div>
               ))}
             </div>
           </div>
@@ -648,9 +633,9 @@ ${servicesText}
               {/* Step 1: Contact Info */}
               {currentStep === 1 && (
                 <div className="space-y-6">
-                  <div className="border-b-2 border-forest-100 pb-4 mb-6">
-                    <h2 className="text-3xl font-bold text-forest-900 mb-2">ðŸ“± Contact Information</h2>
-                    <p className="text-base text-gray-600">We'll use these details to confirm your appointment</p>
+                  <div>
+                    <h2 className="text-2xl font-bold text-forest-700 mb-2">Contact Information</h2>
+                    <p className="text-gray-600">We'll use these details to confirm your appointment</p>
                   </div>
 
                   {/* NEW: Selected Services Card */}
@@ -676,45 +661,26 @@ ${servicesText}
                       <div className="space-y-3 mb-4">
                         {selectedItems.map((code) => {
                           const item = getCatalogItem('pune', code);
-                          const isFreeConsult = code === 'FREE_CONSULT';
                           return item ? (
-                            <div 
-                              key={code} 
-                              className={`flex items-start justify-between rounded-lg p-4 shadow-sm ${
-                                isFreeConsult 
-                                  ? 'bg-lime-100 border-2 border-lime-400' 
-                                  : 'bg-white'
-                              }`}
-                            >
+                            <div key={code} className="flex items-start justify-between bg-white rounded-lg p-4 shadow-sm">
                               <div className="flex-1">
-                                <div className="flex items-center gap-2">
-                                  <p className={`font-semibold ${isFreeConsult ? 'text-forest-900' : 'text-forest-700'}`}>
-                                    {item.name}
-                                  </p>
-                                  {isFreeConsult && (
-                                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-lime-400 text-forest-900">
-                                      ₹œ“ Selected
-                                    </span>
-                                  )}
-                                </div>
-                                <p className={`text-sm mt-1 ${isFreeConsult ? 'text-forest-700 font-medium' : 'text-gray-600'}`}>
+                                <p className="font-semibold text-forest-700">{item.name}</p>
+                                <p className="text-sm text-gray-600 mt-1">
                                   {formatPrice(item.price)} / {item.unit}
                                 </p>
                               </div>
-                              {!isFreeConsult && (
-                                <button
-                                  type="button"
-                                  onClick={() => removeService(code)}
-                                  className="ml-4 inline-flex items-center gap-1 rounded-full bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 px-3 py-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-forest-700"
-                                  style={{ minHeight: '44px', minWidth: '44px' }}
-                                  aria-label={`Remove ${item.name} from selection`}
-                                >
-                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                  </svg>
-                                  Remove
-                                </button>
-                              )}
+                              <button
+                                type="button"
+                                onClick={() => removeService(code)}
+                                className="ml-4 inline-flex items-center gap-1 rounded-full bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 px-3 py-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-forest-700"
+                                style={{ minHeight: '44px', minWidth: '44px' }}
+                                aria-label={`Remove ${item.name} from selection`}
+                              >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                Remove
+                              </button>
                             </div>
                           ) : null;
                         })}
@@ -790,9 +756,9 @@ ${servicesText}
               {/* Step 2: Concern */}
               {currentStep === 2 && (
                 <div className="space-y-6">
-                  <div className="border-b-2 border-forest-100 pb-4 mb-6">
-                    <h2 className="text-3xl font-bold text-forest-900 mb-2">ðŸ’š Your Concern</h2>
-                    <p className="text-base text-gray-600">Help us understand your health concern</p>
+                  <div>
+                    <h2 className="text-2xl font-bold text-forest-700 mb-2">What brings you here?</h2>
+                    <p className="text-gray-600">Help us understand your health concern</p>
                   </div>
 
                   {/* Consultation Type Selection */}
@@ -814,7 +780,7 @@ ${servicesText}
                         />
                         <div className="flex items-start justify-between mb-2">
                           <div className="font-bold text-forest-700 text-lg">Free First Consultation</div>
-                          <div className="text-2xl font-bold text-forest-700">₹‚¹0</div>
+                          <div className="text-2xl font-bold text-forest-700">₹0</div>
                         </div>
                         <p className="text-sm text-forest-600 mb-3">
                           Talk to our in-house doctor at no cost. Get routed to a specialist if needed.
@@ -840,7 +806,7 @@ ${servicesText}
                         />
                         <div className="flex items-start justify-between mb-2">
                           <div className="font-bold text-forest-700 text-lg">Direct Specialist</div>
-                          <div className="text-2xl font-bold text-gray-700">₹‚¹499+</div>
+                          <div className="text-2xl font-bold text-gray-700">₹499+</div>
                         </div>
                         <p className="text-sm text-gray-600 mb-3">
                           Book directly with a verified specialist for your specific concern.
@@ -889,9 +855,9 @@ ${servicesText}
               {/* Step 3: Preferences */}
               {currentStep === 3 && (
                 <div className="space-y-6">
-                  <div className="border-b-2 border-forest-100 pb-4 mb-6">
-                    <h2 className="text-3xl font-bold text-forest-900 mb-2">ðŸ“ Your Preferences</h2>
-                    <p className="text-base text-gray-600">When and where would you like your consultation?</p>
+                  <div>
+                    <h2 className="text-2xl font-bold text-forest-700 mb-2">Your Preferences</h2>
+                    <p className="text-gray-600">When and where would you like your consultation?</p>
                   </div>
 
                   <Select
@@ -1018,7 +984,7 @@ ${servicesText}
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-1">
                             <span className="font-semibold text-forest-900">Basic Health Panel</span>
-                            <span className="text-lg font-bold text-jade-600">₹‚¹999</span>
+                            <span className="text-lg font-bold text-jade-600">₹999</span>
                           </div>
                           <p className="text-xs text-gray-600">CBC, Blood Sugar, Lipid Profile, Liver & Kidney Function</p>
                         </div>
@@ -1042,9 +1008,9 @@ ${servicesText}
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-1">
                             <span className="font-semibold text-forest-900">Comprehensive Health Check Plus</span>
-                            <span className="text-lg font-bold text-jade-600">₹‚¹5,999</span>
+                            <span className="text-lg font-bold text-jade-600">₹5,999</span>
                           </div>
-                          <p className="text-xs text-gray-600">Full panel + consultation + diet plan (saves ₹‚¹1,899)</p>
+                          <p className="text-xs text-gray-600">Full panel + consultation + diet plan (saves ₹1,899)</p>
                         </div>
                       </label>
 
@@ -1066,7 +1032,7 @@ ${servicesText}
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-1">
                             <span className="font-semibold text-forest-900">Gut Health Panel</span>
-                            <span className="text-lg font-bold text-jade-600">₹‚¹1,999</span>
+                            <span className="text-lg font-bold text-jade-600">₹1,999</span>
                           </div>
                           <p className="text-xs text-gray-600">Microbiome analysis, food sensitivities, inflammation markers</p>
                         </div>
@@ -1092,7 +1058,7 @@ ${servicesText}
                     onClick={handleBack}
                     className="flex-1"
                   >
-                    ₹† Back
+                    ← Back
                   </Button>
                 )}
                 
@@ -1102,7 +1068,7 @@ ${servicesText}
                     onClick={handleNext}
                     className="flex-1"
                   >
-                    Next ₹†’
+                    Next →
                   </Button>
                 ) : (
                   <>
@@ -1110,11 +1076,6 @@ ${servicesText}
                       type="submit"
                       disabled={isSubmitting}
                       className="flex-1"
-                      onClick={() => {
-                        console.log('Submit button clicked');
-                        console.log('Form errors:', errors);
-                        console.log('Current form values:', getValues());
-                      }}
                     >
                       {isSubmitting ? 'Submitting...' : 'Confirm Booking'}
                     </Button>
@@ -1122,27 +1083,13 @@ ${servicesText}
                 )}
               </div>
 
-              {/* Show validation errors if any */}
-              {Object.keys(errors).length > 0 && currentStep === STEPS.length && (
-                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                  <p className="text-sm font-semibold text-red-800 mb-2">Please fix the following errors:</p>
-                  <ul className="text-sm text-red-700 space-y-1">
-                    {Object.entries(errors).map(([field, error]) => (
-                      <li key={field}>
-                        <strong>{field}:</strong> {error.message}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
               {/* Booking Reassurance - Below Submit Button */}
               {currentStep === STEPS.length && (
                 <p className="text-sm text-forest-600 text-center mt-3 flex items-center justify-center gap-1.5">
                   <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>No payment now₹€”₹‚¹0 first consult</span>
+                  <span>No payment now—₹0 first consult</span>
                 </p>
               )}
 
@@ -1158,7 +1105,7 @@ ${servicesText}
             <p>
               Need help?{' '}
               <a
-                href="https://wa.me/919860151400?text=I%20need%20help%20with%20booking"
+                href="https://wa.me/918329563445?text=I%20need%20help%20with%20booking"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-jade-600 hover:text-jade-800 font-medium"

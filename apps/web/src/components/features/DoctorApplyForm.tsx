@@ -110,7 +110,7 @@ export function DoctorApplyForm() {
         </div>
         <h3 className="text-2xl font-bold text-forest-900 mb-3">Application Received!</h3>
         <p className="text-gray-700 mb-6">
-          Thank you for your interest in joining Doqor. Our partnerships team will review your application and reach out within 2-3 business days.
+          Thank you for your interest in joining Glowheal. Our partnerships team will review your application and reach out within 2-3 business days.
         </p>
         <div className="bg-white rounded-xl p-6 mb-6 text-left">
           <h4 className="font-semibold text-forest-900 mb-3">Next Steps:</h4>
@@ -470,7 +470,7 @@ export function DoctorApplyForm() {
       {/* Document Upload Note */}
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
         <p className="text-sm text-gray-700">
-          <strong>ðŸ“„ Document Verification:</strong> We'll request registration proof and other documents during the onboarding call. No need to upload now.
+          <strong>📄 Document Verification:</strong> We'll request registration proof and other documents during the onboarding call. No need to upload now.
         </p>
       </div>
 

@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { ServiceCard } from '@/components/features/ServiceCard';
 import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
@@ -9,20 +9,20 @@ import { getCatalog, CatalogSpecialty } from '@/lib/catalog';
 import services from '@/data/services.json';
 
 export const metadata: Metadata = {
-  title: 'Free First Consultation | Healthcare Services - Doqor',
+  title: 'Free First Consultation | Healthcare Services - Glowheal',
   description: 'Start with a free consultation with our in-house doctor. Browse 12+ healthcare specialties including Dermatology, Hair Care, Mental Health, Women\'s Health. Get routed to specialists if needed.',
   openGraph: {
-    title: 'Free First Consultation | Healthcare Services - Doqor',
+    title: 'Free First Consultation | Healthcare Services - Glowheal',
     description: 'Start with a free consultation. Browse 12+ healthcare specialties. Get routed to specialists if needed.',
-    url: 'https://Doqor.in/services',
+    url: 'https://glowheal.in/services',
     type: 'website',
   },
 };
 
 export default function ServicesPage() {
   const breadcrumbs = buildBreadcrumbSchema([
-    { name: 'Home', url: 'https://Doqor.in' },
-    { name: 'Services', url: 'https://Doqor.in/services' },
+    { name: 'Home', url: 'https://glowheal.in' },
+    { name: 'Services', url: 'https://glowheal.in/services' },
   ]);
 
   const organizationSchema = buildOrganizationSchema();
@@ -93,7 +93,7 @@ export default function ServicesPage() {
                   href="/pricing"
                   className="text-jade-600 hover:text-jade-800 font-semibold underline"
                 >
-                  View all Pune pricing ₹†’
+                  View all Pune pricing →
                 </Link>
               </div>
 
@@ -108,7 +108,7 @@ export default function ServicesPage() {
                       href={`/pricing/${specialty.slug}`}
                       className="text-jade-600 hover:text-jade-800 font-medium underline text-sm"
                     >
-                      See all {specialty.title.toLowerCase()} prices ₹†’
+                      See all {specialty.title.toLowerCase()} prices →
                     </Link>
                   </div>
 
@@ -128,7 +128,7 @@ export default function ServicesPage() {
               {/* Disclaimer */}
               <div className="mt-8 p-4 bg-white rounded-lg border border-amber-300">
                 <p className="text-sm text-gray-700 text-center">
-                  <strong>Note:</strong> Doqor fixed prices apply at partner clinics in Pune. 
+                  <strong>Note:</strong> Glowheal fixed prices apply at partner clinics in Pune. 
                   Add-ons (labs, implants, extended stays) require consent after your free consultation.
                 </p>
               </div>
@@ -157,12 +157,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Why Choose Doqor */}
+      {/* Why Choose Glowheal */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-display text-forest-700 mb-4">
-              Why Choose Doqor for Your Health?
+              Why Choose Glowheal for Your Health?
             </h2>
             <p className="text-gray-600">
               India's most trusted platform for quality healthcare
@@ -172,32 +172,32 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                icon: 'ðŸ©º',
+                icon: '🩺',
                 title: 'Expert Doctors',
                 description: '500+ verified medical professionals with 10+ years experience',
               },
               {
-                icon: 'ðŸ’°',
+                icon: '💰',
                 title: 'Free First Consultation',
-                description: 'Your first call with our in-house doctor is free. Specialist fees (₹‚¹499+) apply only if you proceed.',
+                description: 'Your first call with our in-house doctor is free. Specialist fees (₹499+) apply only if you proceed.',
               },
               {
-                icon: 'ðŸ”’',
+                icon: '🔒',
                 title: 'Secure & Private',
                 description: 'End-to-end encrypted consultations. Your data is completely confidential',
               },
               {
-                icon: 'ðŸ“±',
+                icon: '📱',
                 title: 'Instant Access',
                 description: 'Book and consult within minutes. Available 24/7 for urgent needs',
               },
               {
-                icon: 'ðŸ’Š',
+                icon: '💊',
                 title: 'Digital Prescriptions',
                 description: 'Get prescriptions instantly via email. Order medicines online',
               },
               {
-                icon: 'ðŸ”„',
+                icon: '📄',
                 title: 'Follow-up Support',
                 description: 'Free follow-up consultations. Track your health progress',
               },

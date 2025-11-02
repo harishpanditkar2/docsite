@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useMemo } from 'react';
 import { DoctorCard } from '@/components/features/DoctorCard';
@@ -116,7 +116,7 @@ export default function DoctorsPage() {
       // Free consult filter (all doctors start with free consultation, this is for UX affordance)
       // In production, you might have a property like doctor.offersFreConsultation
       if (freeConsultFilter) {
-        // All doctors offer free first consultation via Doqor's routing model
+        // All doctors offer free first consultation via Glowheal's routing model
         // This filter is always true but shows the affordance to users
       }
 
@@ -151,8 +151,8 @@ export default function DoctorsPage() {
   const schemas = [
     buildOrganizationSchema(),
     buildBreadcrumbSchema([
-      { name: 'Home', url: 'https://Doqor.in' },
-      { name: 'Find Doctors', url: 'https://Doqor.in/doctors' },
+      { name: 'Home', url: 'https://glowheal.in' },
+      { name: 'Find Doctors', url: 'https://glowheal.in/doctors' },
     ]),
   ];
 
@@ -180,12 +180,12 @@ export default function DoctorsPage() {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Filters Sidebar */}
             <aside className="lg:w-80 flex-shrink-0">
-              <div className="lg:sticky top-20 bg-white rounded-lg shadow-lg p-6 space-y-6 max-h-[calc(100vh-6rem)] overflow-y-auto">
+              <div className="sticky top-4 bg-white rounded-lg shadow-lg p-6 space-y-6 max-h-[75vh] md:max-h-none overflow-auto">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-bold text-forest-900">Filters</h2>
+                  <h2 className="text-xl font-bold text-forest-700">Filters</h2>
                   <button
                     onClick={resetFilters}
-                    className="text-sm text-jade-600 hover:text-jade-800 font-semibold focus:outline-none focus:ring-2 focus:ring-forest-700 rounded px-2 py-1"
+                    className="text-sm text-jade-600 hover:text-jade-800 font-medium"
                   >
                     Reset All
                   </button>
@@ -200,7 +200,7 @@ export default function DoctorsPage() {
                         ? 'bg-forest-700 border-forest-700 text-white shadow-md'
                         : 'bg-white border-gray-300 text-gray-700 hover:border-forest-500'
                     }`}
-                    style={{ minHeight: '48px' }} // Accessibility: ₹‰¥48px touch target
+                    style={{ minHeight: '48px' }} // Accessibility: ≥48px touch target
                     aria-label="Filter doctors with free first consultation available"
                     aria-pressed={freeConsultFilter}
                   >
@@ -228,20 +228,20 @@ export default function DoctorsPage() {
                   </button>
                   {freeConsultFilter && (
                     <p className="text-xs text-forest-600 mt-2 px-1">
-                      All doctors offer a free consultation with a Doqor physician first. You'll be routed to specialists if needed.
+                      All doctors offer a free consultation with a Glowheal physician first. You'll be routed to specialists if needed.
                     </p>
                   )}
                 </div>
 
                 {/* Specialty Filter */}
                 <div>
-                  <label className="block text-sm font-semibold text-forest-900 mb-2">
+                  <label className="block text-sm font-semibold text-forest-700 mb-2">
                     Specialty
                   </label>
                   <select
                     value={specialtyFilter}
                     onChange={(e) => setSpecialtyFilter(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-forest-700 bg-white text-forest-900 font-medium"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-forest-700"
                   >
                     <option value="all">All Specialties</option>
                     {specialties.map(specialty => (
@@ -254,13 +254,13 @@ export default function DoctorsPage() {
 
                 {/* City Filter */}
                 <div>
-                  <label className="block text-sm font-semibold text-forest-900 mb-2">
+                  <label className="block text-sm font-semibold text-forest-700 mb-2">
                     City
                   </label>
                   <select
                     value={cityFilter}
                     onChange={(e) => setCityFilter(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-forest-700 bg-white text-forest-900 font-medium"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-forest-700"
                   >
                     <option value="all">All Cities</option>
                     {cities.map(city => (
@@ -273,7 +273,7 @@ export default function DoctorsPage() {
 
                 {/* Language Filter */}
                 <div>
-                  <label className="block text-sm font-semibold text-forest-900 mb-2">
+                  <label className="block text-sm font-semibold text-forest-700 mb-2">
                     Languages
                   </label>
                   <div className="space-y-2">
@@ -283,9 +283,9 @@ export default function DoctorsPage() {
                           type="checkbox"
                           checked={languageFilters.includes(language)}
                           onChange={() => toggleLanguage(language)}
-                          className="w-4 h-4 text-jade-600 border-gray-300 rounded focus:ring-2 focus:ring-forest-700"
+                          className="w-4 h-4 text-jade-600 border-gray-300 rounded focus:ring-forest-700"
                         />
-                        <span className="text-sm text-forest-900 font-medium">{language}</span>
+                        <span className="text-sm text-gray-700">{language}</span>
                       </label>
                     ))}
                   </div>
@@ -293,7 +293,7 @@ export default function DoctorsPage() {
 
                 {/* Gender Filter */}
                 <div>
-                  <label className="block text-sm font-semibold text-forest-900 mb-2">
+                  <label className="block text-sm font-semibold text-forest-700 mb-2">
                     Gender
                   </label>
                   <div className="space-y-2">
@@ -307,7 +307,7 @@ export default function DoctorsPage() {
                           onChange={(e) => setGenderFilter(e.target.value)}
                           className="w-4 h-4 text-jade-600 border-gray-300 focus:ring-forest-700"
                         />
-                        <span className="text-sm text-forest-900 font-medium">
+                        <span className="text-sm text-gray-700">
                           {gender === 'all' ? 'Any' : gender}
                         </span>
                       </label>
@@ -317,8 +317,8 @@ export default function DoctorsPage() {
 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-sm font-semibold text-forest-900 mb-2">
-                    Consultation Fee: Up to ₹‚¹{priceRange}
+                  <label className="block text-sm font-semibold text-forest-700 mb-2">
+                    Consultation Fee: Up to ₹{priceRange}
                   </label>
                   <input
                     type="range"
@@ -329,9 +329,9 @@ export default function DoctorsPage() {
                     onChange={(e) => setPriceRange(Number(e.target.value))}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-forest-700"
                   />
-                  <div className="flex justify-between text-xs text-gray-600 mt-1 font-medium">
-                    <span>₹‚¹0</span>
-                    <span>₹‚¹5,000</span>
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>₹0</span>
+                    <span>₹5,000</span>
                   </div>
                 </div>
 
@@ -344,7 +344,7 @@ export default function DoctorsPage() {
                       onChange={(e) => setRatingFilter(e.target.checked)}
                       className="w-4 h-4 text-jade-600 border-gray-300 rounded focus:ring-forest-700"
                     />
-                    <span className="text-sm font-semibold text-forest-900">
+                    <span className="text-sm font-semibold text-forest-700">
                       4.5+ Stars Only
                     </span>
                   </label>
@@ -352,36 +352,36 @@ export default function DoctorsPage() {
 
                 {/* Availability Filter */}
                 <div>
-                  <label className="block text-sm font-semibold text-forest-900 mb-2">
+                  <label className="block text-sm font-semibold text-forest-700 mb-2">
                     Availability
                   </label>
                   <div className="flex flex-wrap gap-2">
                     <button
                       onClick={() => setAvailabilityFilter('today')}
-                      className={`px-4 py-2 rounded-md text-sm font-semibold transition-colors ${
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                         availabilityFilter === 'today'
                           ? 'bg-jade-600 text-white'
-                          : 'bg-gray-100 text-forest-900 hover:bg-gray-200'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                     >
                       Today
                     </button>
                     <button
                       onClick={() => setAvailabilityFilter('thisweek')}
-                      className={`px-4 py-2 rounded-md text-sm font-semibold transition-colors ${
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                         availabilityFilter === 'thisweek'
                           ? 'bg-jade-600 text-white'
-                          : 'bg-gray-100 text-forest-900 hover:bg-gray-200'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                     >
                       This Week
                     </button>
                     <button
                       onClick={() => setAvailabilityFilter('anytime')}
-                      className={`px-4 py-2 rounded-md text-sm font-semibold transition-colors ${
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                         availabilityFilter === 'anytime'
                           ? 'bg-jade-600 text-white'
-                          : 'bg-gray-100 text-forest-900 hover:bg-gray-200'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                     >
                       Anytime
@@ -391,7 +391,7 @@ export default function DoctorsPage() {
 
                 {/* Experience Filter */}
                 <div>
-                  <label className="block text-sm font-semibold text-forest-900 mb-2">
+                  <label className="block text-sm font-semibold text-forest-700 mb-2">
                     Experience: Up to {experienceRange} years
                   </label>
                   <input
@@ -403,7 +403,7 @@ export default function DoctorsPage() {
                     onChange={(e) => setExperienceRange(Number(e.target.value))}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-forest-700"
                   />
-                  <div className="flex justify-between text-xs text-gray-600 mt-1 font-medium">
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>0 years</span>
                     <span>30 years</span>
                   </div>
@@ -461,7 +461,7 @@ export default function DoctorsPage() {
                 </div>
               ) : (
                 <div className="bg-white rounded-lg shadow-lg p-12 text-center">
-                  <div className="text-6xl mb-4">ðŸ”</div>
+                  <div className="text-6xl mb-4">🔍</div>
                   <h3 className="text-2xl font-bold text-forest-700 mb-2">
                     No doctors found
                   </h3>
@@ -497,4 +497,3 @@ export default function DoctorsPage() {
     </>
   );
 }
-

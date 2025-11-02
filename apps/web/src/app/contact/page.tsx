@@ -65,17 +65,17 @@ export default function ContactPage() {
 
     setSubmitMethod('whatsapp');
     
-    const whatsappMessage = `ðŸŒ¿ *Doqor Contact Form*
+    const whatsappMessage = `🌿 *Glowheal Contact Form*
 
-ðŸ'¤ *Name:* ${data.name}
-ðŸ"§ *Email:* ${data.email || 'Not provided'}
-ðŸ"± *Phone:* ${data.phone}
-ðŸ"‹ *Subject:* ${data.subject}
+👤 *Name:* ${data.name}
+📧 *Email:* ${data.email || 'Not provided'}
+📱 *Phone:* ${data.phone}
+📋 *Subject:* ${data.subject}
 
-ðŸ'¬ *Message:*
+💬 *Message:*
 ${data.message}`;
 
-    const whatsappUrl = `https://wa.me/919860151400?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/918329563445?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     
     setSubmitSuccess(true);
@@ -105,8 +105,8 @@ ${data.message}`;
                 </svg>
               </div>
               <h3 className="font-semibold text-forest-900 mb-2">Phone</h3>
-              <a href="tel:+919860151400" className="text-lime-600 hover:text-lime-700 font-medium">
-                +91 986 015 1400
+              <a href="tel:+918329563445" className="text-lime-600 hover:text-lime-700 font-medium">
+                +91 832 956 3445
               </a>
             </div>
 
@@ -117,8 +117,8 @@ ${data.message}`;
                 </svg>
               </div>
               <h3 className="font-semibold text-forest-900 mb-2">Email</h3>
-              <a href="mailto:hello@Doqor.com" className="text-lime-600 hover:text-lime-700 font-medium">
-                hello@Doqor.com
+              <a href="mailto:hello@glowheal.com" className="text-lime-600 hover:text-lime-700 font-medium">
+                hello@glowheal.com
               </a>
             </div>
 
@@ -129,7 +129,7 @@ ${data.message}`;
                 </svg>
               </div>
               <h3 className="font-semibold text-forest-900 mb-2">WhatsApp</h3>
-              <a href="https://wa.me/919860151400" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 font-medium">
+              <a href="https://wa.me/918329563445" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 font-medium">
                 Chat with us
               </a>
             </div>
@@ -265,7 +265,7 @@ ${data.message}`;
             <h3 className="text-xl font-bold text-forest-900 mb-4">Need immediate assistance?</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-forest-700 mb-2">ðŸ“ž Call us directly</h4>
+                <h4 className="font-semibold text-forest-700 mb-2">📞 Call us directly</h4>
                 <p className="text-gray-600 mb-3">
                   For urgent medical queries or booking assistance, call us at:
                 </p>
@@ -278,7 +278,7 @@ ${data.message}`;
               </div>
 
               <div>
-                <h4 className="font-semibold text-forest-700 mb-2">ðŸ©º Book free consultation</h4>
+                <h4 className="font-semibold text-forest-700 mb-2">🩺 Book free consultation</h4>
                 <p className="text-gray-600 mb-3">
                   Skip the queue - book your first consultation at no cost:
                 </p>
