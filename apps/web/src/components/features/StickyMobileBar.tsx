@@ -33,7 +33,7 @@ export function StickyMobileBar() {
     const message = encodeURIComponent(
       'Hi, I want to book my free first consultation with a Doqor doctor.'
     );
-    window.open(`https://wa.me/918329563445?text=${message}`, '_blank');
+    window.open(`https://wa.me/919860151400?text=${message}`, '_blank');
   };
 
   return (

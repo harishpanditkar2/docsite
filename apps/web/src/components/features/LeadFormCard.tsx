@@ -103,7 +103,7 @@ export function LeadFormCard({ position = 'hero', className = '' }: LeadFormCard
       window.location.href = `/book/success?${params.toString()}`;
     } catch (error) {
       console.error('Lead submission error:', error);
-      alert('Something went wrong. Please try WhatsApp or call us at 8329563445');
+      alert('Something went wrong. Please try WhatsApp or call us at 9860151400');
     } finally {
       setIsSubmitting(false);
     }

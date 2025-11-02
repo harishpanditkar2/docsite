@@ -60,7 +60,7 @@ export function useFreeCta() {
 
 /**
  * Helper to format WhatsApp URL with free consultation message
- * @param phone Phone number in E.164 format (e.g., '+918329563445')
+ * @param phone Phone number in E.164 format (e.g., '+919860151400')
  * @param concern Optional health concern
  * @param city Optional city
  */

@@ -346,7 +346,7 @@ ${servicesText}
 
 ✅ I confirm booking and will wait for your call to schedule the consultation.`;
 
-        const whatsappUrl = `https://wa.me/918329563445?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappUrl = `https://wa.me/919860151400?text=${encodeURIComponent(whatsappMessage)}`;
         
         // Open WhatsApp in new tab after short delay (allow user to see success message first)
         setTimeout(() => {
@@ -389,7 +389,7 @@ ${servicesText}
       : `Hi, I just submitted booking ${bookingId}. My name is ${formData.name} and I need ${formData.specialty} consultation in ${formData.city}.${truncatedServiceNames ? ` Interested in: ${truncatedServiceNames}` : ''}`;
     
     const whatsappURL = getFreeConsultWhatsAppURL(formData.specialty, formData.city);
-    const whatsappFallback = `https://api.whatsapp.com/send?phone=918329563445&text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappFallback = `https://api.whatsapp.com/send?phone=919860151400&text=${encodeURIComponent(whatsappMessage)}`;
 
     return (
       <div className="min-h-screen bg-gradient-to-b from-forest-50 to-white py-12">
@@ -580,7 +580,7 @@ ${servicesText}
             <div className="flex items-center gap-2 text-sm text-forest-50">
               <span>Prefer to call?</span>
               <a 
-                href="tel:+918329563445" 
+                href="tel:+919860151400" 
                 className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-forest-100 transition-colors underline underline-offset-2"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -1105,7 +1105,7 @@ ${servicesText}
             <p>
               Need help?{' '}
               <a
-                href="https://wa.me/918329563445?text=I%20need%20help%20with%20booking"
+                href="https://wa.me/919860151400?text=I%20need%20help%20with%20booking"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-jade-600 hover:text-jade-800 font-medium"

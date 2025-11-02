@@ -25,7 +25,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  * @example
  * <Button variant="primary" size="lg">Book Free Consultation</Button>
  * <Button variant="secondary">Learn More</Button>
- * <Button variant="phone" href="tel:+918329563445">Call Now</Button>
+ * <Button variant="phone" href="tel:+919860151400">Call Now</Button>
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', children, href, ...props }, ref) => {
