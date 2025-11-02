@@ -168,7 +168,7 @@ export function DoctorApplyForm() {
               type="text"
               id="fullName"
               className={cn(
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors text-gray-900',
                 errors.fullName ? 'border-red-300 bg-red-50' : 'border-gray-300'
               )}
               aria-invalid={errors.fullName ? 'true' : 'false'}
@@ -190,7 +190,7 @@ export function DoctorApplyForm() {
               type="email"
               id="email"
               className={cn(
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors text-gray-900',
                 errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
               )}
               aria-invalid={errors.email ? 'true' : 'false'}
@@ -213,7 +213,7 @@ export function DoctorApplyForm() {
               id="phone"
               placeholder="9876543210"
               className={cn(
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors text-gray-900 placeholder:text-gray-400',
                 errors.phone ? 'border-red-300 bg-red-50' : 'border-gray-300'
               )}
               aria-invalid={errors.phone ? 'true' : 'false'}
@@ -236,7 +236,7 @@ export function DoctorApplyForm() {
               id="registrationNo"
               placeholder="MCI/NMC/State Council No."
               className={cn(
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors text-gray-900 placeholder:text-gray-400',
                 errors.registrationNo ? 'border-red-300 bg-red-50' : 'border-gray-300'
               )}
               aria-invalid={errors.registrationNo ? 'true' : 'false'}
@@ -265,7 +265,7 @@ export function DoctorApplyForm() {
                 type="text"
                 id="clinicName"
                 className={cn(
-                  'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors',
+                  'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors text-gray-900',
                   errors.clinicName ? 'border-red-300 bg-red-50' : 'border-gray-300'
                 )}
                 aria-invalid={errors.clinicName ? 'true' : 'false'}
@@ -289,7 +289,7 @@ export function DoctorApplyForm() {
                 min="0"
                 max="70"
                 className={cn(
-                  'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors',
+                  'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors text-gray-900',
                   errors.yearsExperience ? 'border-red-300 bg-red-50' : 'border-gray-300'
                 )}
                 aria-invalid={errors.yearsExperience ? 'true' : 'false'}
@@ -344,7 +344,7 @@ export function DoctorApplyForm() {
                 {...register('city')}
                 id="city"
                 className={cn(
-                  'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors',
+                  'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors text-gray-900',
                   errors.city ? 'border-red-300 bg-red-50' : 'border-gray-300'
                 )}
                 aria-invalid={errors.city ? 'true' : 'false'}
@@ -372,7 +372,7 @@ export function DoctorApplyForm() {
                 type="text"
                 id="panGst"
                 placeholder="Can provide during onboarding"
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors text-gray-900 placeholder:text-gray-400"
               />
             </div>
           </div>
@@ -387,7 +387,7 @@ export function DoctorApplyForm() {
               rows={3}
               placeholder="Building, Street, Landmark, Area, Pincode"
               className={cn(
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors resize-none',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors resize-none text-gray-900 placeholder:text-gray-400',
                 errors.address ? 'border-red-300 bg-red-50' : 'border-gray-300'
               )}
               aria-invalid={errors.address ? 'true' : 'false'}
@@ -416,7 +416,7 @@ export function DoctorApplyForm() {
               rows={3}
               placeholder="E.g., Mon-Fri 10am-6pm, Sat 10am-2pm"
               className={cn(
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors resize-none',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors resize-none text-gray-900 placeholder:text-gray-400',
                 errors.slotAvailability ? 'border-red-300 bg-red-50' : 'border-gray-300'
               )}
               aria-invalid={errors.slotAvailability ? 'true' : 'false'}
@@ -461,7 +461,7 @@ export function DoctorApplyForm() {
               id="message"
               rows={3}
               placeholder="Any specific requirements, questions, or areas of expertise you'd like to highlight"
-              className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors resize-none"
+              className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-forest-500 transition-colors resize-none text-gray-900 placeholder:text-gray-400"
             />
           </div>
         </div>
