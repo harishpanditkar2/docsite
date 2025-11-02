@@ -211,15 +211,15 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center justify-center w-full md:w-auto md:justify-start">
+          <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex justify-center w-full md:w-auto md:justify-start">
               <img 
                 src="/images/logo-white.svg" 
                 alt="Doqor" 
-                className="h-14 w-auto"
+                className="h-14 w-auto mx-auto md:mx-0"
               />
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm text-center md:text-left">
               &copy; {currentYear} Doqor. All rights reserved.
             </p>
           </div>
