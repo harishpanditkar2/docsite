@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -57,7 +57,7 @@ export function StickyMobileBar() {
             className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold"
             style={{ minHeight: '48px' }}
           >
-            Start Free Consultation (â‚¹0)
+            Start Free Consultation (₹‚¹0)
           </Button>
         </Link>
 

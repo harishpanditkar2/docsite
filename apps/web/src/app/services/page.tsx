@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import Link from 'next/link';
 import { ServiceCard } from '@/components/features/ServiceCard';
 import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
@@ -93,7 +93,7 @@ export default function ServicesPage() {
                   href="/pricing"
                   className="text-jade-600 hover:text-jade-800 font-semibold underline"
                 >
-                  View all Pune pricing â†’
+                  View all Pune pricing ₹†’
                 </Link>
               </div>
 
@@ -108,7 +108,7 @@ export default function ServicesPage() {
                       href={`/pricing/${specialty.slug}`}
                       className="text-jade-600 hover:text-jade-800 font-medium underline text-sm"
                     >
-                      See all {specialty.title.toLowerCase()} prices â†’
+                      See all {specialty.title.toLowerCase()} prices ₹†’
                     </Link>
                   </div>
 
@@ -179,7 +179,7 @@ export default function ServicesPage() {
               {
                 icon: 'ðŸ’°',
                 title: 'Free First Consultation',
-                description: 'Your first call with our in-house doctor is free. Specialist fees (â‚¹499+) apply only if you proceed.',
+                description: 'Your first call with our in-house doctor is free. Specialist fees (₹‚¹499+) apply only if you proceed.',
               },
               {
                 icon: 'ðŸ”’',

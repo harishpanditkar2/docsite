@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { CatalogItem, CatalogPackage, formatPrice } from '@/lib/catalog';
 import { Button } from '@/components/ui/Button';
@@ -73,7 +73,7 @@ export function PriceCard({
           )}
           {showMostBooked && (
             <span className="inline-flex items-center gap-1 px-3 py-1 bg-jade-100 text-jade-700 text-xs font-semibold rounded-full">
-              <span aria-hidden="true">â­</span>
+              <span aria-hidden="true">₹­</span>
               <span>Most Booked</span>
             </span>
           )}
@@ -100,7 +100,7 @@ export function PriceCard({
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            Save â‚¹{item.savings.toLocaleString()} vs standalone
+            Save ₹‚¹{item.savings.toLocaleString()} vs standalone
             <span className="text-xs text-gray-500">
               ({Math.round((item.savings / item.standaloneTotal) * 100)}% off)
             </span>
@@ -150,7 +150,7 @@ export function PriceCard({
         {item.excludes.length > 0 ? (
           <details className="group">
             <summary className="text-sm font-medium text-gray-600 cursor-pointer hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-1 rounded px-2 py-1 -ml-2 flex items-center gap-1">
-              <span className="group-open:rotate-90 transition-transform inline-block">â–¶</span>
+              <span className="group-open:rotate-90 transition-transform inline-block">₹–¶</span>
               View {item.excludes.length} {item.excludes.length === 1 ? 'exclusion' : 'exclusions'}
             </summary>
             <ul className="space-y-2 mt-2 pl-1" role="list">

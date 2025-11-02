@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/Card';
@@ -132,7 +132,7 @@ export function DoctorCard({
               <p className="text-xs text-forest-700 font-semibold">Start free, then</p>
               <p className="text-xs text-gray-600 font-medium">Specialist fee</p>
             </div>
-            <p className="text-2xl font-bold text-forest-900">â‚¹{consultationFee}</p>
+            <p className="text-2xl font-bold text-forest-900">₹‚¹{consultationFee}</p>
             <p className="text-xs text-gray-700 mt-1 font-medium">Only if you proceed with this specialist</p>
           </div>
 

@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
 import { writeFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
@@ -289,7 +289,7 @@ function generateQuoteHTML(data: {
     }
 
     .includes li::before {
-      content: 'âœ“ ';
+      content: '₹œ“ ';
       color: #10b981;
       font-weight: bold;
       margin-right: 4px;
@@ -300,7 +300,7 @@ function generateQuoteHTML(data: {
     }
 
     .excludes li::before {
-      content: 'âœ— ';
+      content: '₹œ— ';
       color: #ef4444;
       font-weight: bold;
       margin-right: 4px;
@@ -479,12 +479,12 @@ function generateQuoteHTML(data: {
       </div>
       <div class="totals-row due-now">
         <span>Amount Due Now:</span>
-        <span style="color: #10b981;">â‚¹0 (Free Consultation)</span>
+        <span style="color: #10b981;">₹‚¹0 (Free Consultation)</span>
       </div>
     </div>
 
     <div class="disclaimers">
-      <h3>âš ï¸ Important Notes:</h3>
+      <h3>₹š ï¸ Important Notes:</h3>
       <ul>
         <li><strong>This is a provisional quote only.</strong> Final services and costs will be confirmed after your free consultation with our doctor.</li>
         <li><strong>Payment required only after consultation and consent.</strong> You are under no obligation to proceed with any service.</li>

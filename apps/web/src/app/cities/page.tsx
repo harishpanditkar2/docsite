@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { MultiSchemaRenderer } from '@/components/schema/SchemaRenderer';
@@ -62,7 +62,7 @@ export default function CitiesPage() {
           </h1>
           <p className="text-lg text-forest-700 mb-8 max-w-3xl mx-auto">
             Access quality healthcare with verified doctors in major cities. Start with a free first consultation,
-            then see exact costs upfrontâ€”no hidden fees, no surprise charges.
+            then see exact costs upfront₹€”no hidden fees, no surprise charges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book">

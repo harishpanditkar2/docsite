@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+﻿import { cn } from '@/lib/utils';
 
 interface PricingComparisonTableProps {
   className?: string;
@@ -12,35 +12,35 @@ export function PricingComparisonTable({ className }: PricingComparisonTableProp
   const comparisons = [
     {
       feature: 'First consultation',
-      Doqor: 'âœ“ Free (â‚¹0)',
+      Doqor: '₹œ“ Free (₹‚¹0)',
       aggregator: 'Varies',
-      clinic: 'â‚¹500-1,000',
+      clinic: '₹‚¹500-1,000',
       glowealBest: true,
     },
     {
       feature: 'Pricing model',
-      Doqor: 'âœ“ Fixed by city',
+      Doqor: '₹œ“ Fixed by city',
       aggregator: 'Variable, opaque',
       clinic: 'Not disclosed upfront',
       glowealBest: true,
     },
     {
       feature: 'Quote before payment',
-      Doqor: 'âœ“ Yes, always',
+      Doqor: '₹œ“ Yes, always',
       aggregator: 'Sometimes',
       clinic: 'Rarely',
       glowealBest: true,
     },
     {
       feature: 'Doctor transparency',
-      Doqor: 'âœ“ Fixed payouts',
+      Doqor: '₹œ“ Fixed payouts',
       aggregator: 'Opaque commission',
       clinic: 'N/A',
       glowealBest: true,
     },
     {
       feature: 'WhatsApp confirmation',
-      Doqor: 'âœ“ Optional',
+      Doqor: '₹œ“ Optional',
       aggregator: 'Email/SMS only',
       clinic: 'Phone/in-person',
       glowealBest: false,

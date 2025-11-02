@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useMemo } from 'react';
 import { DoctorCard } from '@/components/features/DoctorCard';
@@ -200,7 +200,7 @@ export default function DoctorsPage() {
                         ? 'bg-forest-700 border-forest-700 text-white shadow-md'
                         : 'bg-white border-gray-300 text-gray-700 hover:border-forest-500'
                     }`}
-                    style={{ minHeight: '48px' }} // Accessibility: â‰¥48px touch target
+                    style={{ minHeight: '48px' }} // Accessibility: ₹‰¥48px touch target
                     aria-label="Filter doctors with free first consultation available"
                     aria-pressed={freeConsultFilter}
                   >
@@ -318,7 +318,7 @@ export default function DoctorsPage() {
                 {/* Price Range Filter */}
                 <div>
                   <label className="block text-sm font-semibold text-forest-900 mb-2">
-                    Consultation Fee: Up to â‚¹{priceRange}
+                    Consultation Fee: Up to ₹‚¹{priceRange}
                   </label>
                   <input
                     type="range"
@@ -330,8 +330,8 @@ export default function DoctorsPage() {
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-forest-700"
                   />
                   <div className="flex justify-between text-xs text-gray-600 mt-1 font-medium">
-                    <span>â‚¹0</span>
-                    <span>â‚¹5,000</span>
+                    <span>₹‚¹0</span>
+                    <span>₹‚¹5,000</span>
                   </div>
                 </div>
 

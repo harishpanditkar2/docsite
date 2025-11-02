@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -70,7 +70,7 @@ export default function PricingPage() {
                 Home
               </Link>
             </li>
-            <li aria-hidden="true">â€º</li>
+            <li aria-hidden="true">₹€º</li>
             <li>
               <span className="text-gray-900 font-medium" aria-current="page">
                 Pricing
@@ -142,10 +142,10 @@ export default function PricingPage() {
             </div>
             <div>
               <p className="text-lg font-semibold text-forest-900">
-                Your first consultation is always â‚¹0
+                Your first consultation is always ₹0
               </p>
               <p className="text-gray-700">
-                Meet with a Doqor doctor to discuss your treatment planâ€”completely free.
+                Meet with a Doqor doctor to discuss your treatment plan—completely free.
               </p>
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function PricingPage() {
                       href={`/pricing/${specialty.slug}`}
                       className="text-jade-600 hover:text-jade-800 font-medium underline"
                     >
-                      View all {specialty.title.toLowerCase()} services â†’
+                      View all {specialty.title.toLowerCase()} services ₹†’
                     </Link>
                   </div>
 

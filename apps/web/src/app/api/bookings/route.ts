@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
 
 /**
  * Bookings API - Vercel-compatible version
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Log booking data (accessible in Vercel logs)
-    console.log('âœ… NEW BOOKING RECEIVED:', JSON.stringify({
+    console.log('₹œ… NEW BOOKING RECEIVED:', JSON.stringify({
       timestamp: new Date().toISOString(),
       bookingId: data.id,
       name: data.contact.name,
@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     );
 
   } catch (error) {
-    console.error('â Booking API error:', error);
+    console.error('₹ Booking API error:', error);
     return NextResponse.json(
       { error: 'Failed to process booking' },
       { status: 500 }

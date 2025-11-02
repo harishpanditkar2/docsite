@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+﻿import { cn } from '@/lib/utils';
 import { forwardRef } from 'react';
 import Link from 'next/link';
 
@@ -20,7 +20,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  * - tertiary: Royal blue text link - Inline navigation
  * - phone: WhatsApp green - Phone/contact actions
  * 
- * All buttons meet â‰¥48px touch target requirement (WCAG 2.1 AA)
+ * All buttons meet ₹‰¥48px touch target requirement (WCAG 2.1 AA)
  * 
  * @example
  * <Button variant="primary" size="lg">Book Free Consultation</Button>
@@ -51,7 +51,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         'bg-[#25D366] text-white shadow-md hover:bg-[#1EA952] hover:shadow-lg':
           variant === 'phone',
       },
-      // Sizes (ensure â‰¥48px tap targets for WCAG 2.1 AA)
+      // Sizes (ensure ₹‰¥48px tap targets for WCAG 2.1 AA)
       {
         'px-4 py-2.5 text-sm min-h-[48px]': size === 'sm',
         'px-5 py-3 text-base min-h-[48px] md:px-6': size === 'md',

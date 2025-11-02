@@ -1,4 +1,4 @@
-import { type ClassValue, clsx } from 'clsx';
+﻿import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 /**
@@ -13,7 +13,7 @@ export function cn(...inputs: ClassValue[]) {
  * Format price in Indian Rupees
  */
 export function formatPrice(amount: number): string {
-  return `â‚¹${amount.toLocaleString('en-IN')}`;
+  return `₹‚¹${amount.toLocaleString('en-IN')}`;
 }
 
 /**

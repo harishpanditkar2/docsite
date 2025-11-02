@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -40,7 +40,7 @@ export function DoctorPricingWidget({ specialtySlug, maxItems = 3 }: DoctorPrici
 
   // Build CTA text with optional service name
   const ctaText = preselectedItem 
-    ? `Book in ${cityDisplayName} â€” ${preselectedItem.name}`
+    ? `Book in ${cityDisplayName} ₹€” ${preselectedItem.name}`
     : `Book in ${cityDisplayName}`;
 
   return (
@@ -72,7 +72,7 @@ export function DoctorPricingWidget({ specialtySlug, maxItems = 3 }: DoctorPrici
 
       <Link href={`/pricing/${specialtySlug}`} className="block">
         <Button variant="outline" size="md" className="w-full">
-          See All {specialty.title} Prices â†’
+          See All {specialty.title} Prices ₹†’
         </Button>
       </Link>
 
@@ -90,7 +90,7 @@ export function DoctorPricingWidget({ specialtySlug, maxItems = 3 }: DoctorPrici
       </Link>
 
       <p className="text-xs text-gray-500 text-center">
-        Start with free consultation (â‚¹0)
+        Start with free consultation (₹‚¹0)
       </p>
     </div>
   );

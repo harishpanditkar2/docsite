@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -132,7 +132,7 @@ export function LeadFormCard({ position = 'hero', className = '' }: LeadFormCard
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-2xl font-bold text-forest-700">Start Free Consultation</h3>
           <span className="bg-lime-100 text-lime-700 text-xs font-bold px-3 py-1 rounded-full">
-            â‚¹0 - No Cost
+            ₹‚¹0 - No Cost
           </span>
         </div>
         <p className="text-sm text-gray-600">
@@ -152,7 +152,7 @@ export function LeadFormCard({ position = 'hero', className = '' }: LeadFormCard
             <p className="text-sm font-semibold text-red-700 mb-1">Please fix the following:</p>
             <ul className="text-xs text-red-600 space-y-1">
               {Object.entries(errors).map(([field, error]) => (
-                <li key={field}>â€¢ {error.message}</li>
+                <li key={field}>₹€¢ {error.message}</li>
               ))}
             </ul>
           </div>
@@ -342,7 +342,7 @@ export function LeadFormCard({ position = 'hero', className = '' }: LeadFormCard
             </>
           ) : (
             <>
-              Start Free Consultation (â‚¹0)
+              Start Free Consultation (₹‚¹0)
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

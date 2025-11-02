@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -12,7 +12,7 @@ import { useFreeCta } from '@/hooks/useFreeCta';
  * - No CLS (Cumulative Layout Shift) - reserved space
  * - WCAG AAA contrast (Forest on Amber)
  * - Keyboard accessible
- * - â‰¥48px touch targets
+ * - ₹‰¥48px touch targets
  * 
  * @example
  * <AnnouncementBanner />

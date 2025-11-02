@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
@@ -58,7 +58,7 @@ export function ServiceCard({
           <div className="space-y-3 mt-auto">
             <div className="text-sm">
               <p className="text-gray-500 text-xs mb-1">First Consultation</p>
-              <p className="font-semibold text-forest-700">Free (â‚¹0)</p>
+              <p className="font-semibold text-forest-700">Free (₹‚¹0)</p>
             </div>
             <div className="space-y-2">
               <Button 
@@ -73,7 +73,7 @@ export function ServiceCard({
                 View Packages
               </Button>
               <p className="text-xs text-gray-500 text-center">
-                Start freeâ€”talk to a doctor
+                Start free₹€”talk to a doctor
               </p>
             </div>
           </div>

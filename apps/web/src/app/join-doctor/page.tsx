@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { DoctorApplyForm } from '@/components/features/DoctorApplyForm';
@@ -151,33 +151,33 @@ export default function JoinDoctorPage() {
                 <tbody className="divide-y divide-gray-200">
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">Therapy Session (50-60 min)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">â‚¹1,499</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~â‚¹1,199</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹1,499</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹1,199</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">PRP Hair (1 session)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">â‚¹4,999</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~â‚¹3,999</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹4,999</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹3,999</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">Ortho Follow-up</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">â‚¹899</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~â‚¹719</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹899</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹719</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">Acne Care Plan (30 days)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">â‚¹899</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~â‚¹719</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹899</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹719</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">Diet Plan (30 days)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">â‚¹899</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~â‚¹719</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹899</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹719</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-gray-900">IV Therapy (Vitamin Boost)</td>
-                    <td className="px-6 py-4 text-gray-900 font-medium">â‚¹2,999</td>
-                    <td className="px-6 py-4 text-jade-600 font-semibold">~â‚¹2,399</td>
+                    <td className="px-6 py-4 text-gray-900 font-medium">₹‚¹2,999</td>
+                    <td className="px-6 py-4 text-jade-600 font-semibold">~₹‚¹2,399</td>
                   </tr>
                 </tbody>
               </table>
@@ -201,7 +201,7 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>How long does onboarding take?</span>
-                <span className="group-open:rotate-180 transition-transform">â–¼</span>
+                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 Typically 3-5 business days. After application review, we schedule a brief call, verify credentials, complete KYC, sync your slots, and you're live.
@@ -211,7 +211,7 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>When do I receive payouts?</span>
-                <span className="group-open:rotate-180 transition-transform">â–¼</span>
+                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 Weekly payouts processed every Friday for consultations completed the previous week. Bank transfer via NEFT/IMPS. Requires valid PAN/GST and bank details during KYC.
@@ -221,7 +221,7 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>What if a patient cancels?</span>
-                <span className="group-open:rotate-180 transition-transform">â–¼</span>
+                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 Patients can cancel up to 1 day before their scheduled appointment. Same-day cancellations are not permitted. Doctors will not receive payment for cancelled bookings. No-shows or late cancellations are tracked; persistent offenders are flagged. You won't be penalized for patient-side cancellations within the allowed timeframe.
@@ -231,7 +231,7 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>What documents do I need?</span>
-                <span className="group-open:rotate-180 transition-transform">â–¼</span>
+                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 Medical registration (MCI/NMC/State Council), PAN card, GST certificate (if applicable), bank details (cancelled cheque/passbook), clinic address proof. Degree certificates helpful but optional.
@@ -241,7 +241,7 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>How is patient privacy maintained?</span>
-                <span className="group-open:rotate-180 transition-transform">â–¼</span>
+                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 All consultations and records follow DISHA (Digital Information Security in Healthcare Act) and IT Act guidelines. Patient consent required for data sharing. You own your clinical notes; Doqor handles booking/payment data only.
@@ -251,7 +251,7 @@ export default function JoinDoctorPage() {
             <details className="bg-white rounded-xl shadow-soft border border-gray-200 p-6 group">
               <summary className="text-lg font-semibold text-forest-900 cursor-pointer hover:text-jade-600 transition-colors list-none flex items-center justify-between">
                 <span>Can I set my own prices?</span>
-                <span className="group-open:rotate-180 transition-transform">â–¼</span>
+                <span className="group-open:rotate-180 transition-transform">₹–¼</span>
               </summary>
               <p className="text-gray-700 mt-4">
                 Doqor uses fixed patient-facing prices for transparency. Doctor payouts are based on a pre-agreed fee schedule that factors in specialty, complexity, and market rates. During onboarding, we'll discuss the schedule for your specialties.
