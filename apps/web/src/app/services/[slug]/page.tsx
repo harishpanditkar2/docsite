@@ -84,23 +84,35 @@ export default function ServicePage({ params }: ServicePageProps) {
         </div>
       </nav>
 
-      {/* Hero */}
-      <section className="bg-gradient-to-r from-forest-700 to-jade-600 text-white py-16">
-        <div className="container mx-auto px-4">
+      {/* Hero with Background Image */}
+      <section className="relative bg-gradient-to-r from-forest-700 to-jade-600 text-white py-16 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={service.heroImage}
+            alt={`${service.name} background`}
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability (70-80% opacity) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/75 to-black/70"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1">
-                <span className="inline-block bg-lime-100 text-forest-700 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+                <span className="inline-block bg-lime-400 text-forest-900 text-sm font-semibold px-3 py-1 rounded-full mb-4">
                   {service.icon} Specialty
                 </span>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.name}</h1>
-                <p className="text-xl text-forest-50 mb-6">{service.tagline}</p>
-                <p className="text-forest-100 mb-6">{service.description}</p>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">{service.name}</h1>
+                <p className="text-xl text-white mb-6 drop-shadow-md">{service.tagline}</p>
+                <p className="text-white/90 mb-6 drop-shadow-md">{service.description}</p>
                 <div className="flex flex-wrap gap-4">
-                  <Button variant="secondary" size="lg" asChild className="bg-white text-forest-700 hover:bg-mist-50">
+                  <Button variant="secondary" size="lg" asChild className="bg-white text-forest-700 hover:bg-lime-400 hover:text-forest-900">
                     <Link href="/book">Book Free Consultation</Link>
                   </Button>
-                  <Button variant="secondary" size="lg" asChild className="bg-forest-800 text-white hover:bg-forest-900">
+                  <Button variant="secondary" size="lg" asChild className="bg-lime-400 text-forest-900 hover:bg-lime-500">
                     <Link href={`https://wa.me/919860151400?text=I want to know more about ${service.name}`} target="_blank">
                       WhatsApp Us
                     </Link>
@@ -111,7 +123,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 <img
                   src={service.heroImage}
                   alt={service.name}
-                  className="w-64 h-64 rounded-2xl object-cover shadow-2xl"
+                  className="w-64 h-64 rounded-2xl object-cover shadow-2xl border-4 border-white/20"
                 />
               </div>
             </div>
